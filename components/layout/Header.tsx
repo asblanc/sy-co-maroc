@@ -232,10 +232,18 @@ export function Header() {
                   </Link>
                 ))}
 
+                <a
+                  href={`tel:${contactInfo.phone.replace(/[^+\d]/g, "")}`}
+                  onClick={() => setMobileOpen(false)}
+                  className="mt-4 flex items-center gap-2 rounded-full border border-teal/20 px-4 py-3 font-heading text-base font-bold text-teal"
+                >
+                  <Phone className="h-5 w-5" /> {contactInfo.phone}
+                </a>
+
                 <Button
                   href="/contact"
                   variant="pink"
-                  className="mt-4"
+                  className="mt-3"
                   onClick={() => setMobileOpen(false)}
                 >
                   Contact

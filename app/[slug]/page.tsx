@@ -63,6 +63,12 @@ export default async function DynamicPage({
   if (!page) notFound();
 
   const { prev, next } = getSiblings(page.slug);
+  const categoryHref =
+    page.type === "case-detail"
+      ? "/nos-cas-clients"
+      : page.type === "content"
+        ? "/#expertises"
+        : undefined;
 
   return (
     <>
@@ -70,6 +76,7 @@ export default async function DynamicPage({
       <PageHero
         title={page.h1}
         category={page.category}
+        categoryHref={categoryHref}
         image={page.heroImage}
       />
       <main>{renderBody(page)}</main>

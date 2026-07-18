@@ -55,43 +55,58 @@ export function ServicesGrid({ services }: { services: Service[] }) {
           </h2>
         </Reveal>
 
-        <div className="grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
-          {services.map((s, i) => (
-            <Reveal
-              key={s.title}
-              delay={(i % 3) * 0.08}
-              className="group flex flex-col items-center rounded-3xl border border-black/5 bg-white p-7 text-center shadow-sm transition-all duration-300 hover:-translate-y-1.5 hover:shadow-xl"
-            >
-              {/* photo dans une bulle */}
-              <div
-                className={`${i % 2 === 0 ? "blob-a" : "blob-b"} relative mb-6 h-40 w-40 overflow-hidden shadow-md`}
+        <div className="mx-auto max-w-5xl space-y-12 lg:space-y-16">
+          {services.map((s, i) => {
+            const imageRight = i % 2 === 1; // alterne gauche / droite
+            return (
+              <Reveal
+                key={s.title}
+                className="grid items-center gap-8 sm:grid-cols-2 lg:gap-14"
               >
-                {s.image ? (
-                  <Image
-                    src={s.image}
-                    alt={s.title}
-                    fill
-                    sizes="160px"
-                    className="object-cover"
-                  />
-                ) : (
-                  <div className="flex h-full items-center justify-center bg-gradient-to-br from-teal to-teal-dark p-3">
-                    <span className="text-center font-heading text-sm font-bold text-white/90">
-                      {s.title}
-                    </span>
+                {/* photo dans une bulle (grossie) */}
+                <div
+                  className={`flex justify-center ${imageRight ? "sm:order-2" : "sm:order-1"}`}
+                >
+                  <div
+                    className={`${i % 2 === 0 ? "blob-a" : "blob-b"} relative h-60 w-60 overflow-hidden shadow-xl sm:h-64 sm:w-64 lg:h-72 lg:w-72`}
+                  >
+                    {s.image ? (
+                      <Image
+                        src={s.image}
+                        alt={s.title}
+                        fill
+                        sizes="(max-width: 640px) 240px, 288px"
+                        className="object-cover"
+                      />
+                    ) : (
+                      <div className="flex h-full items-center justify-center bg-gradient-to-br from-teal to-teal-dark p-4">
+                        <span className="text-center font-heading text-lg font-bold text-white/90">
+                          {s.title}
+                        </span>
+                      </div>
+                    )}
                   </div>
-                )}
-              </div>
-              <h3 className="mb-3 font-heading text-lg font-bold leading-snug text-teal">
-                {s.title}
-              </h3>
-              {s.description && (
-                <p className="text-sm leading-relaxed text-ink/70">
-                  {s.description}
-                </p>
-              )}
-            </Reveal>
-          ))}
+                </div>
+
+                {/* texte à côté (gauche/droite) */}
+                <div
+                  className={`text-center sm:text-left ${imageRight ? "sm:order-1 sm:text-right" : "sm:order-2"}`}
+                >
+                  <span className="mb-3 inline-block font-heading text-sm font-bold uppercase tracking-widest text-orange">
+                    {String(i + 1).padStart(2, "0")}
+                  </span>
+                  <h3 className="mb-4 font-heading text-2xl font-bold leading-tight text-teal sm:text-3xl">
+                    {s.title}
+                  </h3>
+                  {s.description && (
+                    <p className="text-base leading-relaxed text-ink/75 sm:text-lg">
+                      {s.description}
+                    </p>
+                  )}
+                </div>
+              </Reveal>
+            );
+          })}
         </div>
       </div>
     </section>

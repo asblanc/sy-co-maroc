@@ -5,13 +5,20 @@ import { PageHeroBg } from "./PageHeroBg";
 type PageHeroProps = {
   title: string;
   category?: string;
+  categoryHref?: string;
   breadcrumb?: string;
   image?: string;
 };
 
 /** Colored page header band with breadcrumb, background image, two-tone title
  *  and a rotating category badge — matching the reference inner pages. */
-export function PageHero({ title, category, breadcrumb, image }: PageHeroProps) {
+export function PageHero({
+  title,
+  category,
+  categoryHref,
+  breadcrumb,
+  image,
+}: PageHeroProps) {
   const [firstWord, ...restWords] = title.split(" ");
   const rest = restWords.join(" ");
 
@@ -31,18 +38,35 @@ export function PageHero({ title, category, breadcrumb, image }: PageHeroProps) 
             {category && (
               <>
                 <ChevronRight className="h-4 w-4" />
-                <span>{category}</span>
+                {categoryHref ? (
+                  <Link
+                    href={categoryHref}
+                    className="transition-colors hover:text-orange"
+                  >
+                    {category}
+                  </Link>
+                ) : (
+                  <span>{category}</span>
+                )}
               </>
             )}
             <ChevronRight className="h-4 w-4" />
             <span className="text-white">{breadcrumb ?? title}</span>
           </nav>
 
-          {category && (
-            <p className="mb-3 font-heading text-sm font-bold uppercase tracking-widest text-orange">
-              {category}
-            </p>
-          )}
+          {category &&
+            (categoryHref ? (
+              <Link
+                href={categoryHref}
+                className="mb-3 inline-block font-heading text-sm font-bold uppercase tracking-widest text-orange transition-opacity hover:opacity-80"
+              >
+                {category}
+              </Link>
+            ) : (
+              <p className="mb-3 font-heading text-sm font-bold uppercase tracking-widest text-orange">
+                {category}
+              </p>
+            ))}
           <h1 className="max-w-3xl text-3xl font-bold uppercase leading-tight sm:text-4xl lg:text-5xl">
             <span className="text-orange">{firstWord} </span>
             {rest}
