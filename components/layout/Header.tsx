@@ -41,7 +41,7 @@ export function Header() {
         <div className="container-narrow flex h-20 items-center justify-between gap-6">
           <Link href="/" className="shrink-0" aria-label="SY&CO accueil">
             <Image
-              src="/images/logo1.png"
+              src="/images/logo2.png"
               alt="SY&CO"
               width={190}
               height={64}
@@ -129,7 +129,7 @@ export function Header() {
             >
               <div className="mb-6 flex items-center justify-between">
                 <Image
-                  src="/images/logo1.png"
+                  src="/images/logo2.png"
                   alt="SY&CO"
                   width={150}
                   height={50}

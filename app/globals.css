@@ -36,6 +36,26 @@
   }
 }
 
+/* Organic "bubble" image shapes — echoing the reference site's blob framing */
+.blob-a {
+  border-radius: 42% 58% 57% 43% / 48% 42% 58% 52%;
+}
+.blob-b {
+  border-radius: 58% 42% 45% 55% / 42% 55% 45% 58%;
+}
+/* arch bubble (rounded top, softer bottom) used behind the hero photo */
+.blob-arch {
+  border-radius: 48% 48% 42% 42% / 60% 60% 40% 40%;
+}
+.blob-a,
+.blob-b {
+  transition: border-radius 0.8s ease-in-out;
+}
+.blob-a:hover,
+.blob-b:hover {
+  border-radius: 50% 50% 50% 50% / 50% 50% 50% 50%;
+}
+
 /* Scrollbar-free horizontal marquee wrapper */
 .marquee-mask {
   -webkit-mask-image: linear-gradient(

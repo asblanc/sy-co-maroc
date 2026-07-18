@@ -18,12 +18,12 @@ export function Accompany() {
       <div className="container-narrow grid items-center gap-14 lg:grid-cols-2">
         <Reveal className="relative order-2 lg:order-1">
           <span className="absolute -left-5 bottom-6 -z-10 h-28 w-28 rounded-3xl bg-orange/60" />
-          <div className="overflow-hidden rounded-[2rem] shadow-xl">
+          <div className="blob-a overflow-hidden shadow-xl">
             <Image
               src="/images/demain1.jpg"
               alt="Vous accompagner vers demain"
               width={620}
-              height={460}
+              height={520}
               className="h-full w-full object-cover"
             />
           </div>

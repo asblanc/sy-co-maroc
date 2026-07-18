@@ -8,13 +8,13 @@ export function Team() {
     <section id="equipe" className="bg-teal py-20 text-white lg:py-28">
       <div className="container-narrow grid items-center gap-14 lg:grid-cols-2">
         <Reveal className="relative">
-          <span className="absolute -right-5 -top-5 -z-0 h-28 w-28 rounded-3xl bg-pink" />
-          <div className="relative overflow-hidden rounded-[2rem] shadow-2xl">
+          <span className="absolute -right-4 -top-6 z-0 h-28 w-28 rounded-full bg-orange" />
+          <div className="blob-b relative overflow-hidden shadow-2xl">
             <Image
               src="/images/equipe1.jpg"
               alt="Une équipe de spécialistes SY&CO"
               width={620}
-              height={460}
+              height={520}
               className="h-full w-full object-cover"
             />
           </div>

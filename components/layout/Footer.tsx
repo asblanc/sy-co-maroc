@@ -16,7 +16,7 @@ export function Footer() {
         <div>
           <div className="mb-5 inline-block rounded-xl bg-white p-3">
             <Image
-              src="/images/logo1.png"
+              src="/images/logo2.png"
               alt="SY&CO"
               width={170}
               height={56}

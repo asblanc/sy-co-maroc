@@ -11,9 +11,14 @@ export function Expertises() {
     <section id="expertises" className="bg-white py-20 lg:py-28">
       <div className="container-narrow">
         <Reveal className="mx-auto mb-14 max-w-2xl text-center">
-          <h2 className="text-3xl font-bold text-teal sm:text-4xl">
-            Quel défi allons-nous relever ensemble&nbsp;?
+          <h2 className="font-display text-4xl leading-tight text-teal sm:text-5xl lg:text-6xl">
+            Co&apos;designons
+            <br />
+            <span className="text-orange">votre réussite</span>
           </h2>
+          <p className="mt-6 font-heading text-lg font-bold text-ink/70">
+            Quel défi allons-nous relever ensemble&nbsp;?
+          </p>
         </Reveal>
 
         <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">

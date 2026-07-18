@@ -208,13 +208,13 @@ function AboutBody({ page }: { page: PageData }) {
             <Prose paragraphs={page.paragraphs} />
           </div>
           <div className="relative">
-            <span className="absolute -right-5 -top-5 -z-0 h-28 w-28 rounded-3xl bg-orange/60" />
-            <div className="relative overflow-hidden rounded-[2rem] shadow-xl">
+            <span className="absolute -right-5 -top-5 z-0 h-28 w-28 rounded-full bg-orange/70" />
+            <div className="blob-a relative overflow-hidden shadow-xl">
               <Image
                 src="/images/equipe1.jpg"
                 alt="L'équipe SY&CO"
                 width={620}
-                height={460}
+                height={560}
                 className="h-full w-full object-cover"
               />
             </div>
