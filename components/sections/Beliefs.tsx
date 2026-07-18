@@ -26,14 +26,16 @@ export function Beliefs() {
         </Reveal>
 
         <Reveal delay={0.15} className="relative">
-          <span className="absolute -right-6 -top-6 -z-10 h-32 w-32 rounded-full bg-teal/15" />
-          <Image
-            src="/images/illustration-home.png"
-            alt="Illustration collaboration SY&CO"
-            width={620}
-            height={420}
-            className="h-auto w-full"
-          />
+          <span className="absolute -right-6 -top-6 -z-10 h-32 w-32 rounded-full bg-orange/20" />
+          <div className="blob-a relative aspect-[5/4] w-full overflow-hidden shadow-xl">
+            <Image
+              src="/images/illustration-home.png"
+              alt="Équipes SY&CO réunies lors d'un événement"
+              fill
+              sizes="(max-width: 1024px) 90vw, 560px"
+              className="object-cover"
+            />
+          </div>
         </Reveal>
       </div>
     </section>

@@ -55,13 +55,12 @@ export const pages: PageData[] = [
   {
     slug: "transformation-des-organisations",
     needs: [
-      "Améliorer les performances de votre organisation",
-      "Répondre aux nouveaux besoins de vos clients et collaborateurs",
-      "Redéfinir une vision partagée",
-      "Définir une nouvelle stratégie d’entreprise",
-      "Vous adapter à un nouveau marché",
-      "Accompagner vos équipes dans une phase de transformation",
-      "Faciliter l’implantation de nouveaux process",
+      "Fédérer vos équipes autour d'un cap commun",
+      "Faire évoluer votre culture d'entreprise",
+      "Accompagner une fusion, une réorganisation ou une forte croissance",
+      "Lever les résistances au changement",
+      "Ancrer de nouvelles façons de travailler",
+      "Redonner du sens et de l'engagement à vos collaborateurs",
     ],
     services: [
       {
@@ -71,17 +70,17 @@ export const pages: PageData[] = [
       },
       {
         title: "Transformation culturelle et organisationnelle",
-        description: "Créez un environnement de travail plus favorable à l’Innovation et à la coopération pour développer l’agilité de vos équipes et la performance de votre organisation à long terme !SY&CO accompagne les organisations dans leurs transformations culturelle et organisationnelle en les aidant à bâtir culture d’entreprise alignée sur leurs objectifs stratégiques. Nos méthodes stimulent l’implication, la prise d’initiative et l’engagement des collaborateurs et renforce ainsi la capacité de l’organisation à grandir.",
+        description: "Faire évoluer votre culture et vos modes de fonctionnement vers plus d'agilité, de coopération et d'engagement.",
         image: "/images/services/transformation-culturelle-organisationnelle.jpg",
       },
       {
         title: "Transition sociétale et environnementale",
-        description: "Partout dans le monde, les crises se succèdent et ne se ressemblent pas. Financières, sanitaires, démographiques, alimentaires… Elles font surtout l’objet d’une montée en puissance des préoccupations sociales et environnementales.Chez SY&CO, nous sommes convaincus qu’en prenant en compte les enjeux environnementaux et sociaux, une démarche RSE peut contribuer à la préservation de votre écosystème et à l’amélioration des relations avec vos parties prenantes. En favorisant l’engagement des collaborateurs dans un environnement de travail positif axé sur des valeurs éthiques, ces démarches entraînent une augmentation de la performance de l’organisation pour finalement soutenir la pérennité de cette dernière.",
+        description: "Intégrer les enjeux RSE au cœur de votre organisation pour conjuguer performance, sens et durabilité.",
         image: "/images/services/transition-societale-environnementale.jpg",
       },
       {
         title: "Diagnostic et data analyse",
-        description: "Garantie de la réussite de votre transformation, la réalisation d’un diagnostic pertinent va permettre de comprendre le contexte de l’organisation, d’évaluer ses besoins ainsi que les défis à relever. Le diagnostic va apporter des données mesurables, qualitatives et quantitatives nécessaires au processus de changement : il permet d’analyser de façon juste et objective la situation de départ pour identifier les domaines clés à adresser, pouvoir décider du chemin stratégique à suivre, et du processus à mettre en œuvre pour réussir votre transformation.",
+        description: "Objectiver votre point de départ grâce à un diagnostic rigoureux et des données claires pour décider en confiance.",
         image: "/images/services/diagnostic-data-analyse.jpg",
       },
       {
@@ -91,7 +90,7 @@ export const pages: PageData[] = [
       },
       {
         title: "Pilotage de projet de transformation et conseil",
-        description: "Pour faciliter la transformation de votre organisation, nous vous accompagnons dans la planification, l’exécution et la gestion des étape décisives : définition des KPI de transformation et suivi, mobilisation des ressources nécessaires, mise en œuvre des changements et gestion du processus de manière itérative. Tout au long du processus, les consultants de SY&CO sont présents pour impliquer les parties prenantes, communiquer de manière efficace, réadapter le dispositif au besoin et évaluer régulièrement avec vous les progrès réalisés.",
+        description: "Planifier, piloter et sécuriser votre projet de transformation, de la feuille de route au suivi des indicateurs.",
         image: "/images/services/pilotage-projet.jpg",
       },
       {
@@ -119,16 +118,12 @@ export const pages: PageData[] = [
   {
     slug: "strategie-et-gouvernance",
     needs: [
-      "Formuler votre raison d’être d’entreprise",
-      "Définir une vision d’entreprise claire",
-      "Élaborer une gouvernance responsable (RSE)",
-      "Affiner ou repenser votre business design",
-      "Élaborer une feuille de route stratégique",
-      "Définir vos objectifs stratégiques et leur déclinaison au plus près du terrain",
-      "Impliquer les équipes dans la stratégie de l’organisation",
-      "Mettre en place un pilotage efficace des actions",
-      "Renforcer votre leadership interne",
-      "Coacher vos équipes pour les rendre plus efficientes",
+      "Clarifier et partager votre vision",
+      "Aligner votre comité de direction",
+      "Traduire votre stratégie en feuille de route",
+      "Décider dans un contexte incertain",
+      "Structurer une gouvernance claire",
+      "Mobiliser vos équipes autour de vos priorités",
     ],
     services: [
       {
@@ -138,12 +133,12 @@ export const pages: PageData[] = [
       },
       {
         title: "Gouvernance responsable",
-        description: "Selon la norme internationale Iso 26000, le périmètre de la RSE inclut 7 thématiques, dont une centrale : la gouvernance de l’organisation. Une gouvernance responsable implique d’appliquer la démarche RSE de façon globale à la stratégie, mais aussi aux process ou au management au sein de l’organisation. Améliorez l’impact sociétal et environnemental de votre organisation grâce à une gouvernance responsable et renforcez la cohérence des actions de votre organisation, afin d’en améliorer sa performance et sa rentabilité de manière durable.",
+        description: "Structurer une gouvernance claire et engageante qui aligne dirigeants, équipes et parties prenantes.",
         image: "/images/services/gouvernance-responsable.jpg",
       },
       {
         title: "Valeurs et raison d’être de l’entreprise",
-        description: "Vous savez ce que vous faites. Mais savez-vous pour quoi (en deux mots !) vous le faites ? Collaborateurs et clients sont de plus en plus attentifs aux valeurs humaines, et aux engagements sociétaux et environnementaux des organisations avec qui ils interagissent. Identifier et porter la vision, la mission et les valeurs de votre organisation permet de créer une ligne directrice claire et de rassembler vos équipes autour d’un projet qui dépasse les seules tâches opérationnelles. SY&CO vous accompagne dans la formalisation collaborative de votre raison d’être et dans sa mise en œuvre.",
+        description: "Clarifier ce qui vous rend unique et traduire vos valeurs en repères concrets pour vos équipes.",
         image: "/images/services/valeurs-raison-etre-de-entreprise.jpg",
       },
       {
@@ -158,7 +153,7 @@ export const pages: PageData[] = [
       },
       {
         title: "Coaching de dirigeant et d’équipe",
-        description: "Développez vos compétences de dirigeant ou celles de votre équipe grâce au coaching de dirigeant et au coaching d’équipe. L’accompagnement par nos coachs certifiés vous permet de renforcer votre capacité à questionner vos perceptions et à développer une vision claire de la situation. Développez votre leadership, l’esprit d’équipe, la motivation pour renforcer votre capacité et celle de vos équipes à vous adapter dans un environnement instable et complexe. La réussite d’un collectif repose sur le développement des compétences techniques et relationnelles de ses membres.",
+        description: "Accompagner dirigeants et équipes dans le développement de leur leadership et de leur cohésion.",
         image: "/images/services/Coaching-de-dirigeant-et-dequipe-1.jpg",
       },
       {
@@ -186,14 +181,12 @@ export const pages: PageData[] = [
   {
     slug: "developpement-des-competences-manageriales",
     needs: [
-      "Accompagner les primo managers dans leur prise de poste",
-      "Restructurer ou asseoir les rôles et responsabilités des managers",
-      "Favoriser le partage de bonnes pratiques et aligner la culture managériale",
-      "Identifier vos besoins en termes de compétences à développer",
-      "Construire un plan de développement des compétences",
-      "Faire monter les managers en compétences",
-      "Développer une culture de l’apprentissage entre pairs",
-      "Développer les nouvelles postures managériales",
+      "Développer le leadership de vos managers",
+      "Professionnaliser vos pratiques managériales",
+      "Accompagner une prise de poste managériale",
+      "Renforcer la cohésion de votre ligne managériale",
+      "Outiller vos managers face au changement",
+      "Ancrer une culture du feedback et de la reconnaissance",
     ],
     services: [
       {
@@ -203,12 +196,12 @@ export const pages: PageData[] = [
       },
       {
         title: "Team learning",
-        description: "Embarquez vos équipes dans un apprentissage collectif et actif, permettant de développer des compétences directement liées au contexte qu’elles rencontrent. À mi-chemin entre coaching d’équipe et formation active, le team learning est un dispositif de plus en plus sollicité et s’adresse à une équipe de travail. En créant un environnement d’apprentissage dynamique et stimulant où ils peuvent s’engager activement, cette méthode collaborative favorise la motivation intrinsèque des apprenants, l’intelligence collective et facilite les prises de décision dans la résolution de problèmes.Nos facilitateurs en Team Learning co-construisent avec vous les séquences de ce dispositif pour aboutir à un process gagnant.",
+        description: "Faire grandir vos équipes ensemble, par des dispositifs collectifs qui ancrent durablement les apprentissages.",
         image: "/images/services/team-learning.jpg",
       },
       {
         title: "Design de parcours de formation sur mesure",
-        description: "Notre méthode IDDEA® garantit à vos équipes de bénéficier d’un parcours de formation parfaitement adapté à leur quotidien et à votre culture d’entreprise. Avec vous, et après une phase d’immersion, nous définissons les besoins en acquisition de compétences et développons un parcours spécifique.Que ce soit en présentiel, en distanciel, en synchrone ou asynchrone, nos parcours Blended Learning s’appuient sur une ingénierie multimodale et sur des formateurs expérimentés. Tout au long de la démarche, notre ingénieur pédagogique co-construit avec vous le parcours qui vous ressemble jusqu’à la personnalisation graphique des supports et capsules de digital learning.",
+        description: "Concevoir des parcours de formation taillés pour vos enjeux, engageants et immédiatement utiles.",
         image: "/images/services/Design-parcours-formation.jpg",
       },
       {
@@ -223,7 +216,7 @@ export const pages: PageData[] = [
       },
       {
         title: "Co-développement",
-        description: "Misez sur la somme des savoirs, savoir-faire et savoir-être de vos équipes ! Le Co-développement est une méthode d’apprentissage collaboratif qui favorise l’échange et le partage entre pairs. Il est utilisé pour promouvoir l’apprentissage mutuel, l’émulation et le développement des compétences de manière três opérationnelle.Nos facilitateurs certifiés créent cet espace sécurisé, au sein duquel les participants peuvent exposer leur problématique, réfléchir ensemble, trouver des solutions créatives et se soutenir mutuellement dans leur développement professionnel. Grâce à notre plateforme collaborative, nous avons développé une solution pour déployer ces sessions de co-développement à distance tout en conservant une approche collaborative engageante.",
+        description: "Miser sur l'intelligence du groupe : des pairs qui s'entraident pour résoudre leurs situations concrètes.",
         image: "/images/services/co-developpement.jpg",
       },
     ],
@@ -246,14 +239,12 @@ export const pages: PageData[] = [
   {
     slug: "innovation-et-codesign",
     needs: [
-      "Développer de nouveaux produits ou services",
-      "Améliorer les processus et l’efficacité opérationnelle",
-      "Développer votre marque employeur",
-      "Faciliter la transformation de votre organisation",
-      "Résoudre des problématiques complexes",
-      "Anticiper les besoins du marché de demain pour y répondre de manière responsable et engagée (RSE)",
-      "Impliquer des équipes transdisciplinaires dans une démarche collaborative",
-      "Centrer votre démarche sur les besoins de vos utilisateurs et/ou clients",
+      "Stimuler la créativité de vos équipes",
+      "Résoudre un problème complexe autrement",
+      "Faire émerger de nouvelles offres ou de nouveaux services",
+      "Impliquer vos collaborateurs dans l'innovation",
+      "Accélérer un projet innovant",
+      "Diffuser une culture de l'innovation",
     ],
     services: [
       {
@@ -263,12 +254,12 @@ export const pages: PageData[] = [
       },
       {
         title: "Design thinking",
-        description: "La parfaite combinaison entre la pensée design créative et la pensée rationnelle ! Le design thinking est un état d’esprit, une approche centrée sur l’humain qui vise à résoudre les problèmes complexes et à favoriser l’innovation de produits, de services ou un process.Nos facilitateurs certifiés favorisent la collaboration interdisciplinaire, l’empathie envers les utilisateurs et une approche itérative d’apprentissage et de développement de solutions.Ainsi, vous pourrez identifier et comprendre les besoins et les attentes des utilisateurs, générer des idées créatives et les tester rapidement afin de créer des solutions adaptées et une expérience utilisateur optimale.",
+        description: "Placer l'utilisateur au centre pour imaginer, tester et déployer des solutions réellement pertinentes.",
         image: "/images/services/design-thinking.jpg",
       },
       {
         title: "Facilitation",
-        description: "C’est le rôle de nos experts facilitateurs et facilitateurs graphiques : rendre facile ! Fluidifier les échanges lors des réunions, favoriser les phases d’émergence d’idées et la convergence vers des solutions partagées, être les garants du processus pour atteindre l’objectif visé. Nous intervenons pour créer un espace de collaboration où les idées de chacun seront valorisées, facilitant ainsi la résolution de problèmes et l’émergence de nouvelles solutions.",
+        description: "Animer vos ateliers et temps collectifs pour libérer la parole et faire émerger des décisions partagées.",
         image: "/images/services/facilitation.jpg",
       },
       {
@@ -283,7 +274,7 @@ export const pages: PageData[] = [
       },
       {
         title: "Accélération de projets innovants",
-        description: "L’innovation peut paraître paradoxale : comment aller vite en s’assurant que l’innovation sera adoptée ? Comment aller vers l’inconnu tout en sécurisant chacune des briques du projet ? L’innovation permet à vos équipes de « faire le pas de côté », penser autrement, se décentrer de leur projet (dans lesquelles elles sont parfois -trop- expertes), pour aller vers une démarche plus transversale, en intégrant des méthodes innovantes.L’objectif est de favoriser la collaboration entre services habituellement « silotés », débloquer les situations et décentrer les zones d’influence en permettant à l’équipe projet de se concentrer sur l’avenir…",
+        description: "Passer de l'idée à la réalité plus vite, en structurant et en dynamisant vos projets d'innovation.",
         image: "/images/services/acceleration-projets.jpg",
       },
       {
@@ -293,7 +284,7 @@ export const pages: PageData[] = [
       },
       {
         title: "Design de services et d’organisation",
-        description: "Créez des expériences cohérentes pour les usagers en repensant les services auxquels ils font appel. En s’intéressant aux besoins des usagers, à leurs attentes et aux points de rencontre, nos consultants en design de services vous aident à construire des parcours et des expériences utilisateurs de qualité, en interne comme en externe.",
+        description: "Concevoir des expériences et des organisations cohérentes, au service de vos clients et de vos équipes.",
         image: "/images/services/design-service.jpg",
       },
       {

@@ -22,6 +22,7 @@ import { TeamGrid } from "@/components/sections/TeamGrid";
 import { ArticlesGrid } from "@/components/sections/ArticlesGrid";
 import { Highlights } from "@/components/sections/Highlights";
 import { Method } from "@/components/sections/Method";
+import { Faq } from "@/components/sections/Faq";
 import { Parallax } from "@/components/ui/Parallax";
 import { pages, pageBySlug, getSiblings, type PageData } from "@/lib/pages";
 import { caseStudies } from "@/lib/data";
@@ -191,6 +192,7 @@ function ContentBody({ page }: { page: PageData }) {
       {page.highlights && page.highlights.length > 0 && (
         <Highlights items={page.highlights} />
       )}
+      {page.slug === "evenementiel-et-seminaires" && <Faq />}
 
       {hasRichBody ? (
         <>
@@ -272,15 +274,15 @@ function PdgSpotlight() {
             Le mot de la Présidente-Directrice Générale
           </p>
           <blockquote className="text-xl font-medium leading-relaxed text-white/90 sm:text-2xl">
-            «&nbsp;Chez SY&amp;CO, nous plaçons l’humain et l’intelligence
-            collective au cœur de chaque transformation. Notre mission&nbsp;:
-            accompagner les organisations marocaines vers un management plus
-            agile, plus collaboratif et durablement performant.&nbsp;»
+            «&nbsp;Un événement réussi, c’est une émotion partagée qui laisse une
+            trace. Chez SY&amp;CO, nous mettons l’humain, la créativité et
+            l’intelligence collective au service d’expériences qui rapprochent
+            les équipes — au Maroc comme à l’international.&nbsp;»
           </blockquote>
           <p className="mt-6 font-heading text-lg font-bold">
-            Présidente-Directrice Générale
+            Salma Bennani
             <span className="mt-0.5 block text-sm font-normal text-white/70">
-              SY&amp;CO — Event · Meet · Training
+              Présidente-Directrice Générale · SY&amp;CO
             </span>
           </p>
         </div>
