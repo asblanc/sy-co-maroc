@@ -1,15 +1,16 @@
 import Image from "next/image";
-import { Check } from "lucide-react";
 import { Reveal } from "@/components/ui/Reveal";
 
 type Service = { title: string; description: string; image?: string };
 
-/** "Vous avez besoin de…" — needs checklist band. */
+const accentColors = ["#097D7A", "#FD8B15", "#ED0F7D", "#1076DA"];
+
+/** "Vous avez besoin de…" — needs presented as accent-bar cards (no markers). */
 export function NeedsChecklist({ items }: { items: string[] }) {
   return (
     <section className="bg-peach/20 py-16 lg:py-24">
       <div className="container-narrow">
-        <Reveal className="mb-10 text-center">
+        <Reveal className="mb-12 text-center">
           <p className="font-heading text-sm font-bold uppercase tracking-widest text-orange">
             Vous avez
           </p>
@@ -17,19 +18,24 @@ export function NeedsChecklist({ items }: { items: string[] }) {
             besoin de…
           </h2>
         </Reveal>
-        <ul className="mx-auto grid max-w-4xl gap-4 sm:grid-cols-2">
-          {items.map((item) => (
-            <li
+
+        <div className="grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
+          {items.map((item, i) => (
+            <Reveal
               key={item}
-              className="flex items-start gap-3 rounded-2xl bg-white p-5 shadow-sm"
+              delay={(i % 3) * 0.06}
+              className="group relative overflow-hidden rounded-2xl bg-white p-6 pl-7 shadow-sm transition-all duration-300 hover:-translate-y-1 hover:shadow-lg"
             >
-              <span className="mt-0.5 flex h-6 w-6 shrink-0 items-center justify-center rounded-full bg-teal text-white">
-                <Check className="h-3.5 w-3.5" strokeWidth={3} />
-              </span>
-              <span className="text-base text-ink/80">{item}</span>
-            </li>
+              <span
+                className="absolute left-0 top-0 h-full w-1.5 transition-all duration-300 group-hover:w-2.5"
+                style={{ backgroundColor: accentColors[i % accentColors.length] }}
+              />
+              <p className="font-heading text-base font-semibold leading-snug text-ink/85">
+                {item}
+              </p>
+            </Reveal>
           ))}
-        </ul>
+        </div>
       </div>
     </section>
   );

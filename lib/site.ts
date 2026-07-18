@@ -54,7 +54,7 @@ export const siteConfig = {
   ],
   contact: {
     email: "contact@sy-co.ma",
-    phone: "+212522220000",
+    phone: "+212699820570",
     addressLocality: "Casablanca",
     country: "MA",
     streetAddress: "Boulevard d'Anfa, Twin Center",

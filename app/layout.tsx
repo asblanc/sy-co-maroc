@@ -58,7 +58,6 @@ export const metadata: Metadata = {
     description: siteConfig.description,
     images: [siteConfig.ogImage],
   },
-  icons: { icon: "/icon.png", apple: "/icon.png" },
   category: "business",
 };
 

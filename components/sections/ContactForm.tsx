@@ -102,7 +102,7 @@ export function ContactForm() {
             <li className="flex items-center gap-3">
               <Phone className="h-5 w-5 shrink-0 text-orange" />
               <a
-                href={`tel:${contactInfo.phone.replace(/\s/g, "")}`}
+                href={`tel:${contactInfo.phone.replace(/[^+\d]/g, "")}`}
                 className="hover:text-orange"
               >
                 {contactInfo.phone}

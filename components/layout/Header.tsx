@@ -3,17 +3,23 @@
 import { useEffect, useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
-import { ChevronDown, Menu, X } from "lucide-react";
+import { usePathname } from "next/navigation";
+import { ChevronDown, Menu, Phone, X } from "lucide-react";
 import { AnimatePresence, motion } from "framer-motion";
 import { TopBar } from "./TopBar";
 import { Button } from "@/components/ui/Button";
-import { megaMenu, navLinks } from "@/lib/data";
+import { megaMenu, navLinks, contactInfo } from "@/lib/data";
 import { cn } from "@/lib/utils";
+
+const dotColors = ["#097D7A", "#FD8B15", "#ED0F7D"];
 
 export function Header() {
   const [scrolled, setScrolled] = useState(false);
   const [mobileOpen, setMobileOpen] = useState(false);
   const [expertisesOpen, setExpertisesOpen] = useState(false);
+  const pathname = usePathname();
+  const expertiseHrefs = megaMenu.flatMap((c) => c.children.map((x) => x.href));
+  const isExpertiseActive = expertiseHrefs.includes(pathname);
 
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 20);
@@ -51,26 +57,40 @@ export function Header() {
           </Link>
 
           {/* Desktop nav */}
-          <nav className="hidden items-center gap-7 lg:flex">
+          <nav className="hidden items-center gap-1 lg:flex">
             <div className="group relative">
-              <button className="flex items-center gap-1 font-heading text-[15px] font-bold text-ink transition-colors group-hover:text-teal">
+              <button
+                className={cn(
+                  "flex items-center gap-1 rounded-full px-3 py-2 font-heading text-[15px] font-bold transition-colors",
+                  isExpertiseActive ? "text-teal" : "text-ink group-hover:text-teal"
+                )}
+              >
                 Nos expertises
                 <ChevronDown className="h-4 w-4 transition-transform duration-300 group-hover:rotate-180" />
               </button>
               {/* Mega menu */}
-              <div className="invisible absolute left-1/2 top-full z-50 w-[720px] -translate-x-1/2 translate-y-2 pt-4 opacity-0 transition-all duration-300 group-hover:visible group-hover:translate-y-0 group-hover:opacity-100">
-                <div className="grid grid-cols-3 gap-6 rounded-2xl border border-black/5 bg-white p-7 shadow-xl">
-                  {megaMenu.map((col) => (
+              <div className="invisible absolute left-1/2 top-full z-50 w-[760px] -translate-x-1/2 translate-y-2 pt-4 opacity-0 transition-all duration-300 group-hover:visible group-hover:translate-y-0 group-hover:opacity-100">
+                <div className="grid grid-cols-3 gap-4 rounded-2xl border border-black/5 bg-white p-6 shadow-2xl">
+                  {megaMenu.map((col, ci) => (
                     <div key={col.title}>
-                      <h4 className="mb-3 font-heading text-sm font-bold uppercase tracking-wide text-teal">
+                      <h4 className="mb-3 flex items-center gap-2 font-heading text-sm font-bold uppercase tracking-wide text-teal">
+                        <span
+                          className="h-2.5 w-2.5 rounded-full"
+                          style={{ backgroundColor: dotColors[ci % dotColors.length] }}
+                        />
                         {col.title}
                       </h4>
-                      <ul className="space-y-2">
+                      <ul className="space-y-1">
                         {col.children.map((child) => (
                           <li key={child.label}>
                             <Link
                               href={child.href}
-                              className="block text-sm leading-snug text-ink/80 transition-colors hover:text-pink"
+                              className={cn(
+                                "block rounded-xl px-3 py-2 text-sm leading-snug transition-colors hover:bg-teal/5 hover:text-teal",
+                                pathname === child.href
+                                  ? "bg-teal/5 font-semibold text-teal"
+                                  : "text-ink/80"
+                              )}
                             >
                               {child.label}
                             </Link>
@@ -83,17 +103,33 @@ export function Header() {
               </div>
             </div>
 
-            {navLinks.map((link) => (
-              <Link
-                key={link.label}
-                href={link.href}
-                className="font-heading text-[15px] font-bold text-ink transition-colors hover:text-teal"
-              >
-                {link.label}
-              </Link>
-            ))}
+            {navLinks.map((link) => {
+              const active = pathname === link.href;
+              return (
+                <Link
+                  key={link.label}
+                  href={link.href}
+                  className={cn(
+                    "relative rounded-full px-3 py-2 font-heading text-[15px] font-bold transition-colors after:absolute after:bottom-1 after:left-3 after:h-0.5 after:rounded-full after:bg-orange after:transition-all after:duration-300 hover:text-teal",
+                    active
+                      ? "text-teal after:w-[calc(100%-1.5rem)]"
+                      : "text-ink after:w-0 hover:after:w-[calc(100%-1.5rem)]"
+                  )}
+                >
+                  {link.label}
+                </Link>
+              );
+            })}
 
-            <Button href="/contact" variant="pink" size="sm">
+            <a
+              href={`tel:${contactInfo.phone.replace(/[^+\d]/g, "")}`}
+              className="ml-2 flex items-center gap-2 rounded-full border border-teal/20 px-3 py-2 text-sm font-semibold text-teal transition-colors hover:bg-teal/5"
+            >
+              <Phone className="h-4 w-4" />
+              <span className="hidden xl:inline">{contactInfo.phone}</span>
+            </a>
+
+            <Button href="/contact" variant="pink" size="sm" className="ml-1">
               Contact
             </Button>
           </nav>

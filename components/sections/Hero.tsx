@@ -59,18 +59,32 @@ export function Hero() {
           initial={{ opacity: 0, scale: 0.94 }}
           animate={{ opacity: 1, scale: 1 }}
           transition={{ duration: 0.8, delay: 0.4 }}
-          className="relative mx-auto w-full max-w-[480px]"
+          className="relative mx-auto w-[86%] max-w-[440px]"
         >
-          {/* decorative "bubble" shapes behind the photo */}
-          <span className="blob-arch absolute -right-8 -top-10 z-0 hidden h-52 w-52 bg-pink/90 sm:block" />
-          <span className="absolute -left-8 bottom-4 z-0 h-40 w-40 rounded-full bg-orange" />
-          <div className="relative h-[360px] overflow-hidden rounded-[2.25rem] shadow-2xl sm:h-[440px]">
+          {/* decorative shapes — sit clearly outside the photo */}
+          <motion.span
+            aria-hidden
+            className="absolute -right-10 -top-12 z-0 h-32 w-32 rounded-full bg-orange shadow-lg sm:h-40 sm:w-40"
+            animate={{ y: [0, -14, 0] }}
+            transition={{ duration: 6, repeat: Infinity, ease: "easeInOut" }}
+          />
+          <motion.span
+            aria-hidden
+            className="blob-arch absolute -bottom-12 -left-12 z-0 h-36 w-36 bg-pink/90 shadow-lg sm:h-44 sm:w-44"
+            animate={{ y: [0, 12, 0] }}
+            transition={{ duration: 7, repeat: Infinity, ease: "easeInOut" }}
+          />
+          <span
+            aria-hidden
+            className="absolute -bottom-4 right-6 z-0 h-8 w-8 rounded-full border-4 border-white/70"
+          />
+          <div className="relative z-10 h-[340px] overflow-hidden rounded-[2.25rem] shadow-2xl sm:h-[440px]">
             <Image
               src="/images/hero-team1.jpg"
               alt="L'équipe SY&CO"
               fill
               priority
-              sizes="(max-width: 1024px) 90vw, 480px"
+              sizes="(max-width: 1024px) 86vw, 440px"
               className="object-cover"
             />
           </div>

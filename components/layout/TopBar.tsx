@@ -7,7 +7,7 @@ export function TopBar() {
     <div className="hidden bg-teal text-white lg:block">
       <div className="container-narrow flex h-10 items-center justify-end gap-8 text-sm">
         <a
-          href={`tel:${contactInfo.phone.replace(/\s/g, "")}`}
+          href={`tel:${contactInfo.phone.replace(/[^+\d]/g, "")}`}
           className="flex items-center gap-2 transition-colors hover:text-orange"
         >
           <Phone className="h-4 w-4" strokeWidth={2.2} />

@@ -7,6 +7,7 @@ import { ArrowLeft, ArrowRight } from "lucide-react";
 import { Header } from "@/components/layout/Header";
 import { Footer } from "@/components/layout/Footer";
 import { PageHero } from "@/components/layout/PageHero";
+import { PageNav } from "@/components/layout/PageNav";
 import { Prose } from "@/components/ui/Prose";
 import { Button } from "@/components/ui/Button";
 import { CaseStudies } from "@/components/sections/CaseStudies";
@@ -22,7 +23,7 @@ import { ArticlesGrid } from "@/components/sections/ArticlesGrid";
 import { Highlights } from "@/components/sections/Highlights";
 import { Method } from "@/components/sections/Method";
 import { Parallax } from "@/components/ui/Parallax";
-import { pages, pageBySlug, type PageData } from "@/lib/pages";
+import { pages, pageBySlug, getSiblings, type PageData } from "@/lib/pages";
 import { caseStudies } from "@/lib/data";
 
 export function generateStaticParams() {
@@ -61,6 +62,8 @@ export default async function DynamicPage({
   const page = pageBySlug(slug);
   if (!page) notFound();
 
+  const { prev, next } = getSiblings(page.slug);
+
   return (
     <>
       <Header />
@@ -70,6 +73,7 @@ export default async function DynamicPage({
         image={page.heroImage}
       />
       <main>{renderBody(page)}</main>
+      <PageNav prev={prev} next={next} />
       <Footer />
     </>
   );

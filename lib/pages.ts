@@ -67,6 +67,7 @@ export const pages: PageData[] = [
       {
         title: "Pilotage de projet de transformation et conseil",
         description: "Pour faciliter la transformation de votre organisation, nous vous accompagnons dans la planification, l’exécution et la gestion des étape décisives : définition des KPI de transformation et suivi, mobilisation des ressources nécessaires, mise en œuvre des changements et gestion du processus de manière itérative. Tout au long du processus, les consultants de SY&CO sont présents pour impliquer les parties prenantes, communiquer de manière efficace, réadapter le dispositif au besoin et évaluer régulièrement avec vous les progrès réalisés.",
+        image: "/images/services/pilotage-projet.jpg",
       },
       {
         title: "Accompagnement et conduite du changement",
@@ -240,33 +241,37 @@ export const pages: PageData[] = [
       {
         title: "Facilitation",
         description: "C’est le rôle de nos experts facilitateurs et facilitateurs graphiques : rendre facile ! Fluidifier les échanges lors des réunions, favoriser les phases d’émergence d’idées et la convergence vers des solutions partagées, être les garants du processus pour atteindre l’objectif visé. Nous intervenons pour créer un espace de collaboration où les idées de chacun seront valorisées, facilitant ainsi la résolution de problèmes et l’émergence de nouvelles solutions.",
+        image: "/images/services/facilitation.jpg",
       },
       {
         title: "Ateliers créatifs et codesign collaboratif",
         description: "Mobiliser l'intelligence collective pour générer des idées et co-construire des solutions concrètes.",
+        image: "/images/services/ateliers-creatifs.jpg",
       },
       {
         title: "Management de l’innovation",
         description: "Structurer et piloter votre démarche d'innovation, de l'idée jusqu'à sa mise en œuvre.",
+        image: "/images/services/management-innovation.jpg",
       },
       {
         title: "Accélération de projets innovants",
         description: "L’innovation peut paraître paradoxale : comment aller vite en s’assurant que l’innovation sera adoptée ? Comment aller vers l’inconnu tout en sécurisant chacune des briques du projet ? L’innovation permet à vos équipes de « faire le pas de côté », penser autrement, se décentrer de leur projet (dans lesquelles elles sont parfois -trop- expertes), pour aller vers une démarche plus transversale, en intégrant des méthodes innovantes.L’objectif est de favoriser la collaboration entre services habituellement « silotés », débloquer les situations et décentrer les zones d’influence en permettant à l’équipe projet de se concentrer sur l’avenir…",
+        image: "/images/services/acceleration-projets.jpg",
       },
       {
         title: "Design de processus",
         description: "Cartographier et optimiser vos processus pour gagner en fluidité, en efficacité et en qualité.",
-        image: "/images/services/Design-de-processus.jpg",
+        image: "/images/services/design-processus-innov.jpg",
       },
       {
         title: "Design de services et d’organisation",
         description: "Créez des expériences cohérentes pour les usagers en repensant les services auxquels ils font appel. En s’intéressant aux besoins des usagers, à leurs attentes et aux points de rencontre, nos consultants en design de services vous aident à construire des parcours et des expériences utilisateurs de qualité, en interne comme en externe.",
-        image: "/images/services/Design-de-processus.jpg",
+        image: "/images/services/design-service.jpg",
       },
       {
         title: "Diagnostic de capacité d’innovation",
         description: "Évaluer la maturité de votre organisation en matière d'innovation et identifier vos axes de progrès.",
-        image: "/images/services/diagnostic-de-formation.jpg",
+        image: "/images/services/diagnostic-innovation.jpg",
       },
     ],
     heroImage: "/images/pages/header-innovation.jpg",
@@ -565,3 +570,37 @@ export const pages: PageData[] = [
 
 export const pageBySlug = (slug: string) =>
   pages.find((p) => p.slug === slug);
+
+/** Ordered sequences for previous/next in-page navigation. */
+export const expertiseNavOrder = [
+  "transformation-des-organisations",
+  "strategie-et-gouvernance",
+  "seminaires-de-cohesion-dequipe",
+  "developpement-des-competences-manageriales",
+  "innovation-et-codesign",
+  "notre-methode-iddea",
+  "parcours-de-formation-sur-mesure",
+  "lancer-son-projet-grace-au-seminaire-kick-off",
+  "everything-disc",
+];
+
+export const caseNavOrder = [
+  "comment-reussir-son-seminaire-a-distance",
+  "decouverte-de-lintelligence-emotionnelle",
+  "ateliers-et-seminaires-au-service-de-lexperience-collaborateur",
+  "accompagner-a-distance-le-changement-de-posture-des-managers",
+];
+
+export function getSiblings(slug: string) {
+  const order = expertiseNavOrder.includes(slug)
+    ? expertiseNavOrder
+    : caseNavOrder.includes(slug)
+      ? caseNavOrder
+      : null;
+  if (!order) return { prev: null, next: null };
+  const i = order.indexOf(slug);
+  const prev = i > 0 ? pageBySlug(order[i - 1]) ?? null : null;
+  const next =
+    i < order.length - 1 ? pageBySlug(order[i + 1]) ?? null : null;
+  return { prev, next };
+}

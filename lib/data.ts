@@ -229,7 +229,7 @@ export const partners: Partner[] = [
 ];
 
 export const contactInfo = {
-  phone: "+212 522 22 00 00",
+  phone: "+212 699-820570",
   address: "Boulevard d'Anfa, Twin Center",
   city: "20100 Casablanca, Maroc",
   reach: "Casablanca, Rabat, Marrakech, Tanger",
