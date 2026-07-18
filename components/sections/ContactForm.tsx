@@ -5,13 +5,33 @@ import { Phone, MapPin, Mail, Send, CheckCircle2 } from "lucide-react";
 import { contactInfo } from "@/lib/data";
 import { Button } from "@/components/ui/Button";
 
-/** Contact page form + coordinates. Client-side validation only (demo). */
+/** Contact page form + coordinates. Submits to the /api/contact route. */
 export function ContactForm() {
   const [sent, setSent] = useState(false);
+  const [submitting, setSubmitting] = useState(false);
+  const [error, setError] = useState<string | null>(null);
 
-  const onSubmit = (e: React.FormEvent<HTMLFormElement>) => {
+  const onSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
-    setSent(true);
+    setSubmitting(true);
+    setError(null);
+    const form = e.currentTarget;
+    const data = Object.fromEntries(new FormData(form).entries());
+    try {
+      const res = await fetch("/api/contact", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(data),
+      });
+      if (!res.ok) throw new Error("failed");
+      setSent(true);
+    } catch {
+      setError(
+        "Une erreur est survenue. Merci de réessayer ou de nous écrire à contact@sy-co.ma."
+      );
+    } finally {
+      setSubmitting(false);
+    }
   };
 
   return (
@@ -52,9 +72,14 @@ export function ContactForm() {
                 className="w-full rounded-xl border border-black/10 px-4 py-3 text-sm outline-none transition-colors focus:border-teal focus:ring-2 focus:ring-teal/20"
               />
             </div>
+            {error && (
+              <p className="sm:col-span-2 rounded-xl bg-pink/10 px-4 py-3 text-sm text-pink">
+                {error}
+              </p>
+            )}
             <div className="sm:col-span-2">
-              <Button type="submit" variant="pink" size="lg">
-                Envoyer <Send className="h-4 w-4" />
+              <Button type="submit" variant="pink" size="lg" disabled={submitting}>
+                {submitting ? "Envoi…" : "Envoyer"} <Send className="h-4 w-4" />
               </Button>
             </div>
           </form>
