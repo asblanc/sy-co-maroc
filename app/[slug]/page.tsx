@@ -1,0 +1,373 @@
+import Image from "next/image";
+import Link from "next/link";
+import { notFound } from "next/navigation";
+import type { Metadata } from "next";
+import { ArrowLeft, ArrowRight } from "lucide-react";
+
+import { Header } from "@/components/layout/Header";
+import { Footer } from "@/components/layout/Footer";
+import { PageHero } from "@/components/layout/PageHero";
+import { Prose } from "@/components/ui/Prose";
+import { Button } from "@/components/ui/Button";
+import { CaseStudies } from "@/components/sections/CaseStudies";
+import { Clients } from "@/components/sections/Clients";
+import { ContactForm } from "@/components/sections/ContactForm";
+import { ContactCTA } from "@/components/sections/ContactCTA";
+import {
+  NeedsChecklist,
+  ServicesGrid,
+} from "@/components/sections/ExpertiseSections";
+import { TeamGrid } from "@/components/sections/TeamGrid";
+import { ArticlesGrid } from "@/components/sections/ArticlesGrid";
+import { Parallax } from "@/components/ui/Parallax";
+import { pages, pageBySlug, type PageData } from "@/lib/pages";
+import { caseStudies } from "@/lib/data";
+
+export function generateStaticParams() {
+  return pages.map((p) => ({ slug: p.slug }));
+}
+
+export async function generateMetadata({
+  params,
+}: {
+  params: Promise<{ slug: string }>;
+}): Promise<Metadata> {
+  const { slug } = await params;
+  const page = pageBySlug(slug);
+  if (!page) return {};
+  const ogImage = page.heroImage || page.introImage || page.image;
+  return {
+    title: page.h1,
+    description: page.description || undefined,
+    alternates: { canonical: `/${page.slug}` },
+    openGraph: {
+      type: "article",
+      title: page.h1,
+      description: page.description || undefined,
+      url: `/${page.slug}`,
+      images: ogImage ? [{ url: ogImage }] : undefined,
+    },
+  };
+}
+
+export default async function DynamicPage({
+  params,
+}: {
+  params: Promise<{ slug: string }>;
+}) {
+  const { slug } = await params;
+  const page = pageBySlug(slug);
+  if (!page) notFound();
+
+  return (
+    <>
+      <Header />
+      <PageHero
+        title={page.h1}
+        category={page.category}
+        image={page.heroImage}
+      />
+      <main>{renderBody(page)}</main>
+      <Footer />
+    </>
+  );
+}
+
+/* ---------- body templates by page type ---------- */
+
+function renderBody(page: PageData) {
+  switch (page.type) {
+    case "cases-index":
+      return <CasesIndexBody page={page} />;
+    case "case-detail":
+      return <CaseDetailBody page={page} />;
+    case "about":
+      return <AboutBody page={page} />;
+    case "articles":
+      return <ArticlesBody />;
+    case "contact":
+      return <ContactBody page={page} />;
+    case "legal":
+      return <LegalBody page={page} />;
+    default:
+      return <ContentBody page={page} />;
+  }
+}
+
+function ContactCta() {
+  return (
+    <div className="mt-12 flex flex-wrap items-center gap-4 rounded-3xl bg-peach/25 p-8">
+      <p className="flex-1 font-heading text-lg font-bold text-teal">
+        Envie d’en savoir plus sur cette expertise&nbsp;?
+      </p>
+      <Button href="/contact" variant="pink" size="lg">
+        Contactez-nous
+      </Button>
+    </div>
+  );
+}
+
+function IntroBlock({ page }: { page: PageData }) {
+  return (
+    <section className="bg-white py-16 lg:py-24">
+      <div className="container-narrow grid items-center gap-12 lg:grid-cols-2">
+        {/* colored square with circular image */}
+        <div className="relative order-2 lg:order-1">
+          <Parallax offset={28}>
+            <div className="relative mx-auto aspect-square w-full max-w-[440px] rounded-[2rem] bg-orange/90">
+              <div className="absolute inset-6 overflow-hidden rounded-full shadow-xl">
+                <Image
+                  src={page.introImage!}
+                  alt={page.h1}
+                  fill
+                  sizes="(max-width: 1024px) 90vw, 440px"
+                  className="object-cover"
+                />
+              </div>
+            </div>
+          </Parallax>
+        </div>
+
+        {/* colorful heading + subheading + text */}
+        <div className="order-1 lg:order-2">
+          <h2 className="bg-gradient-to-r from-pink via-orange to-teal bg-clip-text text-3xl font-bold uppercase leading-tight text-transparent sm:text-4xl">
+            {page.introHeading}
+          </h2>
+          {page.introSubheading && (
+            <p className="mt-1 font-heading text-2xl font-bold text-teal sm:text-3xl">
+              {page.introSubheading}
+            </p>
+          )}
+          <div className="mt-6">
+            <Prose paragraphs={page.paragraphs} />
+          </div>
+        </div>
+      </div>
+    </section>
+  );
+}
+
+function ContentBody({ page }: { page: PageData }) {
+  const hasIntro = Boolean(page.introHeading && page.introImage);
+  const isExpertise = Boolean(page.services && page.services.length);
+
+  return (
+    <>
+      {hasIntro ? (
+        <IntroBlock page={page} />
+      ) : (
+        <section className="bg-white py-16 lg:py-24">
+          <div className="container-narrow max-w-3xl">
+            <Prose paragraphs={page.paragraphs} />
+          </div>
+        </section>
+      )}
+
+      {page.needs && page.needs.length > 0 && (
+        <NeedsChecklist items={page.needs} />
+      )}
+      {page.services && page.services.length > 0 && (
+        <ServicesGrid services={page.services} />
+      )}
+
+      {isExpertise ? (
+        <>
+          <CaseStudies />
+          <ContactCTA />
+        </>
+      ) : (
+        <section className="bg-white pb-16 lg:pb-24">
+          <div className="container-narrow max-w-4xl">
+            <ContactCta />
+          </div>
+        </section>
+      )}
+    </>
+  );
+}
+
+function LegalBody({ page }: { page: PageData }) {
+  return (
+    <section className="bg-white py-16 lg:py-24">
+      <div className="container-narrow max-w-3xl">
+        <Prose paragraphs={page.paragraphs} />
+      </div>
+    </section>
+  );
+}
+
+function AboutBody({ page }: { page: PageData }) {
+  return (
+    <>
+      <section className="bg-white py-16 lg:py-24">
+        <div className="container-narrow grid items-center gap-12 lg:grid-cols-2">
+          <div>
+            <h2 className="mb-6 font-heading text-2xl font-bold text-teal sm:text-3xl">
+              Notre philosophie
+            </h2>
+            <Prose paragraphs={page.paragraphs} />
+          </div>
+          <div className="relative">
+            <span className="absolute -right-5 -top-5 -z-0 h-28 w-28 rounded-3xl bg-orange/60" />
+            <div className="relative overflow-hidden rounded-[2rem] shadow-xl">
+              <Image
+                src="/images/equipe1.jpg"
+                alt="L'équipe SY&CO"
+                width={620}
+                height={460}
+                className="h-full w-full object-cover"
+              />
+            </div>
+          </div>
+        </div>
+      </section>
+      <TeamGrid />
+      <Clients />
+    </>
+  );
+}
+
+function ArticlesBody() {
+  return <ArticlesGrid />;
+}
+
+function ContactBody({ page }: { page: PageData }) {
+  return (
+    <section className="bg-white py-16 lg:py-24">
+      <div className="container-narrow">
+        <ContactForm />
+        {page.paragraphs.length > 1 && (
+          <p className="mt-10 text-center text-sm text-ink/60">
+            {page.paragraphs[0]}
+          </p>
+        )}
+      </div>
+    </section>
+  );
+}
+
+function CasesIndexBody({ page }: { page: PageData }) {
+  return (
+    <>
+      <section className="bg-white pt-16 lg:pt-24">
+        <div className="container-narrow max-w-3xl">
+          <Prose paragraphs={page.paragraphs.slice(0, 1)} />
+        </div>
+      </section>
+
+      <section className="bg-white py-14">
+        <div className="container-narrow grid gap-8 sm:grid-cols-2 lg:grid-cols-2">
+          {caseStudies.map((cs) => (
+            <article
+              key={cs.title}
+              className="group flex flex-col overflow-hidden rounded-3xl border border-black/5 bg-white shadow-sm transition-all duration-300 hover:-translate-y-1.5 hover:shadow-xl"
+            >
+              <Link
+                href={cs.href}
+                className="relative block h-56 overflow-hidden"
+              >
+                <Image
+                  src={cs.image}
+                  alt={cs.title}
+                  fill
+                  sizes="(max-width: 768px) 100vw, 50vw"
+                  className="object-cover transition-transform duration-500 group-hover:scale-105"
+                />
+                {cs.tag && (
+                  <span className="absolute left-4 top-4 rounded-full bg-pink px-3 py-1 text-xs font-bold uppercase text-white">
+                    {cs.tag}
+                  </span>
+                )}
+              </Link>
+              <div className="flex flex-1 flex-col p-7">
+                <p className="mb-3 text-xs font-bold uppercase tracking-wide text-teal">
+                  {cs.category}
+                </p>
+                <h3 className="mb-6 flex-1 font-heading text-lg font-bold leading-snug text-ink">
+                  {cs.title}
+                </h3>
+                <Link
+                  href={cs.href}
+                  className="inline-flex items-center gap-2 self-start font-heading text-sm font-bold uppercase tracking-wide text-pink transition-colors hover:text-teal"
+                >
+                  En savoir <ArrowRight className="h-4 w-4" />
+                </Link>
+              </div>
+            </article>
+          ))}
+        </div>
+      </section>
+      <Clients />
+    </>
+  );
+}
+
+function CaseDetailBody({ page }: { page: PageData }) {
+  const [metaPara, ...rest] = page.paragraphs;
+  const meta = parseMeta(metaPara ?? "");
+  const body = meta.length ? rest : page.paragraphs;
+
+  return (
+    <>
+      <section className="bg-white py-16 lg:py-24">
+        <div className="container-narrow grid gap-12 lg:grid-cols-[1.4fr_1fr]">
+          <div>
+            {page.image && (
+              <div className="mb-10 overflow-hidden rounded-[2rem] shadow-xl">
+                <Image
+                  src={page.image}
+                  alt={page.h1}
+                  width={860}
+                  height={480}
+                  className="h-full w-full object-cover"
+                />
+              </div>
+            )}
+            <Prose paragraphs={body} />
+            <div className="mt-10">
+              <Button href="/nos-cas-clients" variant="outline">
+                <ArrowLeft className="h-4 w-4" /> Tous les cas clients
+              </Button>
+            </div>
+          </div>
+
+          <aside className="h-fit rounded-3xl bg-teal p-8 text-white lg:sticky lg:top-28">
+            <h3 className="mb-6 font-heading text-lg font-bold">
+              Le projet en bref
+            </h3>
+            <dl className="space-y-4 text-sm">
+              {meta.length ? (
+                meta.map((m) => (
+                  <div key={m.label}>
+                    <dt className="font-bold text-orange">{m.label}</dt>
+                    <dd className="text-white/90">{m.value}</dd>
+                  </div>
+                ))
+              ) : (
+                <p className="text-white/90">{page.category}</p>
+              )}
+            </dl>
+          </aside>
+        </div>
+      </section>
+    </>
+  );
+}
+
+/* Parse "Structure : … Secteur : … Effectif : … Mission : …" into pairs. */
+function parseMeta(text: string): { label: string; value: string }[] {
+  const labels = ["Structure", "Secteur", "Effectif", "Mission"];
+  const found: { label: string; value: string }[] = [];
+  const positions = labels
+    .map((l) => ({ l, i: text.indexOf(l + " :") }))
+    .filter((p) => p.i >= 0)
+    .sort((a, b) => a.i - b.i);
+
+  positions.forEach((p, idx) => {
+    const start = p.i + (p.l + " :").length;
+    const end =
+      idx + 1 < positions.length ? positions[idx + 1].i : text.length;
+    found.push({ label: p.l, value: text.slice(start, end).trim() });
+  });
+  return found;
+}
