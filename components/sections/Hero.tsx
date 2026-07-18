@@ -2,6 +2,7 @@
 
 import Image from "next/image";
 import { motion } from "framer-motion";
+import { TrustSeal } from "@/components/ui/TrustSeal";
 
 /**
  * Above-the-fold hero: a full-color band in the SY&CO logo green, white
@@ -42,17 +43,14 @@ export function Hero() {
             initial={{ opacity: 0, scale: 0.9 }}
             animate={{ opacity: 1, scale: 1 }}
             transition={{ duration: 0.6, delay: 0.6 }}
-            className="mt-8 flex justify-center lg:justify-start"
+            className="mt-8 flex items-center justify-center gap-4 lg:justify-start"
           >
-            <div className="rounded-xl bg-white p-3 shadow-lg">
-              <Image
-                src="/images/happyatwork.png"
-                alt="Certification HappyAtWork 2025"
-                width={280}
-                height={140}
-                className="h-auto w-[220px]"
-              />
+            <div className="rounded-full bg-white p-2 shadow-lg">
+              <TrustSeal variant="confiance" className="w-[104px]" />
             </div>
+            <p className="max-w-[180px] text-left text-sm font-semibold text-white/90">
+              La confiance de nos clients, notre meilleure référence.
+            </p>
           </motion.div>
         </div>
 

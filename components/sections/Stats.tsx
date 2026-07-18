@@ -1,6 +1,6 @@
 "use client";
 
-import Image from "next/image";
+import { TrustSeal } from "@/components/ui/TrustSeal";
 import { ExternalLink } from "lucide-react";
 import { stats } from "@/lib/data";
 import { useCountUp } from "@/hooks/useCountUp";
@@ -63,24 +63,12 @@ export function Stats() {
           ))}
         </div>
 
-        <div className="mt-16 flex flex-wrap items-center justify-center gap-6">
-          <div className="rounded-2xl bg-white/95 p-4">
-            <Image
-              src="/images/qualiopi.png"
-              alt="Certification Qualiopi"
-              width={120}
-              height={72}
-              className="h-16 w-auto object-contain"
-            />
+        <div className="mt-16 flex flex-wrap items-center justify-center gap-8">
+          <div className="rounded-full bg-white/95 p-3">
+            <TrustSeal variant="confiance" className="w-24" />
           </div>
-          <div className="rounded-2xl bg-white/95 p-4">
-            <Image
-              src="/images/happyatwork.png"
-              alt="HappyAtWork 2025"
-              width={120}
-              height={72}
-              className="h-16 w-auto object-contain"
-            />
+          <div className="rounded-full bg-white/95 p-3">
+            <TrustSeal variant="qualite" className="w-24" />
           </div>
         </div>
       </div>

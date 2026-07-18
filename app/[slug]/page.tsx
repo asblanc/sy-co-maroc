@@ -221,9 +221,49 @@ function AboutBody({ page }: { page: PageData }) {
           </div>
         </div>
       </section>
+      <PdgSpotlight />
       <TeamGrid />
       <Clients />
     </>
+  );
+}
+
+function PdgSpotlight() {
+  return (
+    <section className="bg-teal py-16 text-white lg:py-24">
+      <div className="container-narrow grid items-center gap-12 lg:grid-cols-[0.9fr_1.1fr]">
+        <div className="relative mx-auto w-full max-w-[380px]">
+          <span className="absolute -left-5 -top-5 z-0 h-28 w-28 rounded-full bg-orange" />
+          <div className="blob-b relative aspect-square overflow-hidden shadow-2xl">
+            <Image
+              src="/images/team/pdg.jpg"
+              alt="Présidente-Directrice Générale de SY&CO"
+              fill
+              sizes="(max-width: 1024px) 90vw, 380px"
+              className="object-cover"
+            />
+          </div>
+        </div>
+
+        <div>
+          <p className="mb-3 font-heading text-sm font-bold uppercase tracking-widest text-orange">
+            Le mot de la Présidente-Directrice Générale
+          </p>
+          <blockquote className="text-xl font-medium leading-relaxed text-white/90 sm:text-2xl">
+            «&nbsp;Chez SY&amp;CO, nous plaçons l’humain et l’intelligence
+            collective au cœur de chaque transformation. Notre mission&nbsp;:
+            accompagner les organisations marocaines vers un management plus
+            agile, plus collaboratif et durablement performant.&nbsp;»
+          </blockquote>
+          <p className="mt-6 font-heading text-lg font-bold">
+            Présidente-Directrice Générale
+            <span className="mt-0.5 block text-sm font-normal text-white/70">
+              SY&amp;CO — Event · Meet · Training
+            </span>
+          </p>
+        </div>
+      </div>
+    </section>
   );
 }
 

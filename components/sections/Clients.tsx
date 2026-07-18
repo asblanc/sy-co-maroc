@@ -1,7 +1,11 @@
+import Image from "next/image";
 import { partners } from "@/lib/data";
 import { Reveal } from "@/components/ui/Reveal";
 
-/** Infinite partner marquee — Moroccan companies rendered as styled wordmarks. */
+/**
+ * Infinite partner marquee. Displays the official logo when a file is provided
+ * in /public/images/clients/, otherwise a clean branded wordmark tile.
+ */
 export function Clients() {
   const loop = [...partners, ...partners];
 
@@ -18,14 +22,24 @@ export function Clients() {
 
       <div className="marquee-mask relative overflow-hidden">
         <div className="flex w-max animate-marquee items-center gap-6">
-          {loop.map((name, i) => (
+          {loop.map((partner, i) => (
             <div
-              key={`${name}-${i}`}
-              className="flex h-16 shrink-0 items-center justify-center whitespace-nowrap rounded-2xl border border-teal/15 bg-teal/[0.04] px-7"
+              key={`${partner.name}-${i}`}
+              className="flex h-20 w-40 shrink-0 items-center justify-center rounded-2xl border border-teal/10 bg-white px-6 shadow-sm"
             >
-              <span className="font-heading text-lg font-bold tracking-tight text-teal/80">
-                {name}
-              </span>
+              {partner.logo ? (
+                <Image
+                  src={partner.logo}
+                  alt={partner.name}
+                  width={140}
+                  height={64}
+                  className="max-h-12 w-auto object-contain grayscale transition-all duration-300 hover:grayscale-0"
+                />
+              ) : (
+                <span className="text-center font-heading text-base font-bold leading-tight tracking-tight text-teal/80">
+                  {partner.name}
+                </span>
+              )}
             </div>
           ))}
         </div>

@@ -2,6 +2,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { Linkedin, Phone, MapPin } from "lucide-react";
 import { Button } from "@/components/ui/Button";
+import { TrustSeal } from "@/components/ui/TrustSeal";
 import {
   contactInfo,
   footerExpertises,
@@ -88,21 +89,9 @@ export function Footer() {
             >
               <Linkedin className="h-5 w-5" /> Linkedin
             </a>
-            <div className="mt-2 flex gap-3 rounded-xl bg-white/95 p-2">
-              <Image
-                src="/images/qualiopi.png"
-                alt="Certification Qualiopi"
-                width={90}
-                height={54}
-                className="h-12 w-auto object-contain"
-              />
-              <Image
-                src="/images/happyatwork.png"
-                alt="HappyAtWork 2025"
-                width={90}
-                height={54}
-                className="h-12 w-auto object-contain"
-              />
+            <div className="mt-2 flex gap-3">
+              <TrustSeal variant="confiance" className="w-16" />
+              <TrustSeal variant="qualite" className="w-16" />
             </div>
           </div>
         </div>

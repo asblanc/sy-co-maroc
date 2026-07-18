@@ -191,28 +191,35 @@ export const stats: Stat[] = [
   { value: 92, suffix: "%", label: "de taux de recommandation" },
 ];
 
-/** Partenaires marocains — rendus en wordmarks stylés (mur de références). */
-export const partners: string[] = [
-  "Maroc Telecom",
-  "OCP Group",
-  "Attijariwafa Bank",
-  "Bank of Africa",
-  "Royal Air Maroc",
-  "Marjane",
-  "Inwi",
-  "Orange Maroc",
-  "Banque Populaire",
-  "CIH Bank",
-  "Lydec",
-  "ONCF",
-  "Managem",
-  "Cosumar",
-  "Label'Vie",
-  "Wafa Assurance",
-  "BMCI",
-  "Lesieur Cristal",
-  "LafargeHolcim Maroc",
-  "Sonasid",
+export type Partner = { name: string; logo?: string };
+
+/**
+ * Partenaires / clients marocains.
+ * `logo` = fichier officiel déposé dans /public/images/clients/ (ex.
+ * "/images/clients/ocp.png"). Sans `logo`, une tuile wordmark stylée est
+ * affichée en repli — il suffit d'ajouter le fichier pour l'activer.
+ */
+export const partners: Partner[] = [
+  { name: "Maroc Telecom" },
+  { name: "OCP Group" },
+  { name: "Attijariwafa Bank" },
+  { name: "Bank of Africa" },
+  { name: "Royal Air Maroc" },
+  { name: "Marjane" },
+  { name: "Inwi" },
+  { name: "Orange Maroc" },
+  { name: "Banque Populaire" },
+  { name: "CIH Bank" },
+  { name: "Lydec" },
+  { name: "ONCF" },
+  { name: "Managem" },
+  { name: "Cosumar" },
+  { name: "Label'Vie" },
+  { name: "Wafa Assurance" },
+  { name: "BMCI" },
+  { name: "Lesieur Cristal" },
+  { name: "LafargeHolcim Maroc" },
+  { name: "Sonasid" },
 ];
 
 export const contactInfo = {
