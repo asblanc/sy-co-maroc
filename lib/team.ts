@@ -2,7 +2,7 @@ export type Member = { name: string; role: string; image?: string };
 
 export const team: Member[] = [
   {
-    name: "Salma Bennani",
+    name: "Adjahi Sylviane",
     role: "Présidente-Directrice Générale",
     image: "/images/team/pdg.jpg",
   },

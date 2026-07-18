@@ -293,7 +293,7 @@ function PdgSpotlight() {
             les équipes — au Maroc comme à l’international.&nbsp;»
           </blockquote>
           <p className="mt-6 font-heading text-lg font-bold">
-            Salma Bennani
+            Adjahi Sylviane
             <span className="mt-0.5 block text-sm font-normal text-white/70">
               Présidente-Directrice Générale · SY&amp;CO
             </span>

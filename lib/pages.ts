@@ -565,7 +565,7 @@ export const pages: PageData[] = [
       "## Éditeur du site",
       "Le présent site est édité par SY&CO SARL, société de droit marocain spécialisée dans l'événementiel d'entreprise, les séminaires et la formation.",
       "Siège social : Boulevard d'Anfa, Twin Center, 20100 Casablanca, Maroc. Téléphone : +212 699-820570. E-mail : contact@sy-co.ma.",
-      "Registre du Commerce (RC) : [à compléter] — Identifiant Commun de l'Entreprise (ICE) : [à compléter] — Identifiant Fiscal (IF) : [à compléter] — Taxe Professionnelle : [à compléter]. Représentante légale et directrice de la publication : Salma Bennani.",
+      "Registre du Commerce (RC) : [à compléter] — Identifiant Commun de l'Entreprise (ICE) : [à compléter] — Identifiant Fiscal (IF) : [à compléter] — Taxe Professionnelle : [à compléter]. Représentante légale et directrice de la publication : Adjahi Sylviane.",
       "## Hébergement",
       "Le site est hébergé par Vercel Inc., 340 S Lemon Ave #4133, Walnut, CA 91789, États-Unis (vercel.com).",
       "## Propriété intellectuelle",

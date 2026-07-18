@@ -206,7 +206,7 @@ export const articles: Article[] = [
     excerpt:
       "Entre désert, montagne et médinas, le Maroc offre un terrain de jeu exceptionnel pour le team building. À condition d'en faire un vrai levier managérial.",
     category: "Team building",
-    author: "Salma Bennani",
+    author: "Adjahi Sylviane",
     authorRole: "Présidente-Directrice Générale",
     date: "2025-11-20",
     dateLabel: "20 novembre 2025",
@@ -326,7 +326,7 @@ export const articles: Article[] = [
     excerpt:
       "Une culture d'entreprise ne se proclame pas sur un mur : elle se vit au quotidien. Comment passer des valeurs affichées aux comportements réels.",
     category: "Management & leadership",
-    author: "Salma Bennani",
+    author: "Adjahi Sylviane",
     authorRole: "Présidente-Directrice Générale",
     date: "2025-07-22",
     dateLabel: "22 juillet 2025",
