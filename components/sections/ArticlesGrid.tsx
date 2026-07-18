@@ -1,5 +1,6 @@
 import Image from "next/image";
-import { ArrowRight } from "lucide-react";
+import Link from "next/link";
+import { ArrowRight, Clock } from "lucide-react";
 import { articles, articleTopics } from "@/lib/articles";
 import { Reveal } from "@/components/ui/Reveal";
 
@@ -22,28 +23,40 @@ export function ArticlesGrid() {
 
         <div className="grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
           {articles.map((article, i) => (
-            <Reveal
-              key={article.title}
-              delay={(i % 3) * 0.08}
-              className="group flex flex-col overflow-hidden rounded-3xl border border-black/5 bg-white shadow-sm transition-all duration-300 hover:-translate-y-1.5 hover:shadow-xl"
-            >
-              <div className="relative h-48 overflow-hidden">
-                <Image
-                  src={article.image}
-                  alt={article.title}
-                  fill
-                  sizes="(max-width: 768px) 100vw, 33vw"
-                  className="object-cover transition-transform duration-500 group-hover:scale-105"
-                />
-              </div>
-              <div className="flex flex-1 flex-col p-6">
-                <h3 className="mb-4 flex-1 font-heading text-base font-bold leading-snug text-ink">
-                  {article.title}
-                </h3>
-                <span className="inline-flex items-center gap-2 self-start font-heading text-sm font-bold uppercase tracking-wide text-pink transition-colors group-hover:text-teal">
-                  Lire l&apos;article <ArrowRight className="h-4 w-4" />
-                </span>
-              </div>
+            <Reveal key={article.slug} delay={(i % 3) * 0.08}>
+              <Link
+                href={`/articles/${article.slug}`}
+                className="group flex h-full flex-col overflow-hidden rounded-3xl border border-black/5 bg-white shadow-sm transition-all duration-300 hover:-translate-y-1.5 hover:shadow-xl"
+              >
+                <div className="relative h-48 overflow-hidden">
+                  <Image
+                    src={article.image}
+                    alt={article.title}
+                    fill
+                    sizes="(max-width: 768px) 100vw, 33vw"
+                    className="object-cover transition-transform duration-500 group-hover:scale-105"
+                  />
+                  <span className="absolute left-4 top-4 rounded-full bg-orange px-3 py-1 text-xs font-bold uppercase tracking-wide text-white">
+                    {article.category}
+                  </span>
+                </div>
+                <div className="flex flex-1 flex-col p-6">
+                  <h3 className="mb-3 font-heading text-base font-bold leading-snug text-ink">
+                    {article.title}
+                  </h3>
+                  <p className="mb-4 flex-1 text-sm leading-relaxed text-ink/70">
+                    {article.excerpt}
+                  </p>
+                  <div className="flex items-center justify-between">
+                    <span className="inline-flex items-center gap-2 font-heading text-sm font-bold uppercase tracking-wide text-pink transition-colors group-hover:text-teal">
+                      Lire l&apos;article <ArrowRight className="h-4 w-4" />
+                    </span>
+                    <span className="flex items-center gap-1 text-xs text-ink/50">
+                      <Clock className="h-3.5 w-3.5" /> {article.readingTime}
+                    </span>
+                  </div>
+                </div>
+              </Link>
             </Reveal>
           ))}
         </div>

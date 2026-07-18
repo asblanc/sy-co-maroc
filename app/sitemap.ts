@@ -1,5 +1,6 @@
 import type { MetadataRoute } from "next";
 import { pages } from "@/lib/pages";
+import { articles } from "@/lib/articles";
 import { siteConfig } from "@/lib/site";
 
 export default function sitemap(): MetadataRoute.Sitemap {
@@ -18,5 +19,12 @@ export default function sitemap(): MetadataRoute.Sitemap {
     priority: p.type === "legal" ? 0.3 : 0.8,
   }));
 
-  return [home, ...rest];
+  const posts: MetadataRoute.Sitemap = articles.map((a) => ({
+    url: `${siteConfig.url}/articles/${a.slug}`,
+    lastModified: new Date(a.date),
+    changeFrequency: "yearly",
+    priority: 0.6,
+  }));
+
+  return [home, ...rest, ...posts];
 }
