@@ -63,35 +63,35 @@ export const expertises: Expertise[] = [
   {
     title: "Transformation des organisations",
     description:
-      "Accompagner les évolutions culturelles des entreprises et fédérer les équipes dans le changement.",
+      "Accompagner vos évolutions culturelles et fédérer vos équipes autour de dispositifs qui donnent du sens au changement.",
     color: "#007873",
     href: "/transformation-des-organisations",
   },
   {
     title: "Stratégie et Gouvernance",
     description:
-      "Accompagner les dirigeants dans la définition de la vision et dans leur réflexion stratégique.",
+      "Clarifier votre vision et aligner vos équipes de direction grâce à des séminaires stratégiques et une facilitation sur-mesure.",
     color: "#ED0F7D",
     href: "/strategie-et-gouvernance",
   },
   {
     title: "Cohésion d’équipe et modes collaboratifs",
     description:
-      "Favoriser l’Intelligence Collective et développer l’engagement et la motivation.",
+      "Renforcer les liens et l’engagement par le team building, les séminaires de cohésion et l’intelligence collective.",
     color: "#1076DA",
     href: "/seminaires-de-cohesion-dequipe",
   },
   {
     title: "Développement des compétences managériales",
     description:
-      "Accompagner le développement des potentiels et concevoir des parcours de formation.",
+      "Faire grandir vos managers avec des parcours de formation sur-mesure, concrets et immédiatement actionnables.",
     color: "#FCD430",
     href: "/developpement-des-competences-manageriales",
   },
   {
     title: "Innovation et codesign",
     description:
-      "Stimuler les dynamiques créatives, anticiper demain et faciliter les processus de résolution de problèmes complexes.",
+      "Stimuler la créativité de vos équipes par des ateliers de codesign, d’idéation et de résolution de problèmes complexes.",
     color: "#FFBC7D",
     href: "/innovation-et-codesign",
   },

@@ -27,13 +27,13 @@ export function Team() {
             <span className="text-orange">collaboratif</span>
           </h2>
           <p className="mb-8 text-base leading-relaxed text-white/85">
-            SY&CO est une équipe de spécialistes aux profils
-            complémentaires et résolument orientés «&nbsp;résultat&nbsp;» qui
-            vous aidera à codesigner le futur de votre organisation. Nous
-            cultivons l’esprit collaboratif, l’intelligence collective et
-            l’innovation. L’optimisme et le plaisir représentent, selon nous, de
-            réels leviers de réussite pour les transformations culturelles,
-            managériales et organisationnelles.
+            Chefs de projet événementiel, facilitateurs, formateurs et
+            créatifs&nbsp;: notre équipe réunit des profils complémentaires,
+            animés par une même exigence de résultat. De Casablanca à
+            l’international, nous imaginons et orchestrons des expériences qui
+            marquent les esprits et rapprochent les équipes. L’écoute,
+            l’énergie et le plaisir sont, pour nous, les meilleurs ingrédients
+            d’un événement réussi et d’une collaboration qui dure.
           </p>
           <p className="mb-5 font-heading text-lg font-bold">
             Envie d&apos;en savoir plus&nbsp;?

@@ -3,12 +3,12 @@ import { Check } from "lucide-react";
 import { Reveal } from "@/components/ui/Reveal";
 
 const agilePoints = [
-  "élaborer une vision partagée,",
-  "développer vos talents pour mettre en oeuvre votre vision,",
-  "motiver et engager vos équipes,",
-  "générer de l'intelligence collective,",
-  "piloter vos projets de transformation,",
-  "mener à bien vos projets d'innovation.",
+  "concevoir des séminaires et conventions qui ont du sens,",
+  "renforcer la cohésion par le team building,",
+  "former vos managers et vos talents sur-mesure,",
+  "libérer l'intelligence collective de vos équipes,",
+  "animer vos lancements de projet (kick-off),",
+  "rayonner au Maroc comme à l'international.",
 ];
 
 /** "Vous accompagner vers demain" — image + agility checklist. */
@@ -36,11 +36,12 @@ export function Accompany() {
             <span className="text-pink">vers demain</span>
           </h2>
           <p className="mb-6 text-base leading-relaxed text-ink/80">
-            Face à un monde qui bouge, les organisations sont amenées à être
-            plus résilientes et agiles.
+            Un événement bien pensé change la dynamique d’une équipe entière.
+            Nous transformons vos moments-clés en expériences utiles, mémorables
+            et alignées avec vos objectifs.
           </p>
           <p className="mb-6 font-heading text-sm font-bold uppercase tracking-wide text-ink">
-            Envie d’être plus agile&nbsp;? SY&CO vous aide à&nbsp;:
+            SY&amp;CO vous aide à&nbsp;:
           </p>
           <ul className="space-y-3">
             {agilePoints.map((point) => (

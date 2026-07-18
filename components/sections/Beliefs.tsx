@@ -14,15 +14,14 @@ export function Beliefs() {
             nous croyons que…
           </h2>
           <p className="text-base leading-relaxed text-ink/80">
-            L’entreprise joue un rôle essentiel dans la transformation de nos
-            écosystèmes économiques, sociaux et environnementaux. Nous croyons
-            que demain se bâtit dès aujourd’hui avec des collectifs engagés dans
-            des organisations porteuses de sens pour créer durablement de la
-            valeur. Pour accompagner les entreprises dans ce monde en perpétuel
-            changement, nous facilitons leur évolution stratégique,
-            organisationnelle et managériale, et cultivons l’Intelligence
-            collective. Chez SY&CO, nous croyons en l’organisation
-            responsable, collaborative et durable.
+            Un événement d’entreprise n’est jamais qu’un moment&nbsp;: c’est un
+            levier de culture, de cohésion et de performance. Basés au Maroc et
+            présents partout dans le monde, nous concevons des séminaires, des
+            conventions et des formations qui rassemblent vos équipes, libèrent
+            l’intelligence collective et transforment durablement vos façons de
+            travailler. Chez SY&amp;CO, nous croyons qu’en réunissant les bonnes
+            personnes, au bon endroit, avec la bonne énergie, on fait grandir les
+            organisations — et les femmes et les hommes qui les composent.
           </p>
         </Reveal>
 

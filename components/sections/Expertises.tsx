@@ -13,7 +13,7 @@ export function Expertises() {
       <div className="container-narrow">
         <Reveal className="mx-auto mb-14 max-w-2xl text-center">
           <h2 className="font-display text-4xl leading-tight text-teal sm:text-5xl lg:text-6xl">
-            Co&apos;designons
+            Co-construisons
             <br />
             <span className="text-orange">votre réussite</span>
           </h2>

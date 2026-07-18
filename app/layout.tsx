@@ -28,7 +28,7 @@ const artifika = Artifika({
 export const metadata: Metadata = {
   metadataBase: new URL(siteConfig.url),
   title: {
-    default: `${siteConfig.name} — Conseil en management & innovation au Maroc`,
+    default: `${siteConfig.name} — Événementiel, séminaires & formation d'entreprise au Maroc et à l'international`,
     template: `%s | ${siteConfig.name}`,
   },
   description: siteConfig.description,
@@ -48,7 +48,7 @@ export const metadata: Metadata = {
     locale: siteConfig.locale,
     url: siteConfig.url,
     siteName: siteConfig.name,
-    title: `${siteConfig.name} — Conseil en management & innovation au Maroc`,
+    title: `${siteConfig.name} — Événementiel, séminaires & formation d'entreprise`,
     description: siteConfig.description,
     images: [{ url: siteConfig.ogImage, width: 1200, height: 630, alt: siteConfig.name }],
   },
