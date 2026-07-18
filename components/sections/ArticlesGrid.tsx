@@ -4,15 +4,17 @@ import { useMemo, useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import { AnimatePresence, motion } from "framer-motion";
-import { ArrowRight, Clock } from "lucide-react";
+import { ArrowRight, ChevronDown, Clock } from "lucide-react";
 import { articles } from "@/lib/articles";
 import { cn } from "@/lib/utils";
 
 const ALL = "Tous les articles";
+const PAGE_SIZE = 6;
 
-/** "Notre Blog" — article grid with a functional thematic filter. */
+/** "Notre Blog" — article grid with a thematic filter and "load more". */
 export function ArticlesGrid() {
   const [active, setActive] = useState(ALL);
+  const [count, setCount] = useState(PAGE_SIZE);
 
   // filter chips derived from the categories that actually have articles
   const categories = useMemo(() => {
@@ -20,13 +22,21 @@ export function ArticlesGrid() {
     return [ALL, ...set];
   }, []);
 
-  const visible = useMemo(
+  const filtered = useMemo(
     () =>
       active === ALL
         ? articles
         : articles.filter((a) => a.category === active),
     [active]
   );
+
+  const visible = filtered.slice(0, count);
+  const remaining = filtered.length - visible.length;
+
+  const selectCategory = (topic: string) => {
+    setActive(topic);
+    setCount(PAGE_SIZE); // reset paging when the filter changes
+  };
 
   return (
     <section className="bg-white py-16 lg:py-24">
@@ -38,7 +48,7 @@ export function ArticlesGrid() {
             return (
               <button
                 key={topic}
-                onClick={() => setActive(topic)}
+                onClick={() => selectCategory(topic)}
                 aria-pressed={isActive}
                 className={cn(
                   "rounded-full border px-4 py-2 text-sm font-semibold transition-colors",
@@ -106,6 +116,21 @@ export function ArticlesGrid() {
           <p className="py-10 text-center text-ink/60">
             Aucun article dans cette thématique pour le moment.
           </p>
+        )}
+
+        {remaining > 0 && (
+          <div className="mt-12 flex flex-col items-center gap-3">
+            <button
+              onClick={() => setCount((c) => c + PAGE_SIZE)}
+              className="inline-flex items-center gap-2 rounded-full bg-teal px-8 py-4 font-heading text-sm font-bold uppercase tracking-wide text-white transition-all duration-300 hover:-translate-y-0.5 hover:bg-pink hover:shadow-md"
+            >
+              Voir plus d&apos;articles
+              <ChevronDown className="h-4 w-4" />
+            </button>
+            <span className="text-xs text-ink/50">
+              {visible.length} sur {filtered.length} articles
+            </span>
+          </div>
         )}
       </div>
     </section>
