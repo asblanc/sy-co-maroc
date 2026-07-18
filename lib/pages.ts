@@ -442,7 +442,7 @@ export const pages: PageData[] = [
     h1: "Comment réussir son séminaire à distance",
     category: "Cohésion d'équipe et modes collaboratifs",
     description: "Découvrez dans ce cas client comment notre solution de coaching à distance My Perso Coach a favorisé la montée en compétences de managers.",
-    image: "/images/cases/seminaire-distance1.jpg",
+    image: "/images/cases/seminaire-distance2.jpg",
     paragraphs: [
       "Structure : PrivéSecteur : Habitat socialEffectif : 1 000 collaborateurs dont 120 managersMission : 2 mois",
       "En septembre 2020, la crise sanitaire met en lumière la nécessité, au sein de l’organisation, de recréer du lien entre les équipes.",
@@ -472,7 +472,7 @@ export const pages: PageData[] = [
     h1: "Ateliers et séminaires au service de l'expérience collaborateur",
     category: "Transformation des organisations",
     description: "Découvrez dans ce cas client comment notre solution de coaching à distance My Perso Coach a favorisé la montée en compétences de managers.",
-    image: "/images/cases/parc-loisirs1.jpg",
+    image: "/images/cases/parc-loisirs2.jpg",
     paragraphs: [
       "Structure : PrivéeSecteur : Parc de loisirsEffectif : 2 500 collaborateurs Mission : 6 jours",
       "Comment identifier et mettre en place des nouvelles pratiques managériales pour améliorer l’expérience collaborateur ?",
@@ -487,7 +487,7 @@ export const pages: PageData[] = [
     h1: "Accompagner à distance le changement de posture des managers",
     category: "Développement des compétences managériales",
     description: "Découvrez dans ce cas client comment notre solution de coaching à distance My Perso Coach a favorisé la montée en compétences de managers.",
-    image: "/images/cases/digitaliser1.jpg",
+    image: "/images/cases/conseil.jpg",
     paragraphs: [
       "Structure : Institution publiqueSecteur : AdministrationEffectif : 10 000 collaborateurs Mission : 3 ans",
       "Collectivité publique d’envergure, notre client évolue dans un contexte public de transformation et de modernisation, connaissant une diminution des ressources financières avec pour autant de nombreux projets à mettre en œuvre.",

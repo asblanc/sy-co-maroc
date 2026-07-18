@@ -148,7 +148,7 @@ export const caseStudies: CaseStudy[] = [
   {
     category: "Cohésion d'équipe et modes collaboratifs",
     title: "Comment réussir son séminaire à distance",
-    image: "/images/cases/seminaire-distance1.jpg",
+    image: "/images/cases/seminaire-distance2.jpg",
     href: "/comment-reussir-son-seminaire-a-distance",
   },
   {
@@ -162,14 +162,14 @@ export const caseStudies: CaseStudy[] = [
     category: "Transformation des organisations",
     title: "Ateliers et séminaires au service de l’expérience collaborateur",
     tag: "PARC",
-    image: "/images/cases/parc-loisirs1.jpg",
+    image: "/images/cases/parc-loisirs2.jpg",
     href: "/ateliers-et-seminaires-au-service-de-lexperience-collaborateur",
   },
   {
     category: "Développement des compétences managériales",
     title: "Accompagner à distance le changement de posture des managers",
     tag: "CONSEIL",
-    image: "/images/cases/digitaliser1.jpg",
+    image: "/images/cases/conseil.jpg",
     href: "/accompagner-a-distance-le-changement-de-posture-des-managers",
   },
 ];
