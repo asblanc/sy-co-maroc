@@ -9,9 +9,13 @@ type Payload = {
   email?: string;
   phone?: string;
   message?: string;
+  eventType?: string;
+  participants?: string;
+  eventDate?: string;
 };
 
 const isEmail = (v: string) => /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(v);
+const clip = (v: unknown, max = 500) => String(v ?? "").trim().slice(0, max);
 
 export async function POST(request: Request) {
   let body: Payload;
@@ -21,11 +25,14 @@ export async function POST(request: Request) {
     return NextResponse.json({ ok: false, error: "invalid_json" }, { status: 400 });
   }
 
-  const firstName = (body.firstName ?? "").trim();
-  const lastName = (body.lastName ?? "").trim();
-  const email = (body.email ?? "").trim();
-  const phone = (body.phone ?? "").trim();
-  const message = (body.message ?? "").trim();
+  const firstName = clip(body.firstName, 120);
+  const lastName = clip(body.lastName, 120);
+  const email = clip(body.email, 200);
+  const phone = clip(body.phone, 40);
+  const message = clip(body.message, 4000);
+  const eventType = clip(body.eventType, 80);
+  const participants = clip(body.participants, 80);
+  const eventDate = clip(body.eventDate, 80);
 
   if (!firstName || !lastName || !email || !message || !isEmail(email)) {
     return NextResponse.json(
@@ -48,7 +55,10 @@ export async function POST(request: Request) {
     email,
     phone,
     message,
-    source: "contact_form",
+    event_type: eventType || null,
+    participants: participants || null,
+    event_date: eventDate || null,
+    source: "devis_evenementiel",
   });
 
   if (error) {

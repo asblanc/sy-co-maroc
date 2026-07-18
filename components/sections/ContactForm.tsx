@@ -38,37 +38,110 @@ export function ContactForm() {
     <div className="grid gap-12 lg:grid-cols-[1.4fr_1fr]">
       {/* Form */}
       <div className="rounded-3xl border border-black/5 bg-white p-8 shadow-sm">
+        <h2 className="mb-2 font-heading text-2xl font-bold text-teal">
+          Demande de devis événementiel
+        </h2>
         <p className="mb-8 text-base leading-relaxed text-ink/80">
-          Chez SY&CO, c’est simple&nbsp;: tout commence par un café ou
-          un thé (même virtuel)&nbsp;! Laissez-nous un message, nous vous
-          recontactons rapidement.
+          Séminaire, convention, team building ou formation&nbsp;? Décrivez-nous
+          votre projet&nbsp;: nous revenons vers vous avec une proposition
+          sur-mesure, au Maroc comme à l’international.
         </p>
 
         {sent ? (
           <div className="flex flex-col items-center gap-4 rounded-2xl bg-teal/5 py-14 text-center">
             <CheckCircle2 className="h-14 w-14 text-teal" />
             <p className="font-heading text-lg font-bold text-teal">
-              Merci&nbsp;! Votre message a bien été envoyé.
+              Merci&nbsp;! Votre demande a bien été envoyée.
+            </p>
+            <p className="max-w-sm text-sm text-ink/70">
+              Notre équipe vous recontacte sous 48h pour construire votre devis.
             </p>
           </div>
         ) : (
           <form onSubmit={onSubmit} className="grid gap-5 sm:grid-cols-2">
             <Field label="Prénom" name="firstName" />
             <Field label="Nom" name="lastName" />
-            <Field label="Email" name="email" type="email" full />
-            <Field label="Téléphone" name="phone" type="tel" full />
+            <Field label="Email" name="email" type="email" />
+            <Field label="Téléphone" name="phone" type="tel" />
+
+            <div>
+              <label
+                htmlFor="eventType"
+                className="mb-1.5 block text-sm font-semibold text-ink"
+              >
+                Type d’événement
+              </label>
+              <select
+                id="eventType"
+                name="eventType"
+                defaultValue=""
+                className="w-full rounded-xl border border-black/10 bg-white px-4 py-3 text-sm outline-none transition-colors focus:border-teal focus:ring-2 focus:ring-teal/20"
+              >
+                <option value="" disabled>
+                  Sélectionnez…
+                </option>
+                <option>Séminaire de direction</option>
+                <option>Convention / Kick-off</option>
+                <option>Team building</option>
+                <option>Soirée / Incentive</option>
+                <option>Formation sur-mesure</option>
+                <option>Autre</option>
+              </select>
+            </div>
+
+            <div>
+              <label
+                htmlFor="participants"
+                className="mb-1.5 block text-sm font-semibold text-ink"
+              >
+                Nombre de participants
+              </label>
+              <select
+                id="participants"
+                name="participants"
+                defaultValue=""
+                className="w-full rounded-xl border border-black/10 bg-white px-4 py-3 text-sm outline-none transition-colors focus:border-teal focus:ring-2 focus:ring-teal/20"
+              >
+                <option value="" disabled>
+                  Sélectionnez…
+                </option>
+                <option>Moins de 20</option>
+                <option>20 à 50</option>
+                <option>50 à 100</option>
+                <option>100 à 300</option>
+                <option>Plus de 300</option>
+              </select>
+            </div>
+
+            <div className="sm:col-span-2">
+              <label
+                htmlFor="eventDate"
+                className="mb-1.5 block text-sm font-semibold text-ink"
+              >
+                Dates ou période souhaitée
+              </label>
+              <input
+                id="eventDate"
+                name="eventDate"
+                type="text"
+                placeholder="Ex : mi-mars 2026, ou du 12 au 14 juin"
+                className="w-full rounded-xl border border-black/10 px-4 py-3 text-sm outline-none transition-colors focus:border-teal focus:ring-2 focus:ring-teal/20"
+              />
+            </div>
+
             <div className="sm:col-span-2">
               <label
                 htmlFor="message"
                 className="mb-1.5 block text-sm font-semibold text-ink"
               >
-                Votre message
+                Votre projet en quelques mots
               </label>
               <textarea
                 id="message"
                 name="message"
                 required
                 rows={5}
+                placeholder="Objectifs, lieu envisagé, format, budget indicatif…"
                 className="w-full rounded-xl border border-black/10 px-4 py-3 text-sm outline-none transition-colors focus:border-teal focus:ring-2 focus:ring-teal/20"
               />
             </div>
@@ -79,7 +152,8 @@ export function ContactForm() {
             )}
             <div className="sm:col-span-2">
               <Button type="submit" variant="pink" size="lg" disabled={submitting}>
-                {submitting ? "Envoi…" : "Envoyer"} <Send className="h-4 w-4" />
+                {submitting ? "Envoi…" : "Demander mon devis"}{" "}
+                <Send className="h-4 w-4" />
               </Button>
             </div>
           </form>

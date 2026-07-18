@@ -229,6 +229,53 @@ export const partners: Partner[] = [
   { name: "Sonasid" },
 ];
 
+export type Realization = {
+  tag: string;
+  title: string;
+  location: string;
+  image: string;
+};
+
+/** Formats d'événements produits par SY&CO (illustratif, sans nom de client). */
+export const realizations: Realization[] = [
+  {
+    tag: "Convention",
+    title: "Convention annuelle & plénière",
+    location: "Casablanca",
+    image: "/images/services/ev-convention.jpg",
+  },
+  {
+    tag: "Séminaire",
+    title: "Séminaire de direction au vert",
+    location: "Marrakech",
+    image: "/images/services/ev-seminaire.jpg",
+  },
+  {
+    tag: "Team building",
+    title: "Team building outdoor",
+    location: "Agadir",
+    image: "/images/services/ev-teambuilding.jpg",
+  },
+  {
+    tag: "Incentive",
+    title: "Soirée de gala & remise de trophées",
+    location: "Rabat",
+    image: "/images/services/ev-incentive.jpg",
+  },
+  {
+    tag: "Kick-off",
+    title: "Lancement de projet stratégique",
+    location: "International",
+    image: "/images/cases/conseil.jpg",
+  },
+  {
+    tag: "Formation",
+    title: "Parcours de formation immersif",
+    location: "Tanger",
+    image: "/images/services/ev-formation.jpg",
+  },
+];
+
 export const contactInfo = {
   phone: "+212 699-820570",
   address: "Boulevard d'Anfa, Twin Center",
