@@ -56,6 +56,7 @@ export type Expertise = {
   title: string;
   description: string;
   color: string;
+  href: string;
 };
 
 export const expertises: Expertise[] = [
@@ -64,30 +65,35 @@ export const expertises: Expertise[] = [
     description:
       "Accompagner les évolutions culturelles des entreprises et fédérer les équipes dans le changement.",
     color: "#007873",
+    href: "/transformation-des-organisations",
   },
   {
     title: "Stratégie et Gouvernance",
     description:
       "Accompagner les dirigeants dans la définition de la vision et dans leur réflexion stratégique.",
     color: "#ED0F7D",
+    href: "/strategie-et-gouvernance",
   },
   {
     title: "Cohésion d’équipe et modes collaboratifs",
     description:
       "Favoriser l’Intelligence Collective et développer l’engagement et la motivation.",
     color: "#1076DA",
+    href: "/seminaires-de-cohesion-dequipe",
   },
   {
     title: "Développement des compétences managériales",
     description:
       "Accompagner le développement des potentiels et concevoir des parcours de formation.",
     color: "#FCD430",
+    href: "/developpement-des-competences-manageriales",
   },
   {
     title: "Innovation et codesign",
     description:
       "Stimuler les dynamiques créatives, anticiper demain et faciliter les processus de résolution de problèmes complexes.",
     color: "#FFBC7D",
+    href: "/innovation-et-codesign",
   },
 ];
 

@@ -36,24 +36,44 @@
   }
 }
 
-/* Organic "bubble" image shapes — echoing the reference site's blob framing */
+/* Organic "bubble" image shapes — echoing the reference site's blob framing.
+   They morph continuously on their own (no hover required). */
+@keyframes blob-morph {
+  0%,
+  100% {
+    border-radius: 42% 58% 57% 43% / 48% 42% 58% 52%;
+  }
+  25% {
+    border-radius: 58% 42% 45% 55% / 42% 55% 45% 58%;
+  }
+  50% {
+    border-radius: 50% 50% 40% 60% / 55% 45% 55% 45%;
+  }
+  75% {
+    border-radius: 45% 55% 55% 45% / 45% 58% 42% 55%;
+  }
+}
+
 .blob-a {
   border-radius: 42% 58% 57% 43% / 48% 42% 58% 52%;
+  animation: blob-morph 12s ease-in-out infinite;
 }
 .blob-b {
   border-radius: 58% 42% 45% 55% / 42% 55% 45% 58%;
+  animation: blob-morph 15s ease-in-out infinite reverse;
 }
 /* arch bubble (rounded top, softer bottom) used behind the hero photo */
 .blob-arch {
   border-radius: 48% 48% 42% 42% / 60% 60% 40% 40%;
+  animation: blob-morph 18s ease-in-out infinite;
 }
-.blob-a,
-.blob-b {
-  transition: border-radius 0.8s ease-in-out;
-}
-.blob-a:hover,
-.blob-b:hover {
-  border-radius: 50% 50% 50% 50% / 50% 50% 50% 50%;
+
+@media (prefers-reduced-motion: reduce) {
+  .blob-a,
+  .blob-b,
+  .blob-arch {
+    animation: none;
+  }
 }
 
 /* Scrollbar-free horizontal marquee wrapper */

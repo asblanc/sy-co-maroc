@@ -40,7 +40,7 @@ export const pages: PageData[] = [
     services: [
       {
         title: "Transformation managériale",
-        description: "",
+        description: "Faire évoluer les pratiques et les postures managériales pour accompagner durablement le changement au sein de vos équipes.",
         image: "/images/services/transformation-manageriale.jpg",
       },
       {
@@ -60,7 +60,7 @@ export const pages: PageData[] = [
       },
       {
         title: "Design de processus de transformation",
-        description: "",
+        description: "Concevoir et structurer, avec vos équipes, les processus qui rendent votre transformation concrète et opérationnelle.",
         image: "/images/services/Design-de-processus.jpg",
       },
       {
@@ -69,7 +69,7 @@ export const pages: PageData[] = [
       },
       {
         title: "Accompagnement et conduite du changement",
-        description: "",
+        description: "Sécuriser chaque étape du changement en embarquant les collaborateurs et en levant les résistances.",
         image: "/images/services/Accompagnement-et-conduite-du-changement.jpg",
       },
     ],
@@ -105,7 +105,7 @@ export const pages: PageData[] = [
     services: [
       {
         title: "Business design",
-        description: "",
+        description: "Repenser votre modèle et vos offres pour créer de la valeur durable et vous différencier sur votre marché.",
         image: "/images/services/Business-design.jpg",
       },
       {
@@ -120,12 +120,12 @@ export const pages: PageData[] = [
       },
       {
         title: "Elaboration de la feuille de route stratégique (roadmap)",
-        description: "",
+        description: "Traduire votre vision en une feuille de route claire, priorisée et actionnable.",
         image: "/images/services/elaboration-feuille-de-route.jpg",
       },
       {
         title: "Accompagnement au déploiement de la stratégie : méthode OKR",
-        description: "",
+        description: "Déployer votre stratégie sur le terrain grâce aux OKR : des objectifs alignés, mesurables et partagés.",
         image: "/images/services/methode-OKR.jpg",
       },
       {
@@ -135,7 +135,7 @@ export const pages: PageData[] = [
       },
       {
         title: "Diagnostic stratégique",
-        description: "",
+        description: "Analyser votre environnement, vos forces et vos leviers de croissance pour éclairer vos décisions.",
       },
     ],
     heroImage: "/images/pages/header-strategie.jpg",
@@ -168,7 +168,7 @@ export const pages: PageData[] = [
     services: [
       {
         title: "Diagnostic de formation",
-        description: "",
+        description: "Identifier précisément les besoins en compétences pour concevoir des parcours réellement utiles.",
         image: "/images/services/diagnostic-de-formation.jpg",
       },
       {
@@ -183,12 +183,12 @@ export const pages: PageData[] = [
       },
       {
         title: "Pédagogie innovante",
-        description: "",
+        description: "Des modalités pédagogiques engageantes et ludiques qui ancrent durablement les apprentissages.",
         image: "/images/services/pedagogie-innovante.jpg",
       },
       {
         title: "Ingénierie de formation multimodale",
-        description: "",
+        description: "Combiner présentiel, distanciel et digital pour des dispositifs de formation flexibles et efficaces.",
         image: "/images/services/Ingenierie-formation-multimodale.jpg",
       },
       {
@@ -226,7 +226,7 @@ export const pages: PageData[] = [
     services: [
       {
         title: "Innovation managériale",
-        description: "",
+        description: "Expérimenter de nouveaux modes d'organisation et de management pour libérer l'engagement et la créativité.",
         image: "/images/services/innovation-manageriale.jpg",
       },
       {
@@ -240,11 +240,11 @@ export const pages: PageData[] = [
       },
       {
         title: "Ateliers créatifs et codesign collaboratif",
-        description: "",
+        description: "Mobiliser l'intelligence collective pour générer des idées et co-construire des solutions concrètes.",
       },
       {
         title: "Management de l’innovation",
-        description: "",
+        description: "Structurer et piloter votre démarche d'innovation, de l'idée jusqu'à sa mise en œuvre.",
       },
       {
         title: "Accélération de projets innovants",
@@ -252,7 +252,7 @@ export const pages: PageData[] = [
       },
       {
         title: "Design de processus",
-        description: "",
+        description: "Cartographier et optimiser vos processus pour gagner en fluidité, en efficacité et en qualité.",
         image: "/images/services/Design-de-processus.jpg",
       },
       {
@@ -262,7 +262,7 @@ export const pages: PageData[] = [
       },
       {
         title: "Diagnostic de capacité d’innovation",
-        description: "",
+        description: "Évaluer la maturité de votre organisation en matière d'innovation et identifier vos axes de progrès.",
         image: "/images/services/diagnostic-de-formation.jpg",
       },
     ],
