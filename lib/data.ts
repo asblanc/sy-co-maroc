@@ -47,6 +47,7 @@ export const megaMenu: NavColumn[] = [
 ];
 
 export const navLinks: NavChild[] = [
+  { label: "Événementiel", href: "/evenementiel-et-seminaires" },
   { label: "Nos Cas Clients", href: "/nos-cas-clients" },
   { label: "Qui sommes-nous ?", href: "/qui-sommes-nous" },
   { label: "Nos Articles", href: "/nos-articles" },
@@ -236,6 +237,7 @@ export const contactInfo = {
 };
 
 export const footerExpertises: NavChild[] = [
+  { label: "Événementiel & séminaires", href: "/evenementiel-et-seminaires" },
   { label: "Notre méthode IDDEA", href: "/notre-methode-iddea" },
   {
     label: "Séminaires de cohésion d'équipe",

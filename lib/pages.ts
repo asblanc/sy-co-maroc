@@ -28,6 +28,31 @@ export type PageData = {
 
 export const pages: PageData[] = [
   {
+    slug: "evenementiel-et-seminaires",
+    type: "content",
+    title: "Événementiel & séminaires d'entreprise au Maroc et à l'international",
+    h1: "Événementiel & séminaires",
+    category: "Événementiel",
+    description:
+      "SY&CO conçoit et orchestre vos événements d'entreprise : séminaires, conventions, kick-off, team building et soirées — au Maroc et partout dans le monde.",
+    heroImage: "/images/pages/header-evenementiel.jpg",
+    introHeading: "Des événements qui rassemblent",
+    introSubheading: "et qui marquent les esprits",
+    introImage: "/images/cases/parc-loisirs2.jpg",
+    paragraphs: [
+      "Un séminaire, une convention ou un team building n'est jamais une simple parenthèse : c'est un moment stratégique qui soude vos équipes, incarne votre culture et accélère vos projets. Chez SY&CO, l'événementiel d'entreprise est notre cœur de métier.",
+      "Basés au Maroc et actifs à l'international, nous imaginons, produisons et animons des événements sur-mesure — de la première idée à la logistique, du contenu à la scénographie. Chaque format sert un objectif clair : fédérer, former, célébrer ou transformer.",
+      "Notre signature : allier la rigueur d'un chef de projet, la créativité d'un studio et la puissance de l'intelligence collective, pour des expériences utiles, mesurables et mémorables.",
+    ],
+    services: [
+      { title: "Séminaires de direction", description: "Alignez vos comités et équipes de direction autour d'une vision commune, dans un cadre propice à la réflexion et à la décision.", image: "/images/services/ev-seminaire.jpg" },
+      { title: "Conventions & lancements (kick-off)", description: "Donnez le coup d'envoi de vos projets et années stratégiques avec des conventions qui embarquent et créent l'élan.", image: "/images/services/ev-convention.jpg" },
+      { title: "Team building", description: "Renforcez la cohésion et la confiance par des activités collaboratives, ludiques et porteuses de sens.", image: "/images/services/ev-teambuilding.jpg" },
+      { title: "Soirées & incentives", description: "Récompensez et célébrez vos équipes avec des soirées et voyages incentives qui laissent un souvenir durable.", image: "/images/services/ev-incentive.jpg" },
+      { title: "Formations événementialisées", description: "Transformez vos formations en expériences immersives et engageantes qui ancrent durablement les apprentissages.", image: "/images/services/ev-formation.jpg" },
+    ],
+  },
+  {
     slug: "transformation-des-organisations",
     needs: [
       "Améliorer les performances de votre organisation",
@@ -83,11 +108,12 @@ export const pages: PageData[] = [
     title: "Accompagnement en transformation des organisations | CO3",
     h1: "Transformation des organisations",
     category: "Stratégie",
-    description: "Nous offrons un accompagnement sur mesure pour votre transformation : stratégies innovantes, adaptabilité et soutien pour une évolution réussie.",
+    description:
+      "Transformation des organisations au Maroc et à l'international : conduite du changement, culture d'entreprise et intelligence collective, orchestrées par SY&CO.",
     paragraphs: [
-      "Chez SY&CO, nous pensons que les sociétés de demain sont les défis d’aujourd’hui*, afin d’agir tous les jours dans un processus d’adaptation continue. En d’autres mots, « Ce n’est pas la plus forte espèce qui survit, ni la plus intelligente, mais celle qui sait le mieux s’adapter aux changements » comme le disait Charles Darwin.",
-      "Nous accompagnons les organisations dans leurs transformations, en questionnant tous les paramètres de réussite du changement, de la stratégie au management. Nous nous appuyons sur notre approche innovante, collaborative et holistique.",
-      "Pour ce faire, nous vous aidons à acquérir l’agilité, la flexibilité, la confiance et les compétences nécessaires aux ajustements et ré-ajustements permanents dans un contexte fluctuant.",
+      "Le monde bouge vite, et vos organisations avec lui. SY&CO accompagne les entreprises, au Maroc comme à l'international, dans leurs transformations culturelles, organisationnelles et managériales — avec une conviction forte : un changement ne réussit que s'il est vécu collectivement.",
+      "De la vision à l'action, nous concevons des dispositifs sur-mesure — séminaires, ateliers collaboratifs, parcours de conduite du changement — qui embarquent vos équipes, lèvent les résistances et donnent du sens à chaque étape.",
+      "En mêlant événementiel, facilitation et intelligence collective, nous ancrons durablement les nouvelles façons de travailler et faisons de votre transformation une dynamique partagée.",
     ],
   },
   {
@@ -149,11 +175,12 @@ export const pages: PageData[] = [
     title: "Stratégie et gouvernance : accompagnement par CO3",
     h1: "Stratégie et gouvernance",
     category: "Stratégie",
-    description: "Expertise en stratégie et gouvernance d'entreprise : définissez et pilotez votre vision avec nos consultants pour un développement durable et responsable.",
+    description:
+      "Séminaires stratégiques et gouvernance : clarifiez votre vision et alignez vos équipes de direction avec SY&CO, au Maroc et à l'international.",
     paragraphs: [
-      "La gouvernance des organisations est en pleine évolution. Les organisations qui récoltent un fort taux d’engagement sont celles qui ont su impliquer les collaborateurs dans les prises de décisions… et au sein desquelles équipes et dirigeants partagent d’une vision commune*. Chez SY&CO, nous sommes totalement en accord avec le théoricien en management Peter Druker, qui disait : “La meilleure façon de prédire l’avenir, c’est de le créer”. C’est pourquoi nous vous accompagnons :",
-      "Au-delà des organisations, ce sont les équipes et les dirigeants que nous accompagnons car, que serait une organisation sans son capital humain ?",
-      "Découvrez l’étude 2023 de ChooseMyCompany ici",
+      "Définir un cap clair et le partager : voilà le point de départ de toute performance durable. SY&CO accompagne dirigeants et comités de direction dans leur réflexion stratégique et leur gouvernance, au Maroc et à l'international.",
+      "À travers des séminaires stratégiques, des ateliers de vision et une facilitation experte, nous aidons vos équipes à décider, à s'aligner et à traduire la stratégie en feuille de route concrète.",
+      "Parce qu'une stratégie ne vaut que par son exécution, nous restons à vos côtés pour déployer, mesurer et ajuster — dans la durée.",
     ],
   },
   {
@@ -208,11 +235,12 @@ export const pages: PageData[] = [
     title: "Développement des compétences managériales | SY&CO",
     h1: "Développement des compétences managériales",
     category: "Management et Intelligence Collective",
-    description: "Découvrez nos formations innovantes en développement de compétences managériales pour renforcer l'efficacité et la confiance de vos managers.",
+    description:
+      "Développement des compétences managériales : parcours de formation sur-mesure et concrets pour vos managers, au Maroc et à l'international, par SY&CO.",
     paragraphs: [
-      "NOS EXPERTISES | Management et Intelligence Collective",
-      "Selon l’étude ChooseMyCompany 2023*, les attentes des collaborateurs sont grandes et nombre d’entre eux sont volontaires pour acquérir de nouvelles compétences, de nouveaux savoir-faire… Suivant la devise aristotélicienne qui dit que « Ce que nous devons apprendre à faire, nous l’apprendrons en le faisant», SY&CO crée des parcours de formation et de développement des compétences au plus près des réalités du terrain de vos managers. Nous misons sur le transfert de compétences et d’outils immédiatement transposables au sein de leurs équipes, mais surtout, nous leur donnons des clés pour progresser et renforcer leur confiance professionnelle. Et parce que progresser dans sa posture ne se fait pas en un jour, nous accompagnons les équipes dans le temps .",
-      "Associée, Formatrice et Consultante en transformation des organisations, Spécialiste en management et développement des ressources humaines.",
+      "Vos managers sont les premiers relais de votre culture et de votre performance. SY&CO conçoit des parcours de développement des compétences managériales sur-mesure, ancrés dans la réalité de leur terrain.",
+      "Postures de leadership, management d'équipe, communication, gestion du changement : nous privilégions des formats actifs, immédiatement transposables, et un accompagnement dans le temps.",
+      "Notre objectif : donner à vos managers les clés concrètes — et la confiance — pour faire grandir leurs équipes.",
     ],
   },
   {
@@ -282,11 +310,12 @@ export const pages: PageData[] = [
     title: "Innovation et CoDesign pour entreprises | SY&CO",
     h1: "Innovation et codesign",
     category: "Innovation",
-    description: "Explorez nos services d'innovation et de CoDesign : solutions créatives, facilitation de projet, et stratégies personnalisées pour vous propulser vers l'avenir.",
+    description:
+      "Innovation & codesign : ateliers créatifs, design thinking et facilitation pour innover en équipe, au Maroc et à l'international, avec SY&CO.",
     paragraphs: [
-      "Plusieurs études* montrent que les organisations qui intègrent les processus d’innovation à leur fonctionnement sont plus résilientes face aux chocs économiques et aux perturbations du marché. Ces organisations sont mieux préparées à faire face à l’incertitude, à saisir de nouvelles opportunités et à rebondir plus rapidement après des crises.Leur secret : l’utilisation de modes de pensée divers, la sécurité psychologique pour pourvoir parler et penser librement et l’envie de participer à un projet qui les dépasse. Comme le dit le théoricien du management Peter Drucker : « Rien ne sert de défendre le monde d’hier quand on peut construire le monde de demain« .Vous aussi avez envie d’aller plus loin avec vos équipes et d’anticiper l’avenir ? Nos facilitateurs et consultant·es certifié·es en Design Thinking et Intelligence collective sont là pour vous y mener !",
-      "*Pérennité, innovation et résilience des entreprises : Panorama mondial des entreprises historiques innovantes, Marc Giget & Véronique Hillen, European Institute for Creative Strategies & Innovation, 2021. À consulter ici",
-      "Coach professionnel consultant, Facilitateur certifié en démarches collaboratives.",
+      "Les organisations les plus résilientes sont celles qui savent innover en continu. SY&CO stimule la créativité de vos équipes et structure vos démarches d'innovation, du premier atelier à la mise en œuvre.",
+      "Design thinking, codesign, facilitation d'ateliers créatifs : nous mobilisons l'intelligence collective pour faire émerger des idées neuves et résoudre vos problèmes complexes.",
+      "Innover devient alors une aventure collective, concrète et durable — au service de vos clients comme de vos collaborateurs.",
     ],
   },
   {
@@ -304,11 +333,12 @@ export const pages: PageData[] = [
     title: "Séminaires de cohésion d’équipe innovants | SY&CO",
     h1: "Le séminaire de cohésion d'équipe",
     category: "Management et Intelligence Collective",
-    description: "Découvrez nos séminaires de cohésion d'équipe : des expériences sur-mesure pour renforcer l'intelligence collective, la coopération, et l'esprit d'équipe.",
+    description:
+      "Séminaires de cohésion d'équipe et team building au Maroc et à l'international : fédérez et engagez vos équipes avec SY&CO.",
     paragraphs: [
-      "Améliorer les relations pour fluidifier la collaboration.",
-      "Redéfinir une identité collective forte en remobilisant les individus et en relançant les dynamiques collectives constitue une priorité pour retrouver la motivation, la cohésion et la positivité des équipes.",
-      "Co‘SY&CO élabore des séminaires innovants, sur-mesure, avec une réelle valeur ajoutée : un moment impactant avec des effets positifs de longue traîne.",
+      "La cohésion ne se décrète pas, elle se vit. SY&CO conçoit des séminaires de cohésion et des team buildings qui rapprochent réellement vos équipes et créent une dynamique collective durable.",
+      "Dans un cadre bienveillant et stimulant, nous favorisons l'écoute, la confiance et la coopération — les fondations d'une équipe engagée et performante.",
+      "Chaque séminaire est construit autour de vos enjeux, de votre culture et de vos objectifs, au Maroc comme à l'international.",
     ],
   },
   {
@@ -321,11 +351,12 @@ export const pages: PageData[] = [
     title: "Méthode IDDEA - Formation personnalisée et innovante | CO3",
     h1: "Notre méthode IDDEA®",
     category: "Notre méthode",
-    description: "Explorez notre méthode IDDEA pour des formations personnalisées : parcours individualisés, pédagogie adaptative, et expérience apprenante optimale.",
+    description:
+      "La méthode IDDEA® de SY&CO : une démarche de codesign en 5 étapes pour des accompagnements et formations sur-mesure, centrés sur vos besoins.",
     paragraphs: [
-      "Designer des parcours de formation innovants.",
-      "La digitalisation et le besoin d’individualisation ont entraîné un changement global dans nos modes de consommation. La formation est bien sûr impactée, avec des attentes spécifiques de la part des apprenants en termes de rythme et de modalités d’apprentissage.",
-      "La personnalisation et l’individualisation des formations, l’adaptation des rythmes d’apprentissage, la création de parcours hybrides mêlant distanciel et présentiel permettent d’optimiser les taux de complétion des parcours et de satisfaction de la part des apprenants.",
+      "Pour garantir des accompagnements réellement utiles, SY&CO s'appuie sur une démarche éprouvée : la méthode IDDEA®. Inspirée du design thinking, elle place l'utilisateur et le besoin au cœur de chaque projet.",
+      "Immersion, Design, Déploiement, Évaluation, Amélioration : cinq étapes pour comprendre, co-créer, expérimenter et améliorer en continu.",
+      "Résultat : des séminaires, formations et dispositifs sur-mesure, mesurables et durablement efficaces.",
     ],
   },
   {
@@ -343,11 +374,12 @@ export const pages: PageData[] = [
     title: "Parcours de formation sur mesure innovants | SY&CO",
     h1: "Notre ingénierie pédagogique sur mesure",
     category: "Formation",
-    description: "Découvrez nos parcours de formation sur mesure : pédagogie innovante, supports multimodaux, et approche collaborative pour un résultat optimal.",
+    description:
+      "Parcours de formation sur-mesure et multimodaux (présentiel, distanciel, digital) au Maroc et à l'international, conçus par SY&CO.",
     paragraphs: [
-      "Des parcours de formation au plus près des besoins des apprenants.",
-      "Notre approche très collaborative de l’apprentissage s’inscrit dans la création de synergies et d’entraide mutuelle entre les participants afin de prolonger les acquis au-delà du seul temps d’apprentissage.",
-      "Sur la base de notre méthode IDDEA, SY&CO crée des parcours adaptés aux besoins de votre organisation et de vos apprenants, dans une optique d’appropriation optimale, que ce soit lors de formations synchrones/asynchrones, en présentiel, à distance, par le biais de e-learning, de podcasts, de classes virtuelles collaboratives ou de ludo-pédagogie.",
+      "Une formation efficace part toujours d'un besoin précis. SY&CO conçoit des parcours de formation sur-mesure, bâtis à partir d'un diagnostic fin de vos compétences et de vos objectifs.",
+      "Présentiel, distanciel, digital et social learning : nous combinons les modalités les plus engageantes pour un ancrage durable des apprentissages.",
+      "À chaque étape, nous mesurons l'impact pour garantir le transfert des compétences sur le terrain.",
     ],
   },
   {
@@ -365,11 +397,12 @@ export const pages: PageData[] = [
     title: "Lancement de projet : réussir votre séminaire kick-off | CO3",
     h1: "Lancer son projet grâce au séminaire kick off",
     category: "Séminaire",
-    description: "Transformez vos réunions de lancement en moteurs de succès grâce au séminaire kick-off de SY&CO 3.",
+    description:
+      "Séminaire kick-off : réussissez le lancement de vos projets et fédérez vos équipes dès le départ, au Maroc et à l'international, avec SY&CO.",
     paragraphs: [
-      "Lancer son projet grâce au séminaire kick off",
-      "Créez de l’émulation grâce à une vision partagée.",
-      "Le kick-off meeting, ou réunion de lancement, est une étape incontournable pour créer une dynamique positive autour d’un projet.",
+      "La réussite d'un projet se joue souvent dès son lancement. SY&CO conçoit des séminaires kick-off qui alignent les parties prenantes et créent l'élan nécessaire à la réussite.",
+      "Vision partagée, rôles clarifiés, jalons posés : un format participatif et motivant qui met tout le monde en mouvement dans la même direction.",
+      "Un lancement réussi, c'est déjà une bonne partie du chemin parcouru.",
     ],
   },
   {
@@ -387,10 +420,12 @@ export const pages: PageData[] = [
     title: "Everything DISC | SY&CO",
     h1: "Everything DiSC®",
     category: "Outils",
-    description: "L’outil de référence, pour améliorer la communication interpersonnelle et la performance.",
+    description:
+      "Everything DiSC® par SY&CO : mieux se connaître pour mieux collaborer. Profils comportementaux et ateliers d'équipe, au Maroc et à l'international.",
     paragraphs: [
-      "Améliorez l’échange et la coopération, en offrant un référentiel commun à vos équipes. À travers l’objectivation des comportements, nous accompagnons vos équipes vers une meilleure compréhension des schémas d’interactions.",
-      "La comparaison de ces grilles souples sert de support d’échange pour aborder les interactions professionnelles, favoriser la prise de conscience et poser des bases concrètes au changement.",
+      "Mieux se comprendre pour mieux travailler ensemble : c'est tout l'enjeu d'Everything DiSC®. SY&CO déploie cet outil de référence pour fluidifier les relations au sein de vos équipes.",
+      "À travers un profil comportemental personnalisé et des ateliers collectifs, chacun découvre ses préférences, ses moteurs et ceux des autres.",
+      "Un langage commun s'installe, les tensions s'apaisent, et la collaboration gagne en efficacité et en plaisir.",
     ],
   },
   {
@@ -573,6 +608,7 @@ export const pageBySlug = (slug: string) =>
 
 /** Ordered sequences for previous/next in-page navigation. */
 export const expertiseNavOrder = [
+  "evenementiel-et-seminaires",
   "transformation-des-organisations",
   "strategie-et-gouvernance",
   "seminaires-de-cohesion-dequipe",
