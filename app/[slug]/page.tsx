@@ -80,7 +80,7 @@ export default async function DynamicPage({
         categoryHref={categoryHref}
         image={page.heroImage}
       />
-      <main>{renderBody(page)}</main>
+      <main id="main-content">{renderBody(page)}</main>
       <PageNav prev={prev} next={next} />
       <Footer />
     </>
@@ -214,7 +214,20 @@ function LegalBody({ page }: { page: PageData }) {
   return (
     <section className="bg-white py-16 lg:py-24">
       <div className="container-narrow max-w-3xl">
-        <Prose paragraphs={page.paragraphs} />
+        {page.paragraphs.map((p, i) =>
+          p.startsWith("## ") ? (
+            <h2
+              key={i}
+              className="mb-3 mt-8 font-heading text-xl font-bold text-teal first:mt-0"
+            >
+              {p.slice(3)}
+            </h2>
+          ) : (
+            <p key={i} className="mb-4 text-sm leading-relaxed text-ink/75">
+              {p}
+            </p>
+          )
+        )}
       </div>
     </section>
   );

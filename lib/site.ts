@@ -39,7 +39,7 @@ export const siteConfig = {
   url: resolveSiteUrl(),
   locale: "fr_MA",
   lang: "fr",
-  ogImage: "/images/hero-team1.jpg",
+  ogImage: "/images/og-sy-co.jpg",
   keywords: [
     "événementiel d'entreprise Maroc",
     "agence séminaire Casablanca",

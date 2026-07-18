@@ -76,6 +76,7 @@ export default async function ArticlePage({
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
       />
       <Header />
+      <main id="main-content">
 
       {/* Hero */}
       <section className="relative overflow-hidden bg-teal text-white">
@@ -238,6 +239,7 @@ export default async function ArticlePage({
           </div>
         </div>
       </section>
+      </main>
 
       <Footer />
     </>

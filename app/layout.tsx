@@ -107,6 +107,9 @@ export default function RootLayout({
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(websiteJsonLd) }}
         />
+        <a href="#main-content" className="skip-link">
+          Aller au contenu
+        </a>
         <ScrollProgress />
         {children}
       </body>
