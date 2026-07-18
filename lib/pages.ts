@@ -22,6 +22,7 @@ export type PageData = {
   introImage?: string;
   needs?: string[];
   services?: { title: string; description: string; image?: string }[];
+  highlights?: { title: string; description: string }[];
   paragraphs: string[];
 };
 
@@ -136,6 +137,7 @@ export const pages: PageData[] = [
       {
         title: "Diagnostic stratégique",
         description: "Analyser votre environnement, vos forces et vos leviers de croissance pour éclairer vos décisions.",
+        image: "/images/services/diagnostic-strategique.jpg",
       },
     ],
     heroImage: "/images/pages/header-strategie.jpg",
@@ -189,11 +191,12 @@ export const pages: PageData[] = [
       {
         title: "Ingénierie de formation multimodale",
         description: "Combiner présentiel, distanciel et digital pour des dispositifs de formation flexibles et efficaces.",
-        image: "/images/services/Ingenierie-formation-multimodale.jpg",
+        image: "/images/services/formation-multimodale.jpg",
       },
       {
         title: "Co-développement",
         description: "Misez sur la somme des savoirs, savoir-faire et savoir-être de vos équipes ! Le Co-développement est une méthode d’apprentissage collaboratif qui favorise l’échange et le partage entre pairs. Il est utilisé pour promouvoir l’apprentissage mutuel, l’émulation et le développement des compétences de manière três opérationnelle.Nos facilitateurs certifiés créent cet espace sécurisé, au sein duquel les participants peuvent exposer leur problématique, réfléchir ensemble, trouver des solutions créatives et se soutenir mutuellement dans leur développement professionnel. Grâce à notre plateforme collaborative, nous avons développé une solution pour déployer ces sessions de co-développement à distance tout en conservant une approche collaborative engageante.",
+        image: "/images/services/co-developpement.jpg",
       },
     ],
     heroImage: "/images/pages/header-management.jpg",
@@ -283,6 +286,11 @@ export const pages: PageData[] = [
   },
   {
     slug: "seminaires-de-cohesion-dequipe",
+    highlights: [
+      { title: "Renforcer les liens", description: "Des formats ludiques et immersifs qui rapprochent les équipes et installent une dynamique collective durable." },
+      { title: "Libérer la parole", description: "Un cadre bienveillant qui favorise l'écoute, la confiance et la coopération entre collaborateurs." },
+      { title: "100% sur-mesure", description: "Chaque séminaire est conçu autour de vos enjeux, de votre culture et de vos objectifs d'équipe." },
+    ],
     heroImage: "/images/pages/header-cohesion.jpg",
     introHeading: "Un outil à fort impact",
     introSubheading: "de management",
@@ -317,6 +325,11 @@ export const pages: PageData[] = [
   },
   {
     slug: "parcours-de-formation-sur-mesure",
+    highlights: [
+      { title: "Ingénierie pédagogique", description: "Des parcours structurés à partir d'un diagnostic précis de vos besoins en compétences." },
+      { title: "Approche multimodale", description: "Présentiel, distanciel, digital et social learning combinés pour un ancrage durable." },
+      { title: "Mesure d'impact", description: "Une évaluation à chaque étape pour garantir le transfert des compétences sur le terrain." },
+    ],
     heroImage: "/images/pages/header-pedagogie.jpg",
     introHeading: "Des modalités",
     introSubheading: "engageantes et innovantes",
@@ -334,6 +347,11 @@ export const pages: PageData[] = [
   },
   {
     slug: "lancer-son-projet-grace-au-seminaire-kick-off",
+    highlights: [
+      { title: "Aligner les équipes", description: "Un lancement qui fédère toutes les parties prenantes autour d'une vision et d'objectifs communs." },
+      { title: "Cadrer le projet", description: "Rôles, jalons et modalités de collaboration clarifiés dès le départ." },
+      { title: "Créer l'élan", description: "Un format participatif et motivant qui donne l'énergie nécessaire à la réussite." },
+    ],
     heroImage: "/images/pages/header-kickoff.jpg",
     introHeading: "Réussir",
     introSubheading: "son lancement de projet",
@@ -351,6 +369,11 @@ export const pages: PageData[] = [
   },
   {
     slug: "everything-disc",
+    highlights: [
+      { title: "Mieux se connaître", description: "Un profil comportemental qui éclaire les préférences et les moteurs de chacun." },
+      { title: "Mieux collaborer", description: "Un langage commun pour fluidifier les relations et prévenir les tensions." },
+      { title: "Passer à l'action", description: "Des plans de progrès concrets, ancrés dans le quotidien professionnel." },
+    ],
     heroImage: "/images/pages/header-innovation.jpg",
     introHeading: "Optimiser les interactions",
     introSubheading: "grâce à Everything DiSC®",
@@ -367,6 +390,11 @@ export const pages: PageData[] = [
   },
   {
     slug: "telechargez-notre-certificat-qualiopi",
+    highlights: [
+      { title: "Démarche qualité", description: "Nos actions de formation répondent aux exigences d'un référentiel qualité reconnu." },
+      { title: "Amélioration continue", description: "Chaque intervention est évaluée et inscrite dans une logique de progrès permanent." },
+      { title: "Transparence", description: "Consultez notre certificat et nos engagements qualité en toute confiance." },
+    ],
     heroImage: "/images/pages/header-iddea.jpg",
     type: "content",
     title: "Téléchargez notre certificat Qualiopi - SY&CO 3",

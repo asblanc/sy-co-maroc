@@ -19,6 +19,8 @@ import {
 } from "@/components/sections/ExpertiseSections";
 import { TeamGrid } from "@/components/sections/TeamGrid";
 import { ArticlesGrid } from "@/components/sections/ArticlesGrid";
+import { Highlights } from "@/components/sections/Highlights";
+import { Method } from "@/components/sections/Method";
 import { Parallax } from "@/components/ui/Parallax";
 import { pages, pageBySlug, type PageData } from "@/lib/pages";
 import { caseStudies } from "@/lib/data";
@@ -149,7 +151,11 @@ function IntroBlock({ page }: { page: PageData }) {
 
 function ContentBody({ page }: { page: PageData }) {
   const hasIntro = Boolean(page.introHeading && page.introImage);
-  const isExpertise = Boolean(page.services && page.services.length);
+  const hasRichBody = Boolean(
+    (page.services && page.services.length) ||
+      (page.highlights && page.highlights.length) ||
+      page.slug === "notre-methode-iddea"
+  );
 
   return (
     <>
@@ -163,16 +169,21 @@ function ContentBody({ page }: { page: PageData }) {
         </section>
       )}
 
+      {page.slug === "notre-methode-iddea" && <Method />}
+
       {page.needs && page.needs.length > 0 && (
         <NeedsChecklist items={page.needs} />
       )}
       {page.services && page.services.length > 0 && (
         <ServicesGrid services={page.services} />
       )}
+      {page.highlights && page.highlights.length > 0 && (
+        <Highlights items={page.highlights} />
+      )}
 
-      {isExpertise ? (
+      {hasRichBody ? (
         <>
-          <CaseStudies />
+          {page.services && page.services.length > 0 && <CaseStudies />}
           <ContactCTA />
         </>
       ) : (

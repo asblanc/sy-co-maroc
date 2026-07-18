@@ -49,40 +49,41 @@ export function ServicesGrid({ services }: { services: Service[] }) {
           </h2>
         </Reveal>
 
-        <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+        <div className="grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
           {services.map((s, i) => (
             <Reveal
               key={s.title}
               delay={(i % 3) * 0.08}
-              className="group flex flex-col overflow-hidden rounded-3xl border border-black/5 bg-white shadow-sm transition-all duration-300 hover:-translate-y-1.5 hover:shadow-xl"
+              className="group flex flex-col items-center rounded-3xl border border-black/5 bg-white p-7 text-center shadow-sm transition-all duration-300 hover:-translate-y-1.5 hover:shadow-xl"
             >
-              <div className="relative h-44 overflow-hidden bg-teal/10">
+              {/* photo dans une bulle */}
+              <div
+                className={`${i % 2 === 0 ? "blob-a" : "blob-b"} relative mb-6 h-40 w-40 overflow-hidden shadow-md`}
+              >
                 {s.image ? (
                   <Image
                     src={s.image}
                     alt={s.title}
                     fill
-                    sizes="(max-width: 768px) 100vw, 33vw"
-                    className="object-cover transition-transform duration-500 group-hover:scale-105"
+                    sizes="160px"
+                    className="object-cover"
                   />
                 ) : (
-                  <div className="flex h-full items-center justify-center bg-gradient-to-br from-teal to-teal-dark">
-                    <span className="px-4 text-center font-heading text-lg font-bold text-white/90">
+                  <div className="flex h-full items-center justify-center bg-gradient-to-br from-teal to-teal-dark p-3">
+                    <span className="text-center font-heading text-sm font-bold text-white/90">
                       {s.title}
                     </span>
                   </div>
                 )}
               </div>
-              <div className="flex flex-1 flex-col p-6">
-                <h3 className="mb-3 font-heading text-lg font-bold leading-snug text-teal">
-                  {s.title}
-                </h3>
-                {s.description && (
-                  <p className="text-sm leading-relaxed text-ink/70">
-                    {s.description}
-                  </p>
-                )}
-              </div>
+              <h3 className="mb-3 font-heading text-lg font-bold leading-snug text-teal">
+                {s.title}
+              </h3>
+              {s.description && (
+                <p className="text-sm leading-relaxed text-ink/70">
+                  {s.description}
+                </p>
+              )}
             </Reveal>
           ))}
         </div>
