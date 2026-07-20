@@ -3,6 +3,7 @@
 import Image from "next/image";
 import { motion } from "framer-motion";
 import { TrustSeal } from "@/components/ui/TrustSeal";
+import { TextReveal } from "@/components/ui/TextReveal";
 
 /**
  * Above-the-fold hero: a full-color band in the SY&CO logo green, white
@@ -18,26 +19,23 @@ export function Hero() {
       <div className="container-narrow relative grid items-center gap-10 py-12 lg:min-h-[600px] lg:grid-cols-2 lg:gap-8 lg:py-16">
         {/* Left */}
         <div className="text-center text-white lg:text-left">
-          <motion.h1
-            initial={{ opacity: 0, y: 24 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.7, delay: 0.1 }}
+          <TextReveal
+            as="h1"
+            text={"Rassembler,\nformer, transformer."}
+            delay={0.15}
+            stagger={0.08}
             className="text-4xl font-bold uppercase leading-[1.08] sm:text-5xl lg:text-6xl"
-          >
-            Rassembler,
-            <br />
-            former, transformer.
-          </motion.h1>
+          />
 
-          <motion.p
-            initial={{ opacity: 0, y: 24 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.7, delay: 0.35 }}
+          <TextReveal
+            as="p"
+            text={
+              "Événementiel d'entreprise, séminaires et formations sur-mesure — au Maroc et partout dans le monde."
+            }
+            delay={0.6}
+            stagger={0.03}
             className="mx-auto mt-6 max-w-md font-heading text-lg text-white/90 lg:mx-0"
-          >
-            Événementiel d&apos;entreprise, séminaires et formations sur-mesure
-            — au Maroc et partout dans le monde.
-          </motion.p>
+          />
 
           <motion.div
             initial={{ opacity: 0, scale: 0.9 }}
