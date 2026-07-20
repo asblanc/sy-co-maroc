@@ -13,7 +13,7 @@ export type NavColumn = {
 
 export const megaMenu: NavColumn[] = [
   {
-    title: "Stratégie",
+    title: "Conseil & transformation",
     children: [
       {
         label: "Transformation des organisations",
@@ -26,7 +26,7 @@ export const megaMenu: NavColumn[] = [
     ],
   },
   {
-    title: "Management et Intelligence Collective",
+    title: "Séminaires & cohésion",
     children: [
       {
         label: "Cohésion d’équipe et modes collaboratifs",
@@ -39,18 +39,18 @@ export const megaMenu: NavColumn[] = [
     ],
   },
   {
-    title: "Innovation",
+    title: "Innovation & créativité",
     children: [
-      { label: "Innovation et co-design", href: "/innovation-et-codesign" },
+      { label: "Innovation & créativité", href: "/innovation-et-codesign" },
     ],
   },
 ];
 
 export const navLinks: NavChild[] = [
   { label: "Événementiel", href: "/evenementiel-et-seminaires" },
-  { label: "Nos Cas Clients", href: "/nos-cas-clients" },
-  { label: "Qui sommes-nous ?", href: "/qui-sommes-nous" },
-  { label: "Nos Articles", href: "/nos-articles" },
+  { label: "Études de cas", href: "/nos-cas-clients" },
+  { label: "L’agence", href: "/qui-sommes-nous" },
+  { label: "Le Blog", href: "/nos-articles" },
 ];
 
 export type Expertise = {
@@ -90,9 +90,9 @@ export const expertises: Expertise[] = [
     href: "/developpement-des-competences-manageriales",
   },
   {
-    title: "Innovation et codesign",
+    title: "Innovation & créativité",
     description:
-      "Stimuler la créativité de vos équipes par des ateliers de codesign, d’idéation et de résolution de problèmes complexes.",
+      "Stimuler la créativité de vos équipes par des ateliers créatifs, d’idéation et de résolution de problèmes complexes.",
     color: "#FFBC7D",
     href: "/innovation-et-codesign",
   },
@@ -117,7 +117,7 @@ export const iddeaSteps: Step[] = [
     index: "Step 2",
     title: "DESIGN",
     description:
-      "En collaboration avec vous et vos équipes, codesign de l'accompagnement ou de la formation spécifique qu'il vous faut.",
+      "En collaboration avec vous et vos équipes, la conception collaborative de l'accompagnement ou de la formation spécifique qu'il vous faut.",
     color: "#ED0F7D",
   },
   {

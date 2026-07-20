@@ -65,7 +65,7 @@ export function Header() {
                   isExpertiseActive ? "text-teal" : "text-ink group-hover:text-teal"
                 )}
               >
-                Nos expertises
+                Nos prestations
                 <ChevronDown className="h-4 w-4 transition-transform duration-300 group-hover:rotate-180" />
               </button>
               {/* Mega menu */}
@@ -184,7 +184,7 @@ export function Header() {
                   className="flex items-center justify-between py-3 font-heading text-lg font-bold text-ink"
                   onClick={() => setExpertisesOpen((v) => !v)}
                 >
-                  Nos expertises
+                  Nos prestations
                   <ChevronDown
                     className={cn(
                       "h-5 w-5 transition-transform",

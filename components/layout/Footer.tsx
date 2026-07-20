@@ -34,7 +34,7 @@ export function Footer() {
         {/* Expertises */}
         <div>
           <h4 className="mb-5 font-heading text-lg font-bold">
-            Autres expertises
+            Nos prestations
           </h4>
           <ul className="space-y-3">
             {footerExpertises.map((link) => (

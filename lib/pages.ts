@@ -263,7 +263,7 @@ export const pages: PageData[] = [
         image: "/images/services/facilitation.jpg",
       },
       {
-        title: "Ateliers créatifs et codesign collaboratif",
+        title: "Ateliers créatifs et idéation collaborative",
         description: "Mobiliser l'intelligence collective pour générer des idées et co-construire des solutions concrètes.",
         image: "/images/services/ateliers-creatifs.jpg",
       },
@@ -298,14 +298,14 @@ export const pages: PageData[] = [
     introSubheading: "le monde de demain",
     introImage: "/images/pages/intro-innovation.jpg",
     type: "content",
-    title: "Innovation et CoDesign pour entreprises | SY&CO",
-    h1: "Innovation et codesign",
+    title: "Innovation & créativité pour entreprises | SY&CO",
+    h1: "Innovation & créativité",
     category: "Innovation",
     description:
-      "Innovation & codesign : ateliers créatifs, design thinking et facilitation pour innover en équipe, au Maroc et à l'international, avec SY&CO.",
+      "Innovation & créativité : ateliers créatifs, design thinking et facilitation pour innover en équipe, au Maroc et à l'international, avec SY&CO.",
     paragraphs: [
       "Les organisations les plus résilientes sont celles qui savent innover en continu. SY&CO stimule la créativité de vos équipes et structure vos démarches d'innovation, du premier atelier à la mise en œuvre.",
-      "Design thinking, codesign, facilitation d'ateliers créatifs : nous mobilisons l'intelligence collective pour faire émerger des idées neuves et résoudre vos problèmes complexes.",
+      "Design thinking, idéation, facilitation d'ateliers créatifs : nous mobilisons l'intelligence collective pour faire émerger des idées neuves et résoudre vos problèmes complexes.",
       "Innover devient alors une aventure collective, concrète et durable — au service de vos clients comme de vos collaborateurs.",
     ],
   },
@@ -343,7 +343,7 @@ export const pages: PageData[] = [
     h1: "Notre méthode IDDEA®",
     category: "Notre méthode",
     description:
-      "La méthode IDDEA® de SY&CO : une démarche de codesign en 5 étapes pour des accompagnements et formations sur-mesure, centrés sur vos besoins.",
+      "La méthode IDDEA® de SY&CO : une démarche collaborative en 5 étapes pour des accompagnements et formations sur-mesure, centrés sur vos besoins.",
     paragraphs: [
       "Pour garantir des accompagnements réellement utiles, SY&CO s'appuie sur une démarche éprouvée : la méthode IDDEA®. Inspirée du design thinking, elle place l'utilisateur et le besoin au cœur de chaque projet.",
       "Immersion, Design, Déploiement, Évaluation, Amélioration : cinq étapes pour comprendre, co-créer, expérimenter et améliorer en continu.",
@@ -441,9 +441,9 @@ export const pages: PageData[] = [
     slug: "nos-cas-clients",
     heroImage: "/images/pages/header-strategie.jpg",
     type: "cases-index",
-    title: "Nos cas clients | SY&CO",
-    h1: "Nos Cas Clients",
-    category: "Cas clients",
+    title: "Nos études de cas | SY&CO",
+    h1: "Nos études de cas",
+    category: "Études de cas",
     description: "Rien de mieux que des exemples concrets pour appréhender nos méthodes et nos modes opératoires. Découvrez comment SY&CO a permis a ses clients d’atteindre leur objectif",
     paragraphs: [
       "Rien de mieux que des exemples concrets pour appréhender nos méthodes et nos modes opératoires ! Découvrez comment SY&CO a permis à ses clients d’atteindre leur objectif dans les domaines suivants :",
@@ -497,7 +497,7 @@ export const pages: PageData[] = [
     title: "Comment réussir son séminaire à distance - SY&CO 3",
     h1: "Comment réussir son séminaire à distance",
     category: "Cohésion d'équipe et modes collaboratifs",
-    description: "Découvrez dans ce cas client comment notre solution de coaching à distance My Perso Coach a favorisé la montée en compétences de managers.",
+    description: "Découvrez comment SY&CO a accompagné à distance la montée en compétences et le changement de posture de managers.",
     image: "/images/cases/seminaire-distance2.jpg",
     paragraphs: [
       "Structure : PrivéSecteur : Habitat socialEffectif : 1 000 collaborateurs dont 120 managersMission : 2 mois",
@@ -527,7 +527,7 @@ export const pages: PageData[] = [
     title: "Ateliers et séminaires au service de l’expérience collaborateur - SY&CO 3",
     h1: "Ateliers et séminaires au service de l'expérience collaborateur",
     category: "Transformation des organisations",
-    description: "Découvrez dans ce cas client comment notre solution de coaching à distance My Perso Coach a favorisé la montée en compétences de managers.",
+    description: "Découvrez comment SY&CO a accompagné à distance la montée en compétences et le changement de posture de managers.",
     image: "/images/cases/parc-loisirs2.jpg",
     paragraphs: [
       "Structure : PrivéeSecteur : Parc de loisirsEffectif : 2 500 collaborateurs Mission : 6 jours",
@@ -542,7 +542,7 @@ export const pages: PageData[] = [
     title: "Accompagner à distance le changement de posture des managers - SY&CO 3",
     h1: "Accompagner à distance le changement de posture des managers",
     category: "Développement des compétences managériales",
-    description: "Découvrez dans ce cas client comment notre solution de coaching à distance My Perso Coach a favorisé la montée en compétences de managers.",
+    description: "Découvrez comment SY&CO a accompagné à distance la montée en compétences et le changement de posture de managers.",
     image: "/images/cases/conseil.jpg",
     paragraphs: [
       "Structure : Institution publiqueSecteur : AdministrationEffectif : 10 000 collaborateurs Mission : 3 ans",

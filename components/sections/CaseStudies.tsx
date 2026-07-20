@@ -8,7 +8,7 @@ import { caseStudies } from "@/lib/data";
 import { Reveal } from "@/components/ui/Reveal";
 import { Button } from "@/components/ui/Button";
 
-/** "Cas clients" — horizontally scrollable case-study carousel. */
+/** "Études de cas" — horizontally scrollable case-study carousel. */
 export function CaseStudies() {
   const trackRef = useRef<HTMLDivElement>(null);
 
@@ -26,7 +26,7 @@ export function CaseStudies() {
         <Reveal className="mb-4 flex flex-col items-start justify-between gap-4 sm:flex-row sm:items-end">
           <div>
             <h2 className="text-3xl font-bold text-teal sm:text-4xl">
-              Cas clients
+              Études de cas
             </h2>
             <p className="mt-3 max-w-xl text-base text-ink/70">
               Vous aimeriez être accompagné·e dans votre management.
@@ -94,7 +94,7 @@ export function CaseStudies() {
 
         <Reveal className="mt-8 text-center">
           <Button href="/nos-cas-clients" variant="outline">
-            Accueil Cas Clients
+            Toutes nos études de cas
           </Button>
         </Reveal>
       </div>
