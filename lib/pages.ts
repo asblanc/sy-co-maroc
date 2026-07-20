@@ -433,9 +433,8 @@ export const pages: PageData[] = [
     category: "Certification",
     description: "",
     paragraphs: [
-      "Chez SY&CO, c’est simple : tout commence par un café ou un thé (même virtuel) !",
-      "Cabinet de conseil en stratégie, management et innovation spécialisé dans la transformation organisationnelle, culturelle et managériale par l’intelligence collective et les démarches collaboratives.",
-      "Siège social : 56 avenue Daumesnil 75012 Paris",
+      "SY&CO inscrit ses actions de formation dans une démarche qualité exigeante et une logique d'amélioration continue.",
+      "Téléchargez notre attestation et découvrez nos engagements en matière de qualité pédagogique et de satisfaction de nos participants.",
     ],
   },
   {
@@ -449,7 +448,7 @@ export const pages: PageData[] = [
     paragraphs: [
       "Rien de mieux que des exemples concrets pour appréhender nos méthodes et nos modes opératoires ! Découvrez comment SY&CO a permis à ses clients d’atteindre leur objectif dans les domaines suivants :",
       "Chez SY&CO, c’est simple : tout commence par un café ou un thé (même virtuel) !",
-      "Cabinet de conseil en stratégie, management et innovation spécialisé dans la transformation organisationnelle, culturelle et managériale par l’intelligence collective et les démarches collaboratives.",
+      "SY&CO, agence marocaine d'événementiel d'entreprise : séminaires, conventions, team building et formations sur-mesure, au Maroc et à l'international.",
     ],
   },
   {
@@ -474,9 +473,7 @@ export const pages: PageData[] = [
     category: "Blog",
     description: "",
     paragraphs: [
-      "Chez SY&CO, c’est simple : tout commence par un café ou un thé (même virtuel) !",
-      "Cabinet de conseil en stratégie, management et innovation spécialisé dans la transformation organisationnelle, culturelle et managériale par l’intelligence collective et les démarches collaboratives.",
-      "Siège social : 56 avenue Daumesnil 75012 Paris",
+      "Le blog de SY&CO : conseils, retours d'expérience et tendances sur l'événementiel d'entreprise, les séminaires, la formation et le management collaboratif.",
     ],
   },
   {
@@ -489,8 +486,8 @@ export const pages: PageData[] = [
     description: "Envie d'échanger avec notre équipe ? Chez SY&CO, c’est simple : tout commence par un café ou un thé (même virtuel). Alors choisissez votre format, et prenons rendez-vous !",
     paragraphs: [
       "Retrouvez les actualités de SY&CO, du secteur et nos témoignages clients sur notre page LinkedIn",
-      "Cabinet de conseil en stratégie, management et innovation spécialisé dans la transformation organisationnelle, culturelle et managériale par l’intelligence collective et les démarches collaboratives.",
-      "Nos agences sont basées à Paris, Toulouse, Montpellier, Lyon et Marseille.",
+      "SY&CO, agence marocaine d'événementiel d'entreprise : séminaires, conventions, team building et formations sur-mesure, au Maroc et à l'international.",
+      "Nous intervenons à Casablanca, Rabat, Marrakech, Tanger et Agadir, ainsi qu'à l'international.",
     ],
   },
   {

@@ -25,9 +25,9 @@ export function Footer() {
             />
           </div>
           <p className="text-sm leading-relaxed text-white/80">
-            Cabinet de conseil en stratégie, management et innovation spécialisé
-            dans la transformation organisationnelle, culturelle et managériale
-            par l’intelligence collective et les démarches collaboratives.
+            SY&CO, agence marocaine d&apos;événementiel d&apos;entreprise :
+            séminaires, conventions, team building et formations sur-mesure, au
+            Maroc et à l&apos;international.
           </p>
         </div>
 
@@ -113,7 +113,7 @@ export function Footer() {
             ))}
           </div>
           <p>
-            ©2026 SY&CO SARL | Réalisation : Bureau Chapeau Melon
+            ©2026 SY&CO SARL | Réalisé par Asblanc
           </p>
         </div>
       </div>

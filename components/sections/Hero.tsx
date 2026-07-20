@@ -76,14 +76,14 @@ export function Hero() {
             aria-hidden
             className="absolute -bottom-4 right-6 z-0 h-8 w-8 rounded-full border-4 border-white/70"
           />
-          <div className="relative z-10 h-[440px] overflow-hidden rounded-[1.75rem] shadow-2xl sm:h-[440px] sm:rounded-[2.25rem]">
+          <div className="relative z-10 aspect-[4/5] w-full overflow-hidden rounded-[1.75rem] shadow-2xl sm:rounded-[2.25rem]">
             <Image
               src="/images/hero-team1.jpg"
               alt="L'équipe SY&CO"
               fill
               priority
-              sizes="(max-width: 1024px) 86vw, 440px"
-              className="object-cover"
+              sizes="(max-width: 1024px) 90vw, 440px"
+              className="object-cover object-center"
             />
           </div>
         </motion.div>
