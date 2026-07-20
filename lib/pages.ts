@@ -447,7 +447,7 @@ export const pages: PageData[] = [
     description: "Rien de mieux que des exemples concrets pour appréhender nos méthodes et nos modes opératoires. Découvrez comment SY&CO a permis a ses clients d’atteindre leur objectif",
     paragraphs: [
       "Rien de mieux que des exemples concrets pour appréhender nos méthodes et nos modes opératoires ! Découvrez comment SY&CO a permis à ses clients d’atteindre leur objectif dans les domaines suivants :",
-      "Chez SY&CO, c’est simple : tout commence par un café ou un thé (même virtuel) !",
+      "Retrouvez ici nos engagements qualité et téléchargez notre attestation en toute transparence.",
       "SY&CO, agence marocaine d'événementiel d'entreprise : séminaires, conventions, team building et formations sur-mesure, au Maroc et à l'international.",
     ],
   },
@@ -483,7 +483,7 @@ export const pages: PageData[] = [
     title: "Contact | SY&CO",
     h1: "Envie d'échanger avec notre équipe ?",
     category: "Contact",
-    description: "Envie d'échanger avec notre équipe ? Chez SY&CO, c’est simple : tout commence par un café ou un thé (même virtuel). Alors choisissez votre format, et prenons rendez-vous !",
+    description: "Une idée d'événement, un besoin de formation, une simple question ? Choisissez le format qui vous convient et échangeons.",
     paragraphs: [
       "Retrouvez les actualités de SY&CO, du secteur et nos témoignages clients sur notre page LinkedIn",
       "SY&CO, agence marocaine d'événementiel d'entreprise : séminaires, conventions, team building et formations sur-mesure, au Maroc et à l'international.",

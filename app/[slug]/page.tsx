@@ -112,7 +112,7 @@ function ContactCta() {
   return (
     <div className="mt-12 flex flex-wrap items-center gap-4 rounded-3xl bg-peach/25 p-8">
       <p className="flex-1 font-heading text-lg font-bold text-teal">
-        Envie d’en savoir plus sur cette expertise&nbsp;?
+        Un projet en tête pour vos équipes&nbsp;?
       </p>
       <Button href="/contact" variant="pink" size="lg">
         Contactez-nous

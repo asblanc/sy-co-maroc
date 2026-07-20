@@ -5,17 +5,17 @@ type Service = { title: string; description: string; image?: string };
 
 const accentColors = ["#097D7A", "#FD8B15", "#ED0F7D", "#1076DA"];
 
-/** "Vous avez besoin de…" — needs presented as accent-bar cards (no markers). */
+/** "Vos enjeux, nos réponses" — needs presented as accent-bar cards. */
 export function NeedsChecklist({ items }: { items: string[] }) {
   return (
     <section className="bg-peach/20 py-16 lg:py-24">
       <div className="container-narrow">
         <Reveal className="mb-12 text-center">
           <p className="font-heading text-sm font-bold uppercase tracking-widest text-orange">
-            Vous avez
+            Vos enjeux
           </p>
           <h2 className="mt-1 text-3xl font-bold text-teal sm:text-4xl">
-            besoin de…
+            nos réponses
           </h2>
         </Reveal>
 
@@ -41,17 +41,17 @@ export function NeedsChecklist({ items }: { items: string[] }) {
   );
 }
 
-/** "Qu'allons-nous faire pour vous aujourd'hui ?" — services grid. */
+/** "Ce que nous mettons en œuvre" — services grid. */
 export function ServicesGrid({ services }: { services: Service[] }) {
   return (
     <section className="bg-white py-16 lg:py-24">
       <div className="container-narrow">
         <Reveal className="mb-12 text-center">
           <h3 className="font-heading text-xl font-semibold text-ink/70">
-            Qu&apos;allons-nous faire pour
+            Ce que nous
           </h3>
           <h2 className="mt-1 text-3xl font-bold text-teal sm:text-4xl">
-            vous aujourd&apos;hui&nbsp;?
+            mettons en œuvre
           </h2>
         </Reveal>
 

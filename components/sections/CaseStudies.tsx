@@ -29,7 +29,7 @@ export function CaseStudies() {
               Études de cas
             </h2>
             <p className="mt-3 max-w-xl text-base text-ink/70">
-              Vous aimeriez être accompagné·e dans votre management.
+              Des projets que nous avons imaginés, produits et menés à bien.
             </p>
           </div>
           <div className="flex gap-3">

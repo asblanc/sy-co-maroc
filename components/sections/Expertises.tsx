@@ -6,7 +6,7 @@ import { Plus } from "lucide-react";
 import { expertises } from "@/lib/data";
 import { Reveal } from "@/components/ui/Reveal";
 
-/** "Quel défi allons-nous relever ensemble ?" — grid of expertise cards. */
+/** Expertises grid under the "Construisons votre réussite" heading. */
 export function Expertises() {
   return (
     <section id="expertises" className="bg-white py-20 lg:py-28">
@@ -18,7 +18,7 @@ export function Expertises() {
             <span className="text-orange">votre réussite</span>
           </h2>
           <p className="mt-6 font-heading text-lg font-bold text-ink/70">
-            Quel défi allons-nous relever ensemble&nbsp;?
+            Des expériences sur-mesure pour vos équipes.
           </p>
         </Reveal>
 

@@ -25,18 +25,19 @@ const options = [
   },
 ];
 
-/** "Parlons de votre projet" — three ways to get in touch. */
+/** Final CTA — three ways to get in touch. */
 export function ContactCTA() {
   return (
     <section id="contact" className="bg-peach/25 py-20 lg:py-28">
       <div className="container-narrow text-center">
         <Reveal>
           <h2 className="mb-5 text-3xl font-bold text-teal sm:text-4xl">
-            Parlons de votre projet
+            Donnons vie à votre projet
           </h2>
           <p className="mx-auto mb-14 max-w-xl text-base text-ink/80">
-            Chez SY&CO, c’est simple&nbsp;: tout commence par un café
-            ou un thé (même virtuel)&nbsp;!
+            Séminaire, convention, team building ou formation&nbsp;:
+            racontez-nous votre idée, nous imaginons l’expérience qui vous
+            ressemble.
           </p>
         </Reveal>
 
