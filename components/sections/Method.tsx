@@ -1,10 +1,10 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { iddeaSteps } from "@/lib/data";
+import { methodSteps } from "@/lib/data";
 import { Reveal } from "@/components/ui/Reveal";
 
-/** "Notre méthode IDDEA" — 5-step approach timeline. */
+/** "Notre méthode ÉCLAT" — 5-step SY&CO approach timeline. */
 export function Method() {
   return (
     <section id="methode" className="bg-peach/20 py-20 lg:py-28">
@@ -14,19 +14,21 @@ export function Method() {
             Notre méthode
           </p>
           <h2 className="mb-6 text-4xl font-bold text-teal sm:text-5xl">
-            IDDEA<sup className="text-lg">®</sup>
+            ÉCLAT
           </h2>
           <p className="text-base leading-relaxed text-ink/80">
-            Pour accompagner nos clients, nous avons élaboré la démarche
-            IDDEA®. Inspirée du Design Thinking, cette démarche garantit des
-            accompagnements sur-mesure centrés utilisateur, basés sur la
-            compréhension du besoin, la créativité, la co-création, l’itération
-            et l’amélioration continue.
+            Pour concevoir des événements et des formations qui marquent, nous
+            suivons une démarche en cinq temps —{" "}
+            <span className="font-semibold text-teal">
+              Écoute, Conception, Lancement, Animation, Traces
+            </span>{" "}
+            — centrée sur vos objectifs, de la première idée jusqu’à la mesure
+            de l’impact.
           </p>
         </Reveal>
 
         <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-5">
-          {iddeaSteps.map((step, i) => (
+          {methodSteps.map((step, i) => (
             <motion.div
               key={step.title}
               initial={{ opacity: 0, y: 30 }}
@@ -36,13 +38,13 @@ export function Method() {
               className="group relative flex flex-col rounded-3xl bg-white p-6 shadow-sm transition-all duration-300 hover:-translate-y-1.5 hover:shadow-xl"
             >
               <div
-                className="mb-4 flex h-14 w-14 items-center justify-center rounded-2xl font-heading text-xl font-bold text-white shadow-md"
+                className="mb-4 flex h-14 w-14 items-center justify-center rounded-2xl font-heading text-2xl font-bold text-white shadow-md"
                 style={{ backgroundColor: step.color }}
               >
-                {i + 1}
+                {step.letter}
               </div>
               <p className="mb-1 text-xs font-bold uppercase tracking-widest text-ink/40">
-                {step.index}
+                Étape {i + 1}
               </p>
               <h3
                 className="mb-3 font-heading text-lg font-bold"

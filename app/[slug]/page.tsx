@@ -166,7 +166,7 @@ function ContentBody({ page }: { page: PageData }) {
   const hasRichBody = Boolean(
     (page.services && page.services.length) ||
       (page.highlights && page.highlights.length) ||
-      page.slug === "notre-methode-iddea"
+      page.slug === "notre-methode-eclat"
   );
 
   return (
@@ -181,7 +181,7 @@ function ContentBody({ page }: { page: PageData }) {
         </section>
       )}
 
-      {page.slug === "notre-methode-iddea" && <Method />}
+      {page.slug === "notre-methode-eclat" && <Method />}
 
       {page.needs && page.needs.length > 0 && (
         <NeedsChecklist items={page.needs} />

@@ -99,47 +99,47 @@ export const expertises: Expertise[] = [
 ];
 
 export type Step = {
-  index: string;
+  letter: string;
   title: string;
   description: string;
   color: string;
 };
 
-export const iddeaSteps: Step[] = [
+export const methodSteps: Step[] = [
   {
-    index: "Step 1",
-    title: "IMMERSION",
+    letter: "É",
+    title: "Écoute",
     description:
-      "Mise en empathie et en écoute active pour identifier les besoins profonds de votre organisation (audit, diagnostic, interviews...).",
-    color: "#007873",
+      "Immersion dans vos enjeux, votre culture et vos objectifs : audit, entretiens et cadrage précis du besoin.",
+    color: "#097D7A",
   },
   {
-    index: "Step 2",
-    title: "DESIGN",
+    letter: "C",
+    title: "Conception",
     description:
-      "En collaboration avec vous et vos équipes, la conception collaborative de l'accompagnement ou de la formation spécifique qu'il vous faut.",
+      "Co-création d'une expérience sur-mesure : contenu, format, fil narratif et scénographie.",
     color: "#ED0F7D",
   },
   {
-    index: "Step 3",
-    title: "DÉPLOIEMENT",
+    letter: "L",
+    title: "Lancement",
     description:
-      "Intervention de nos facilitateurs, consultants, coachs et formateurs via des modalités innovantes, ludiques et participatives, adaptées à vos besoins.",
+      "Production et orchestration : logistique, coordination et préparation des intervenants, jusqu'au moindre détail.",
     color: "#1076DA",
   },
   {
-    index: "Step 4",
-    title: "ÉVALUATION",
+    letter: "A",
+    title: "Animation",
     description:
-      "Monitoring en temps réel de l'impact de nos actions, à chaque étape puis des retombées à moyen-long terme.",
-    color: "#FCD430",
+      "Le jour J : facilitation, énergie et interactivité pour une expérience réellement mémorable.",
+    color: "#FD8B15",
   },
   {
-    index: "Step 5",
-    title: "AMÉLIORATION",
+    letter: "T",
+    title: "Traces",
     description:
-      "Bilan de chaque action et inscription dans un processus d’amélioration continue.",
-    color: "#FFBC7D",
+      "Mesure de l'impact, bilan et actions concrètes pour prolonger les effets dans la durée.",
+    color: "#FCD430",
   },
 ];
 
@@ -285,7 +285,7 @@ export const contactInfo = {
 
 export const footerExpertises: NavChild[] = [
   { label: "Événementiel & séminaires", href: "/evenementiel-et-seminaires" },
-  { label: "Notre méthode IDDEA", href: "/notre-methode-iddea" },
+  { label: "Notre méthode ÉCLAT", href: "/notre-methode-eclat" },
   {
     label: "Séminaires de cohésion d'équipe",
     href: "/seminaires-de-cohesion-dequipe",
