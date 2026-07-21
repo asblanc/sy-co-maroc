@@ -4,6 +4,7 @@ import "./globals.css";
 import { Analytics } from "@vercel/analytics/next";
 import { SpeedInsights } from "@vercel/speed-insights/next";
 import { ScrollProgress } from "@/components/ui/ScrollProgress";
+import { WhatsAppButton } from "@/components/ui/WhatsAppButton";
 import { siteConfig } from "@/lib/site";
 
 const arvo = Arvo({
@@ -119,6 +120,7 @@ export default function RootLayout({
         </a>
         <ScrollProgress />
         {children}
+        <WhatsAppButton />
         <Analytics />
         <SpeedInsights />
       </body>
