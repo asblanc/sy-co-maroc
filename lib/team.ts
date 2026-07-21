@@ -2,48 +2,48 @@ export type Member = { name: string; role: string; image?: string };
 
 export const team: Member[] = [
   {
-    name: "Adjahi Sylviane",
-    role: "Présidente-Directrice Générale",
+    name: "Sylviane KOFFI AMA",
+    role: "Directrice Générale",
     image: "/images/team/pdg.jpg",
   },
   {
     name: "Youssef Amrani",
-    role: "Directeur associé, Chef de projet événementiel",
+    role: "Directeur associé, Développement & partenariats",
     image: "/images/team/avatar-youssef-amrani.png",
   },
   {
     name: "Karim El Fassi",
-    role: "Directeur artistique & Scénographe",
+    role: "Responsable ingénierie pédagogique",
     image: "/images/team/avatar-karim-el-fassi.png",
   },
   {
     name: "Nadia Chraibi",
-    role: "Facilitatrice & Coach en intelligence collective",
+    role: "Coach en leadership & intelligence émotionnelle",
     image: "/images/team/avatar-nadia-chraibi.png",
   },
   {
     name: "Mehdi Tazi",
-    role: "Consultant formation & Ingénierie pédagogique",
+    role: "Consultant en management stratégique",
     image: "/images/team/avatar-mehdi-tazi.png",
   },
   {
     name: "Leila Berrada",
-    role: "Responsable production événementielle",
+    role: "Responsable des rencontres Meet & Share",
     image: "/images/team/avatar-leila-berrada.png",
   },
   {
     name: "Omar Sqalli",
-    role: "Consultant en transformation & management",
+    role: "Consultant en transformation organisationnelle",
     image: "/images/team/avatar-omar-sqalli.png",
   },
   {
     name: "Imane Ouazzani",
-    role: "Cheffe de projet séminaires & conventions",
+    role: "Cheffe de projet formations résidentielles",
     image: "/images/team/avatar-imane-ouazzani.png",
   },
   {
     name: "Hamza Benjelloun",
-    role: "Facilitateur & Formateur certifié DISC",
+    role: "Formateur & facilitateur certifié",
     image: "/images/team/avatar-hamza-benjelloun.png",
   },
   {

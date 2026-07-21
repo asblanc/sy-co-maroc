@@ -21,7 +21,6 @@ import {
 import { TeamGrid } from "@/components/sections/TeamGrid";
 import { ArticlesGrid } from "@/components/sections/ArticlesGrid";
 import { Highlights } from "@/components/sections/Highlights";
-import { Method } from "@/components/sections/Method";
 import { Faq } from "@/components/sections/Faq";
 import { Parallax } from "@/components/ui/Parallax";
 import { pages, pageBySlug, getSiblings, type PageData } from "@/lib/pages";
@@ -165,8 +164,7 @@ function ContentBody({ page }: { page: PageData }) {
   const hasIntro = Boolean(page.introHeading && page.introImage);
   const hasRichBody = Boolean(
     (page.services && page.services.length) ||
-      (page.highlights && page.highlights.length) ||
-      page.slug === "notre-methode-eclat"
+      (page.highlights && page.highlights.length)
   );
 
   return (
@@ -181,18 +179,24 @@ function ContentBody({ page }: { page: PageData }) {
         </section>
       )}
 
-      {page.slug === "notre-methode-eclat" && <Method />}
-
       {page.needs && page.needs.length > 0 && (
-        <NeedsChecklist items={page.needs} />
+        <NeedsChecklist
+          items={page.needs}
+          eyebrow={page.needsEyebrow}
+          title={page.needsTitle}
+        />
       )}
       {page.services && page.services.length > 0 && (
-        <ServicesGrid services={page.services} />
+        <ServicesGrid
+          services={page.services}
+          eyebrow={page.servicesEyebrow}
+          title={page.servicesTitle}
+        />
       )}
       {page.highlights && page.highlights.length > 0 && (
         <Highlights items={page.highlights} />
       )}
-      {page.slug === "evenementiel-et-seminaires" && <Faq />}
+      {page.slug === "form-action" && <Faq />}
 
       {hasRichBody ? (
         <>
@@ -240,7 +244,7 @@ function AboutBody({ page }: { page: PageData }) {
         <div className="container-narrow grid items-center gap-12 lg:grid-cols-2">
           <div>
             <h2 className="mb-6 font-heading text-2xl font-bold text-teal sm:text-3xl">
-              Notre philosophie
+              Notre histoire, notre mission
             </h2>
             <Prose paragraphs={page.paragraphs} />
           </div>
@@ -258,10 +262,73 @@ function AboutBody({ page }: { page: PageData }) {
           </div>
         </div>
       </section>
+      <LeadershipAxes />
       <PdgSpotlight />
       <TeamGrid />
       <Clients />
     </>
+  );
+}
+
+const leadershipAxes = [
+  {
+    n: "01",
+    title: "Le leadership de soi",
+    description:
+      "Self leadership, intelligence émotionnelle et connaissance de soi : la première marche pour inspirer les autres.",
+    color: "#097D7A",
+  },
+  {
+    n: "02",
+    title: "Le leadership interpersonnel",
+    description:
+      "Animer des équipes, gérer la transformation et adopter une posture de coach au service du collectif.",
+    color: "#ED0F7D",
+  },
+  {
+    n: "03",
+    title: "Le leadership business",
+    description:
+      "Management stratégique, innovation et transformation organisationnelle pour conduire vers l'excellence.",
+    color: "#FD8B15",
+  },
+];
+
+function LeadershipAxes() {
+  return (
+    <section className="bg-peach/20 py-16 lg:py-24">
+      <div className="container-narrow">
+        <div className="mx-auto mb-12 max-w-2xl text-center">
+          <p className="font-heading text-sm font-bold uppercase tracking-widest text-orange">
+            Notre approche
+          </p>
+          <h2 className="mt-1 text-3xl font-bold text-teal sm:text-4xl">
+            Les 3 axes du leadership SY&amp;CO
+          </h2>
+        </div>
+        <div className="grid gap-6 sm:grid-cols-3">
+          {leadershipAxes.map((axe) => (
+            <div
+              key={axe.n}
+              className="flex flex-col rounded-3xl border border-black/5 bg-white p-8 shadow-sm transition-all duration-300 hover:-translate-y-1.5 hover:shadow-xl"
+            >
+              <span
+                className="mb-5 font-display text-4xl font-bold"
+                style={{ color: axe.color }}
+              >
+                {axe.n}
+              </span>
+              <h3 className="mb-3 font-heading text-lg font-bold text-teal">
+                {axe.title}
+              </h3>
+              <p className="text-sm leading-relaxed text-ink/70">
+                {axe.description}
+              </p>
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
   );
 }
 
@@ -274,7 +341,7 @@ function PdgSpotlight() {
           <div className="blob-b relative aspect-square overflow-hidden shadow-2xl">
             <Image
               src="/images/team/pdg.jpg"
-              alt="Présidente-Directrice Générale de SY&CO"
+              alt="Directrice Générale de SY&CO"
               fill
               sizes="(max-width: 1024px) 90vw, 380px"
               className="object-cover"
@@ -284,18 +351,21 @@ function PdgSpotlight() {
 
         <div>
           <p className="mb-3 font-heading text-sm font-bold uppercase tracking-widest text-orange">
-            Le mot de la Présidente-Directrice Générale
+            Le mot de la Directrice Générale
           </p>
           <blockquote className="text-xl font-medium leading-relaxed text-white/90 sm:text-2xl">
-            «&nbsp;Un événement réussi, c’est une émotion partagée qui laisse une
-            trace. Chez SY&amp;CO, nous mettons l’humain, la créativité et
-            l’intelligence collective au service d’expériences qui rapprochent
-            les équipes — au Maroc comme à l’international.&nbsp;»
+            «&nbsp;Notre mission va au-delà de la formation : nous portons
+            l’ambition d’une transformation panafricaine, portée par des cadres
+            et dirigeants capables d’impulser le changement dans leurs
+            organisations et, plus largement, dans leurs pays. Chaque programme
+            que nous concevons est pensé pour ancrer des compétences durables,
+            au service d’une Afrique qui construit elle-même les dirigeants de
+            sa réussite.&nbsp;»
           </blockquote>
           <p className="mt-6 font-heading text-lg font-bold">
-            Adjahi Sylviane
+            Sylviane KOFFI AMA
             <span className="mt-0.5 block text-sm font-normal text-white/70">
-              Présidente-Directrice Générale · SY&amp;CO
+              Directrice Générale · SY&amp;CO
             </span>
           </p>
         </div>

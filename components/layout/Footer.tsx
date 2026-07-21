@@ -1,6 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
-import { Linkedin, Phone, MapPin } from "lucide-react";
+import { Linkedin, Phone, MapPin, Mail } from "lucide-react";
 import { Button } from "@/components/ui/Button";
 import { TrustSeal } from "@/components/ui/TrustSeal";
 import {
@@ -25,16 +25,17 @@ export function Footer() {
             />
           </div>
           <p className="text-sm leading-relaxed text-white/80">
-            SY&CO, agence marocaine d&apos;événementiel d&apos;entreprise :
-            séminaires, conventions, team building et formations sur-mesure, au
-            Maroc et à l&apos;international.
+            SY&CO — Synergie &amp; Compétences : cabinet de formation et de
+            conseil qui transforme cadres et dirigeants d&apos;Afrique
+            francophone en leaders de demain. FormAction · Meet &amp; Share ·
+            Event.
           </p>
         </div>
 
         {/* Expertises */}
         <div>
           <h4 className="mb-5 font-heading text-lg font-bold">
-            Nos prestations
+            Nos programmes
           </h4>
           <ul className="space-y-3">
             {footerExpertises.map((link) => (
@@ -70,6 +71,15 @@ export function Footer() {
             </p>
             <p className="flex items-center gap-2">
               <Phone className="h-4 w-4" /> Tel : {contactInfo.phone}
+            </p>
+            <p className="flex items-center gap-2">
+              <Mail className="h-4 w-4" />
+              <a
+                href={`mailto:${contactInfo.email}`}
+                className="transition-colors hover:text-orange"
+              >
+                {contactInfo.email}
+              </a>
             </p>
           </div>
         </div>
@@ -113,7 +123,7 @@ export function Footer() {
             ))}
           </div>
           <p>
-            ©2026 SY&CO SARL | Réalisé par Asblanc
+            ©2026 SY&CO — Synergie &amp; Compétences | Réalisé par Asblanc
           </p>
         </div>
       </div>

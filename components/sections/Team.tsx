@@ -27,13 +27,12 @@ export function Team() {
             <span className="text-orange">collaboratif</span>
           </h2>
           <p className="mb-8 text-base leading-relaxed text-white/85">
-            Chefs de projet événementiel, facilitateurs, formateurs et
-            créatifs&nbsp;: notre équipe réunit des profils complémentaires,
-            animés par une même exigence de résultat. De Casablanca à
-            l’international, nous imaginons et orchestrons des expériences qui
-            marquent les esprits et rapprochent les équipes. L’écoute,
-            l’énergie et le plaisir sont, pour nous, les meilleurs ingrédients
-            d’un événement réussi et d’une collaboration qui dure.
+            Formateurs, coachs, consultants et facilitateurs&nbsp;: notre équipe
+            intergénérationnelle réunit des profils complémentaires et un solide
+            réseau de partenaires pluridisciplinaires. Du Maroc au Sénégal et à
+            la Côte d’Ivoire, nous mettons la synergie des talents et des
+            expertises au service de la performance de nos clients — en remettant
+            l’humain au centre de chaque transformation.
           </p>
           <p className="mb-5 font-heading text-lg font-bold">
             Envie d&apos;en savoir plus&nbsp;?

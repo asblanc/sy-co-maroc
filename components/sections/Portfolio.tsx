@@ -12,15 +12,15 @@ export function Portfolio() {
       <div className="container-narrow">
         <Reveal className="mb-14 text-center">
           <p className="font-heading text-sm font-bold uppercase tracking-widest text-orange">
-            Nos réalisations
+            Nos programmes
           </p>
           <h2 className="mt-1 text-3xl font-bold text-teal sm:text-4xl">
-            Des événements qui marquent les esprits
+            Des parcours qui transforment
           </h2>
           <p className="mx-auto mt-4 max-w-2xl text-base text-ink/70">
-            Du séminaire de direction au team building outdoor, découvrez les
-            formats que nous concevons et produisons, au Maroc et à
-            l’international.
+            De la formation résidentielle immersive aux rencontres entre pairs,
+            découvrez les programmes que nous concevons, au Maroc, au Sénégal et
+            en Côte d’Ivoire.
           </p>
         </Reveal>
 
@@ -55,8 +55,8 @@ export function Portfolio() {
         </div>
 
         <Reveal className="mt-12 text-center">
-          <Button href="/evenementiel-et-seminaires" variant="outline">
-            Découvrir notre offre événementielle <ArrowRight className="h-4 w-4" />
+          <Button href="/form-action" variant="outline">
+            Découvrir nos formations <ArrowRight className="h-4 w-4" />
           </Button>
         </Reveal>
       </div>

@@ -6,9 +6,17 @@
 
 ## 1. Le projet en bref
 
-Site vitrine de **SY&CO** — agence marocaine d'**événementiel d'entreprise** :
-séminaires, conventions, team building et **formation** (baseline *Event · Meet · Training*),
-au Maroc et à l'international. Basée à Casablanca.
+Site vitrine de **SY&CO (Synergie & Compétences)** — **cabinet de formation et de
+conseil** créé en 2020, **filiale du Groupe VISION & STRATÉGIE**, qui développe les
+compétences des cadres, dirigeants et organisations d'**Afrique francophone**
+(Maroc, Sénégal, Côte d'Ivoire). Slogan : *« Vous guider vers la réussite »*.
+Baseline / 3 piliers : **FormAction · Meet & Share · Event**.
+- **FormAction** : formations résidentielles immersives (7–10 j) — 7 thématiques
+  (finance publique/verte/durable, leadership & transfo digitale, gouvernance/audit,
+  RH stratégique & data RH, gestion de projet & suivi-évaluation, RSE, agriculture/agribusiness).
+- **Meet & Share** : rencontres entre pairs (TOP MANAGER, SHE TALK, Rencontres DAF/DRH/RAF/Assistantes).
+- **Formation sur mesure** : intra-entreprise dès 5 personnes.
+Basé à Casablanca (adresse à confirmer). Contact : +212 699 820 570 · seminairesyco@gmail.com.
 
 - **Repo GitHub** : https://github.com/asblanc/sy-co-maroc (branche `main`)
 - **Déploiement** : Vercel (équipe `zozo-sery-blanchards-projects`, via intégration Git)
@@ -46,17 +54,22 @@ Lucide React · Supabase (formulaire de devis) · ESLint (flat config). Déploie
 
 ## 5. Décisions structurantes (à respecter)
 
-- **Méthode maison = ÉCLAT** (Écoute · Conception · Lancement · Animation · Traces).
-  Ne PAS réintroduire « IDDEA » (méthode déposée de la référence).
+- **Méthode maison = ÉCLAT** (Écoute · Conception · Lancement · Animation · Traces),
+  affichée sur la home (section `Method`). Ne PAS réintroduire « IDDEA » (méthode
+  déposée de la référence). Voir aussi les **3 axes du leadership SY&CO** (page L'agence).
+- **Directrice Générale : Mme Sylviane KOFFI AMA** (mot de la Directrice sur `qui-sommes-nous`).
+  Ne PAS réutiliser l'ancien nom « Adjahi Sylviane » ni le titre « PDG » (placeholders).
 - **Équipe** : noms fictifs + **avatars à initiales générés** (pas de vraies photos de
-  personnes). PDG : **Mme Adjahi Sylviane**. À remplacer par les vrais noms/photos quand fournis.
+  personnes), rôles orientés formation/conseil. À remplacer par les vrais noms/photos quand fournis.
 - **Partenaires** (`partners` dans data.ts) : entreprises marocaines en **tuiles texte**
   (placeholders). Le composant `Clients` affiche un vrai logo si `logo` est renseigné
   (déposer les fichiers dans `public/images/clients/`). N'afficher que de **vrais** clients.
 - **Réalisations** (`realizations`) : formats d'événements illustratifs, **sans nom de client réel**.
-- **Menu / rubriques** volontairement distincts de la référence : « Nos prestations »,
-  « Études de cas », « L'agence », « Le Blog », méga-menu « Conseil & transformation /
-  Séminaires & cohésion / Innovation & créativité ».
+- **Menu / rubriques** : méga-menu « Nos programmes » = **FormAction / Meet & Share /
+  Formation sur mesure** ; navLinks « Nos offres », « Calendrier 2027 », « L'agence »,
+  « Le Blog ». Pages piliers : `/form-action`, `/meet-and-share`, `/formation-sur-mesure`,
+  plus `/nos-offres`, `/calendrier-2027`. La page `/nos-cas-clients` = « Ils nous font
+  confiance » (intro + études de cas conservées + mur clients).
 - **Contenu 100% original** : ne pas recopier de textes/tournures de coefficience3.
 
 ## 6. Base de données (Supabase)

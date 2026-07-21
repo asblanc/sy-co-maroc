@@ -27,7 +27,7 @@ export function ContactForm() {
       setSent(true);
     } catch {
       setError(
-        "Une erreur est survenue. Merci de réessayer ou de nous écrire à contact@sy-co.ma."
+        `Une erreur est survenue. Merci de réessayer ou de nous écrire à ${contactInfo.email}.`
       );
     } finally {
       setSubmitting(false);
@@ -39,12 +39,12 @@ export function ContactForm() {
       {/* Form */}
       <div className="rounded-3xl border border-black/5 bg-white p-8 shadow-sm">
         <h2 className="mb-2 font-heading text-2xl font-bold text-teal">
-          Demande de devis événementiel
+          Nous contacter
         </h2>
         <p className="mb-8 text-base leading-relaxed text-ink/80">
-          Séminaire, convention, team building ou formation&nbsp;? Décrivez-nous
-          votre projet&nbsp;: nous revenons vers vous avec une proposition
-          sur-mesure, au Maroc comme à l’international.
+          Une formation à réserver, un projet pour votre équipe ou une simple
+          question&nbsp;? Décrivez-nous votre besoin&nbsp;: notre équipe revient
+          vers vous rapidement pour construire le parcours adapté.
         </p>
 
         {sent ? (
@@ -54,7 +54,8 @@ export function ContactForm() {
               Merci&nbsp;! Votre demande a bien été envoyée.
             </p>
             <p className="max-w-sm text-sm text-ink/70">
-              Notre équipe vous recontacte sous 48h pour construire votre devis.
+              Notre équipe vous recontacte rapidement pour répondre à votre
+              demande.
             </p>
           </div>
         ) : (
@@ -69,7 +70,7 @@ export function ContactForm() {
                 htmlFor="eventType"
                 className="mb-1.5 block text-sm font-semibold text-ink"
               >
-                Type d’événement
+                Votre besoin
               </label>
               <select
                 id="eventType"
@@ -80,11 +81,10 @@ export function ContactForm() {
                 <option value="" disabled>
                   Sélectionnez…
                 </option>
-                <option>Séminaire de direction</option>
-                <option>Convention / Kick-off</option>
-                <option>Team building</option>
-                <option>Soirée / Incentive</option>
-                <option>Formation sur-mesure</option>
+                <option>FormAction — Formation résidentielle</option>
+                <option>Meet &amp; Share — Rencontre entre pairs</option>
+                <option>Formation sur mesure (intra-entreprise)</option>
+                <option>Coaching / accompagnement conseil</option>
                 <option>Autre</option>
               </select>
             </div>
@@ -105,11 +105,11 @@ export function ContactForm() {
                 <option value="" disabled>
                   Sélectionnez…
                 </option>
-                <option>Moins de 20</option>
-                <option>20 à 50</option>
-                <option>50 à 100</option>
-                <option>100 à 300</option>
-                <option>Plus de 300</option>
+                <option>1 (moi-même)</option>
+                <option>2 à 5</option>
+                <option>5 à 15</option>
+                <option>15 à 50</option>
+                <option>Plus de 50</option>
               </select>
             </div>
 
@@ -124,7 +124,7 @@ export function ContactForm() {
                 id="eventDate"
                 name="eventDate"
                 type="text"
-                placeholder="Ex : mi-mars 2026, ou du 12 au 14 juin"
+                placeholder="Ex : session 2027, ou une période souhaitée"
                 className="w-full rounded-xl border border-black/10 px-4 py-3 text-sm outline-none transition-colors focus:border-teal focus:ring-2 focus:ring-teal/20"
               />
             </div>
@@ -134,14 +134,14 @@ export function ContactForm() {
                 htmlFor="message"
                 className="mb-1.5 block text-sm font-semibold text-ink"
               >
-                Votre projet en quelques mots
+                Votre besoin en quelques mots
               </label>
               <textarea
                 id="message"
                 name="message"
                 required
                 rows={5}
-                placeholder="Objectifs, lieu envisagé, format, budget indicatif…"
+                placeholder="Objectifs, thématique, profils concernés, contexte…"
                 className="w-full rounded-xl border border-black/10 px-4 py-3 text-sm outline-none transition-colors focus:border-teal focus:ring-2 focus:ring-teal/20"
               />
             </div>
@@ -152,7 +152,7 @@ export function ContactForm() {
             )}
             <div className="sm:col-span-2">
               <Button type="submit" variant="pink" size="lg" disabled={submitting}>
-                {submitting ? "Envoi…" : "Demander mon devis"}{" "}
+                {submitting ? "Envoi…" : "Envoyer ma demande"}{" "}
                 <Send className="h-4 w-4" />
               </Button>
             </div>
@@ -185,10 +185,10 @@ export function ContactForm() {
             <li className="flex items-center gap-3">
               <Mail className="h-5 w-5 shrink-0 text-orange" />
               <a
-                href="mailto:contact@sy-co.ma"
+                href={`mailto:${contactInfo.email}`}
                 className="hover:text-orange"
               >
-                contact@sy-co.ma
+                {contactInfo.email}
               </a>
             </li>
           </ul>

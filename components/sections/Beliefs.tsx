@@ -14,14 +14,15 @@ export function Beliefs() {
             nous croyons que…
           </h2>
           <p className="text-base leading-relaxed text-ink/80">
-            Un événement d’entreprise n’est jamais qu’un moment&nbsp;: c’est un
-            levier de culture, de cohésion et de performance. Basés au Maroc et
-            présents partout dans le monde, nous concevons des séminaires, des
-            conventions et des formations qui rassemblent vos équipes, libèrent
-            l’intelligence collective et transforment durablement vos façons de
-            travailler. Chez SY&amp;CO, nous croyons qu’en réunissant les bonnes
-            personnes, au bon endroit, avec la bonne énergie, on fait grandir les
-            organisations — et les femmes et les hommes qui les composent.
+            La transformation est une source d’opportunités. Depuis 2020, nous
+            accompagnons cadres, dirigeants et organisations d’Afrique
+            francophone dans le développement de leurs compétences en
+            leadership, management stratégique et transformation
+            organisationnelle. Chez SY&amp;CO, nous croyons qu’une pédagogie
+            exigeante, incarnée et immédiatement actionnable réconcilie
+            performance de l’entreprise, bien-être au travail et responsabilité
+            sociétale — au service d’une Afrique qui construit elle-même les
+            dirigeants de sa réussite.
           </p>
         </Reveal>
 

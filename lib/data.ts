@@ -13,42 +13,33 @@ export type NavColumn = {
 
 export const megaMenu: NavColumn[] = [
   {
-    title: "Conseil & transformation",
+    title: "FormAction",
     children: [
-      {
-        label: "Transformation des organisations",
-        href: "/transformation-des-organisations",
-      },
-      {
-        label: "Stratégie et Gouvernance",
-        href: "/strategie-et-gouvernance",
-      },
+      { label: "Formations résidentielles", href: "/form-action" },
+      { label: "Nos thématiques d’expertise", href: "/form-action" },
+      { label: "Leadership & transformation digitale", href: "/form-action" },
     ],
   },
   {
-    title: "Séminaires & cohésion",
+    title: "Meet & Share",
     children: [
-      {
-        label: "Cohésion d’équipe et modes collaboratifs",
-        href: "/seminaires-de-cohesion-dequipe",
-      },
-      {
-        label: "Développement des compétences managériales",
-        href: "/developpement-des-competences-manageriales",
-      },
+      { label: "TOP MANAGER — Stratégie & Innovation", href: "/meet-and-share" },
+      { label: "SHE TALK — Femmes Leaders", href: "/meet-and-share" },
+      { label: "Rencontres métiers (DAF · DRH · RAF)", href: "/meet-and-share" },
     ],
   },
   {
-    title: "Innovation & créativité",
+    title: "Formation sur mesure",
     children: [
-      { label: "Innovation & créativité", href: "/innovation-et-codesign" },
+      { label: "Formation intra-entreprise", href: "/formation-sur-mesure" },
+      { label: "Programme personnalisé", href: "/formation-sur-mesure" },
     ],
   },
 ];
 
 export const navLinks: NavChild[] = [
-  { label: "Événementiel", href: "/evenementiel-et-seminaires" },
-  { label: "Études de cas", href: "/nos-cas-clients" },
+  { label: "Nos offres", href: "/nos-offres" },
+  { label: "Calendrier 2027", href: "/calendrier-2027" },
   { label: "L’agence", href: "/qui-sommes-nous" },
   { label: "Le Blog", href: "/nos-articles" },
 ];
@@ -62,39 +53,25 @@ export type Expertise = {
 
 export const expertises: Expertise[] = [
   {
-    title: "Transformation des organisations",
+    title: "FormAction",
     description:
-      "Accompagner vos évolutions culturelles et fédérer vos équipes autour de dispositifs qui donnent du sens au changement.",
-    color: "#007873",
-    href: "/transformation-des-organisations",
+      "Des formations résidentielles immersives, conçues avec des experts internationaux, pour un impact opérationnel immédiat sur vos cadres et dirigeants.",
+    color: "#097D7A",
+    href: "/form-action",
   },
   {
-    title: "Stratégie et Gouvernance",
+    title: "Meet & Share",
     description:
-      "Clarifier votre vision et aligner vos équipes de direction grâce à des séminaires stratégiques et une facilitation sur-mesure.",
+      "Des rencontres professionnelles entre pairs — tables rondes, témoignages, réseautage — pour échanger sans filtre sur les vrais enjeux du métier.",
     color: "#ED0F7D",
-    href: "/strategie-et-gouvernance",
+    href: "/meet-and-share",
   },
   {
-    title: "Cohésion d’équipe et modes collaboratifs",
+    title: "Formation sur mesure",
     description:
-      "Renforcer les liens et l’engagement par le team building, les séminaires de cohésion et l’intelligence collective.",
-    color: "#1076DA",
-    href: "/seminaires-de-cohesion-dequipe",
-  },
-  {
-    title: "Développement des compétences managériales",
-    description:
-      "Faire grandir vos managers avec des parcours de formation sur-mesure, concrets et immédiatement actionnables.",
-    color: "#FCD430",
-    href: "/developpement-des-competences-manageriales",
-  },
-  {
-    title: "Innovation & créativité",
-    description:
-      "Stimuler la créativité de vos équipes par des ateliers créatifs, d’idéation et de résolution de problèmes complexes.",
-    color: "#FFBC7D",
-    href: "/innovation-et-codesign",
+      "À partir de 5 personnes, un formateur intervient dans vos locaux ou en classe virtuelle : un programme personnalisé, toujours adapté à votre besoin réel.",
+    color: "#FD8B15",
+    href: "/formation-sur-mesure",
   },
 ];
 
@@ -189,13 +166,21 @@ export type Stat = {
 };
 
 export const stats: Stat[] = [
-  { value: 3500, suffix: "", label: "apprenants" },
   {
-    value: 95,
-    suffix: "%",
-    label: "de taux de satisfaction pour nos accompagnements et formations",
+    value: 5,
+    suffix: " ans",
+    label: "d'accompagnement des cadres et dirigeants africains",
   },
-  { value: 92, suffix: "%", label: "de taux de recommandation" },
+  {
+    value: 500,
+    suffix: "+",
+    label: "participants formés au fil de nos programmes",
+  },
+  {
+    value: 6,
+    suffix: "",
+    label: "pays de déploiement : Maroc, Sénégal, Côte d'Ivoire, et au-delà",
+  },
 ];
 
 export type Partner = { name: string; logo?: string };
@@ -236,41 +221,41 @@ export type Realization = {
   image: string;
 };
 
-/** Formats d'événements produits par SY&CO (illustratif, sans nom de client). */
+/** Programmes phares de SY&CO — formations résidentielles & rencontres entre pairs. */
 export const realizations: Realization[] = [
   {
-    tag: "Convention",
-    title: "Convention annuelle & plénière",
+    tag: "FormAction",
+    title: "Finance publique, verte & durable",
     location: "Casablanca",
     image: "/images/services/ev-convention.jpg",
   },
   {
-    tag: "Séminaire",
-    title: "Séminaire de direction au vert",
+    tag: "FormAction",
+    title: "Leadership & transformation digitale",
     location: "Marrakech",
     image: "/images/services/ev-seminaire.jpg",
   },
   {
-    tag: "Team building",
-    title: "Team building outdoor",
-    location: "Agadir",
-    image: "/images/services/ev-teambuilding.jpg",
-  },
-  {
-    tag: "Incentive",
-    title: "Soirée de gala & remise de trophées",
-    location: "Rabat",
+    tag: "Meet & Share",
+    title: "TOP MANAGER — Stratégie & Innovation",
+    location: "Casablanca",
     image: "/images/services/ev-incentive.jpg",
   },
   {
-    tag: "Kick-off",
-    title: "Lancement de projet stratégique",
-    location: "International",
+    tag: "Meet & Share",
+    title: "SHE TALK — Forum des Femmes Leaders",
+    location: "Dakar",
+    image: "/images/services/ev-teambuilding.jpg",
+  },
+  {
+    tag: "FormAction",
+    title: "Gouvernance, audit & conformité",
+    location: "Abidjan",
     image: "/images/cases/conseil.jpg",
   },
   {
-    tag: "Formation",
-    title: "Parcours de formation immersif",
+    tag: "Sur mesure",
+    title: "Formation intra-entreprise personnalisée",
     location: "Tanger",
     image: "/images/services/ev-formation.jpg",
   },
@@ -278,27 +263,19 @@ export const realizations: Realization[] = [
 
 export const contactInfo = {
   phone: "+212 699-820570",
+  email: "seminairesyco@gmail.com",
   address: "Boulevard d'Anfa, Twin Center",
   city: "20100 Casablanca, Maroc",
-  reach: "Casablanca, Rabat, Marrakech, Tanger",
+  reach: "Maroc · Sénégal · Côte d'Ivoire",
 };
 
 export const footerExpertises: NavChild[] = [
-  { label: "Événementiel & séminaires", href: "/evenementiel-et-seminaires" },
-  { label: "Notre méthode ÉCLAT", href: "/notre-methode-eclat" },
-  {
-    label: "Séminaires de cohésion d'équipe",
-    href: "/seminaires-de-cohesion-dequipe",
-  },
-  {
-    label: "Parcours de formation sur mesure",
-    href: "/parcours-de-formation-sur-mesure",
-  },
-  {
-    label: "Lancer son projet grâce au séminaire kick off",
-    href: "/lancer-son-projet-grace-au-seminaire-kick-off",
-  },
-  { label: "Everything DISC", href: "/everything-disc" },
+  { label: "FormAction — Formations résidentielles", href: "/form-action" },
+  { label: "Meet & Share — Nos rencontres", href: "/meet-and-share" },
+  { label: "Formation sur mesure", href: "/formation-sur-mesure" },
+  { label: "Nos offres", href: "/nos-offres" },
+  { label: "Calendrier 2027", href: "/calendrier-2027" },
+  { label: "Ils nous font confiance", href: "/nos-cas-clients" },
 ];
 
 export const legalLinks: NavChild[] = [

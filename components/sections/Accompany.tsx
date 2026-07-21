@@ -3,12 +3,12 @@ import { Check } from "lucide-react";
 import { Reveal } from "@/components/ui/Reveal";
 
 const agilePoints = [
-  "concevoir des séminaires et conventions qui ont du sens,",
-  "renforcer la cohésion par le team building,",
-  "former vos managers et vos talents sur-mesure,",
-  "libérer l'intelligence collective de vos équipes,",
-  "animer vos lancements de projet (kick-off),",
-  "rayonner au Maroc comme à l'international.",
+  "un accompagnement complet, de l'inscription à la logistique sur place,",
+  "une expertise internationale, académique et issue de l'entreprise,",
+  "un impact mesuré : chaque participant repart avec un plan d'action concret,",
+  "des formations résidentielles immersives (FormAction),",
+  "des rencontres entre pairs pour échanger sans filtre (Meet & Share),",
+  "un ancrage panafricain : Maroc, Sénégal, Côte d'Ivoire.",
 ];
 
 /** "Vous accompagner vers demain" — image + agility checklist. */
@@ -36,12 +36,13 @@ export function Accompany() {
             <span className="text-pink">vers demain</span>
           </h2>
           <p className="mb-6 text-base leading-relaxed text-ink/80">
-            Un événement bien pensé change la dynamique d’une équipe entière.
-            Nous transformons vos moments-clés en expériences utiles, mémorables
-            et alignées avec vos objectifs.
+            Développer ses compétences change la trajectoire d’un dirigeant — et
+            de toute son organisation. Nous concevons des parcours utiles,
+            exigeants et alignés avec vos objectifs, du diagnostic au plan
+            d’action.
           </p>
           <p className="mb-6 font-heading text-sm font-bold uppercase tracking-wide text-ink">
-            SY&amp;CO vous aide à&nbsp;:
+            Pourquoi SY&amp;CO&nbsp;:
           </p>
           <ul className="space-y-3">
             {agilePoints.map((point) => (

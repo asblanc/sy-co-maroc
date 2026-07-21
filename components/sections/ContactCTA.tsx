@@ -32,12 +32,12 @@ export function ContactCTA() {
       <div className="container-narrow text-center">
         <Reveal>
           <h2 className="mb-5 text-3xl font-bold text-teal sm:text-4xl">
-            Donnons vie à votre projet
+            Envie de transformer vos équipes&nbsp;?
           </h2>
           <p className="mx-auto mb-14 max-w-xl text-base text-ink/80">
-            Séminaire, convention, team building ou formation&nbsp;:
-            racontez-nous votre idée, nous imaginons l’expérience qui vous
-            ressemble.
+            Formation résidentielle, rencontre entre pairs ou programme sur
+            mesure&nbsp;: parlez-nous de votre besoin, nous construisons le
+            parcours qui fera grandir vos cadres et dirigeants.
           </p>
         </Reveal>
 

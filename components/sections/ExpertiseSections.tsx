@@ -6,16 +6,24 @@ type Service = { title: string; description: string; image?: string };
 const accentColors = ["#097D7A", "#FD8B15", "#ED0F7D", "#1076DA"];
 
 /** "Vos enjeux, nos réponses" — needs presented as accent-bar cards. */
-export function NeedsChecklist({ items }: { items: string[] }) {
+export function NeedsChecklist({
+  items,
+  eyebrow = "Vos enjeux",
+  title = "nos réponses",
+}: {
+  items: string[];
+  eyebrow?: string;
+  title?: string;
+}) {
   return (
     <section className="bg-peach/20 py-16 lg:py-24">
       <div className="container-narrow">
         <Reveal className="mb-12 text-center">
           <p className="font-heading text-sm font-bold uppercase tracking-widest text-orange">
-            Vos enjeux
+            {eyebrow}
           </p>
           <h2 className="mt-1 text-3xl font-bold text-teal sm:text-4xl">
-            nos réponses
+            {title}
           </h2>
         </Reveal>
 
@@ -42,16 +50,24 @@ export function NeedsChecklist({ items }: { items: string[] }) {
 }
 
 /** "Ce que nous mettons en œuvre" — services grid. */
-export function ServicesGrid({ services }: { services: Service[] }) {
+export function ServicesGrid({
+  services,
+  eyebrow = "Ce que nous",
+  title = "mettons en œuvre",
+}: {
+  services: Service[];
+  eyebrow?: string;
+  title?: string;
+}) {
   return (
     <section className="bg-white py-16 lg:py-24">
       <div className="container-narrow">
         <Reveal className="mb-12 text-center">
           <h3 className="font-heading text-xl font-semibold text-ink/70">
-            Ce que nous
+            {eyebrow}
           </h3>
           <h2 className="mt-1 text-3xl font-bold text-teal sm:text-4xl">
-            mettons en œuvre
+            {title}
           </h2>
         </Reveal>
 

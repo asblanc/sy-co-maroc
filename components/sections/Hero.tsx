@@ -21,7 +21,7 @@ export function Hero() {
         <div className="text-center text-white lg:text-left">
           <TextReveal
             as="h1"
-            text={"Rassembler,\nformer, transformer."}
+            text={"Vous guider\nvers la réussite."}
             delay={0.15}
             stagger={0.08}
             className="text-4xl font-bold uppercase leading-[1.08] sm:text-5xl lg:text-6xl"
@@ -30,7 +30,7 @@ export function Hero() {
           <TextReveal
             as="p"
             text={
-              "Événementiel d'entreprise, séminaires et formations sur-mesure — au Maroc et partout dans le monde."
+              "Le cabinet de formation et de conseil qui transforme vos cadres et dirigeants en leaders de demain — FormAction · Meet & Share · Event."
             }
             delay={0.6}
             stagger={0.03}
