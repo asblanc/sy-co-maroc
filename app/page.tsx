@@ -7,7 +7,6 @@ import { Accompany } from "@/components/sections/Accompany";
 import { Team } from "@/components/sections/Team";
 import { Method } from "@/components/sections/Method";
 import { Portfolio } from "@/components/sections/Portfolio";
-import { CaseStudies } from "@/components/sections/CaseStudies";
 import { Clients } from "@/components/sections/Clients";
 import { Stats } from "@/components/sections/Stats";
 import { ContactCTA } from "@/components/sections/ContactCTA";
@@ -23,9 +22,7 @@ export default function Home() {
         <Accompany />
         <Team />
         <Method />
-        <Portfolio />
-        <CaseStudies />
-        <Clients />
+        <Portfolio />        <Clients />
         <Stats />
         <ContactCTA />
       </main>

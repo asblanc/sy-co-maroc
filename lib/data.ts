@@ -120,44 +120,6 @@ export const methodSteps: Step[] = [
   },
 ];
 
-export type CaseStudy = {
-  category: string;
-  title: string;
-  tag?: string;
-  image: string;
-  href: string;
-};
-
-export const caseStudies: CaseStudy[] = [
-  {
-    category: "Cohésion d'équipe et modes collaboratifs",
-    title: "Comment réussir son séminaire à distance",
-    image: "/images/cases/seminaire-distance2.jpg",
-    href: "/comment-reussir-son-seminaire-a-distance",
-  },
-  {
-    category: "Cohésion d'équipe et modes collaboratifs",
-    title:
-      "Méthodologie EQ-i 2.0 ou l’intelligence émotionnelle au service de la cohésion d’équipe",
-    image: "/images/cases/intelligence-emotionnelle1.jpg",
-    href: "/decouverte-de-lintelligence-emotionnelle",
-  },
-  {
-    category: "Transformation des organisations",
-    title: "Ateliers et séminaires au service de l’expérience collaborateur",
-    tag: "PARC",
-    image: "/images/cases/parc-loisirs2.jpg",
-    href: "/ateliers-et-seminaires-au-service-de-lexperience-collaborateur",
-  },
-  {
-    category: "Développement des compétences managériales",
-    title: "Accompagner à distance le changement de posture des managers",
-    tag: "CONSEIL",
-    image: "/images/cases/conseil.jpg",
-    href: "/accompagner-a-distance-le-changement-de-posture-des-managers",
-  },
-];
-
 export type Stat = {
   value: number;
   suffix?: string;
@@ -186,32 +148,24 @@ export const stats: Stat[] = [
 export type Partner = { name: string; logo?: string };
 
 /**
- * Partenaires / clients marocains.
- * `logo` = fichier officiel déposé dans /public/images/clients/ (ex.
- * "/images/clients/ocp.png"). Sans `logo`, une tuile wordmark stylée est
- * affichée en repli — il suffit d'ajouter le fichier pour l'activer.
+ * Secteurs accompagnés par SY&CO (tuiles texte). Ce mur remplace un mur de
+ * "clients" nommés tant que nous n'affichons pas de VRAIS logos autorisés :
+ * n'afficher que des clients réels avec leur accord. Pour passer aux logos,
+ * déposer les fichiers dans /public/images/clients/ et renseigner `logo`.
  */
 export const partners: Partner[] = [
-  { name: "Maroc Telecom" },
-  { name: "OCP Group" },
-  { name: "Attijariwafa Bank" },
-  { name: "Bank of Africa" },
-  { name: "Royal Air Maroc" },
-  { name: "Marjane" },
-  { name: "Inwi" },
-  { name: "Orange Maroc" },
-  { name: "Banque Populaire" },
-  { name: "CIH Bank" },
-  { name: "Lydec" },
-  { name: "ONCF" },
-  { name: "Managem" },
-  { name: "Cosumar" },
-  { name: "Label'Vie" },
-  { name: "Wafa Assurance" },
-  { name: "BMCI" },
-  { name: "Lesieur Cristal" },
-  { name: "LafargeHolcim Maroc" },
-  { name: "Sonasid" },
+  { name: "Finance publique" },
+  { name: "Banque & Assurance" },
+  { name: "Administration publique" },
+  { name: "Énergie & Mines" },
+  { name: "Agro-industrie" },
+  { name: "Télécoms & Digital" },
+  { name: "Santé" },
+  { name: "Éducation & Formation" },
+  { name: "Collectivités territoriales" },
+  { name: "Grande distribution" },
+  { name: "Industrie & BTP" },
+  { name: "Organisations internationales" },
 ];
 
 export type Realization = {

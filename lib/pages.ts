@@ -303,75 +303,6 @@ export const pages: PageData[] = [
     ],
   },
 
-  /* ---------- Études de cas (conservées) ---------- */
-  {
-    slug: "comment-reussir-son-seminaire-a-distance",
-    heroImage: "/images/pages/header-cohesion.jpg",
-    type: "case-detail",
-    title: "Comment réussir son séminaire à distance | SY&CO",
-    h1: "Comment réussir son séminaire à distance",
-    category: "Cohésion d'équipe et modes collaboratifs",
-    description:
-      "Découvrez comment SY&CO a accompagné à distance la montée en compétences et le changement de posture de managers.",
-    image: "/images/cases/seminaire-distance2.jpg",
-    paragraphs: [
-      "Structure : PrivéSecteur : Habitat socialEffectif : 1 000 collaborateurs dont 120 managersMission : 2 mois",
-      "En septembre 2020, la crise sanitaire met en lumière la nécessité, au sein de l'organisation, de recréer du lien entre les équipes.",
-      "La période est difficile pour l'ensemble, et notamment pour les managers qui ressentent de la solitude et des difficultés à animer leurs équipes. Une transformation plus profonde de leurs pratiques de travail est en cours.",
-    ],
-  },
-  {
-    slug: "decouverte-de-lintelligence-emotionnelle",
-    heroImage: "/images/pages/header-cohesion.jpg",
-    type: "case-detail",
-    title:
-      "L'intelligence émotionnelle au service de la cohésion d'équipe | SY&CO",
-    h1: "L'intelligence émotionnelle au service de la cohésion d'équipe",
-    category: "Cohésion d'équipe et modes collaboratifs",
-    description:
-      "Découvrez comment la méthodologie EQ-i 2.0 permet de renforcer les liens, la cohésion et le sentiment d'appartenance des équipes.",
-    image: "/images/cases/intelligence-emotionnelle1.jpg",
-    paragraphs: [
-      "Structure : InstitutionSecteur : SantéEffectif : 15 000 dont 5 200 titulaires Mission : 2 jours",
-      "Dans le cadre de l'élaboration du plan de formation des managers, notre client a souhaité sensibiliser sa filière RH nationale à l'intelligence émotionnelle à l'occasion de leur séminaire annuel. Sur les 3 journées de séminaire, une journée est consacrée à ce sujet.",
-      "L'enjeu est d'emmener les 18 encadrants, dont la légitimité est à ce moment-là centrée sur la technicité de leur métier, à prendre conscience de l'aspect humain de leur rôle de manager.",
-    ],
-  },
-  {
-    slug: "ateliers-et-seminaires-au-service-de-lexperience-collaborateur",
-    heroImage: "/images/pages/header-strategie.jpg",
-    type: "case-detail",
-    title:
-      "Ateliers et séminaires au service de l'expérience collaborateur | SY&CO",
-    h1: "Ateliers et séminaires au service de l'expérience collaborateur",
-    category: "Transformation des organisations",
-    description:
-      "Découvrez comment SY&CO a fait évoluer les pratiques managériales pour améliorer l'expérience collaborateur.",
-    image: "/images/cases/parc-loisirs2.jpg",
-    paragraphs: [
-      "Structure : PrivéeSecteur : Parc de loisirsEffectif : 2 500 collaborateurs Mission : 6 jours",
-      "Comment identifier et mettre en place de nouvelles pratiques managériales pour améliorer l'expérience collaborateur ?",
-      "Face aux évolutions sociétales comme la digitalisation, l'arrivée des nouvelles générations, ou encore la place des soft skills au travail, la Direction de ce parc de loisirs a senti la nécessité de faire évoluer les modes de fonctionnement et pratiques managériales.",
-    ],
-  },
-  {
-    slug: "accompagner-a-distance-le-changement-de-posture-des-managers",
-    heroImage: "/images/pages/header-management.jpg",
-    type: "case-detail",
-    title:
-      "Accompagner à distance le changement de posture des managers | SY&CO",
-    h1: "Accompagner à distance le changement de posture des managers",
-    category: "Développement des compétences managériales",
-    description:
-      "Découvrez comment SY&CO a accompagné à distance la montée en compétences et le changement de posture de managers.",
-    image: "/images/cases/conseil.jpg",
-    paragraphs: [
-      "Structure : Institution publiqueSecteur : AdministrationEffectif : 10 000 collaborateurs Mission : 3 ans",
-      "Institution publique d'envergure, notre client évolue dans un contexte de transformation et de modernisation, connaissant une diminution des ressources financières avec pour autant de nombreux projets à mettre en œuvre.",
-      "Il doit alors chercher des moyens de renforcer la performance tant individuelle que collective des agents en poste. Les deux axes prioritaires identifiés pour réussir ce défi sont les suivants :",
-    ],
-  },
-
   /* ---------- Pages légales ---------- */
   {
     slug: "mentions-legales",
@@ -455,12 +386,7 @@ export const expertiseNavOrder = [
   "calendrier-2027",
 ];
 
-export const caseNavOrder = [
-  "comment-reussir-son-seminaire-a-distance",
-  "decouverte-de-lintelligence-emotionnelle",
-  "ateliers-et-seminaires-au-service-de-lexperience-collaborateur",
-  "accompagner-a-distance-le-changement-de-posture-des-managers",
-];
+export const caseNavOrder: string[] = [];
 
 export function getSiblings(slug: string) {
   const order = expertiseNavOrder.includes(slug)

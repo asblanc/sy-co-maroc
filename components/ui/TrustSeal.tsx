@@ -6,25 +6,31 @@ type SealProps = {
 };
 
 /**
- * Self-contained SVG "trust label" seal (no external asset, no trademark).
- * `confiance` = client-trust badge (hero), `qualite` = certification badge.
+ * Self-contained SVG brand seal (no external asset, no trademark).
+ * Textes volontairement factuels et vérifiables — pas de mention de
+ * certification ou de note client que SY&CO ne peut pas prouver.
+ * `confiance` = sceau de marque (hero), `qualite` = sceau ancrage panafricain.
  */
 export function TrustSeal({ variant = "confiance", className }: SealProps) {
   const isConfiance = variant === "confiance";
   const ring = isConfiance ? "#097D7A" : "#FD8B15";
   const accent = isConfiance ? "#FD8B15" : "#097D7A";
   const topText = isConfiance
-    ? "· LABEL DE CONFIANCE ·"
-    : "· QUALITÉ CERTIFIÉE ·";
+    ? "· FORMATION · CONSEIL ·"
+    : "· CADRES & DIRIGEANTS ·";
   const bottomText = isConfiance
-    ? "· CLIENTS SATISFAITS ·"
-    : "· CONSEIL · FORMATION ·";
+    ? "· DEPUIS 2020 ·"
+    : "· MAROC · SÉNÉGAL · CI ·";
 
   return (
     <svg
       viewBox="0 0 120 120"
       role="img"
-      aria-label={isConfiance ? "Label de confiance" : "Qualité certifiée"}
+      aria-label={
+        isConfiance
+          ? "SY&CO, cabinet de formation et de conseil depuis 2020"
+          : "SY&CO, présent au Maroc, au Sénégal et en Côte d'Ivoire"
+      }
       className={cn("h-auto w-full", className)}
     >
       <defs>
@@ -86,29 +92,16 @@ export function TrustSeal({ variant = "confiance", className }: SealProps) {
         </textPath>
       </text>
 
-      {/* center emblem */}
+      {/* center emblem — checkmark (neutre, sans revendication chiffrée) */}
       <circle cx="60" cy="55" r="20" fill={ring} />
-      {isConfiance ? (
-        <text
-          x="60"
-          y="60"
-          textAnchor="middle"
-          fontSize="12"
-          fill={accent}
-          fontFamily="Arvo, serif"
-        >
-          ★★★★★
-        </text>
-      ) : (
-        <path
-          d="M52 55 l5 5 l11 -12"
-          fill="none"
-          stroke="#fff"
-          strokeWidth="4"
-          strokeLinecap="round"
-          strokeLinejoin="round"
-        />
-      )}
+      <path
+        d="M52 55 l5 5 l11 -12"
+        fill="none"
+        stroke="#fff"
+        strokeWidth="4"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+      />
       <text
         x="60"
         y="84"

@@ -16,7 +16,7 @@ export function Clients() {
           Ils nous font confiance
         </p>
         <h2 className="text-2xl font-bold text-teal sm:text-3xl">
-          Nos clients &amp; partenaires
+          Des cadres &amp; dirigeants de tous secteurs
         </h2>
       </Reveal>
 

@@ -1,8 +1,6 @@
 import Image from "next/image";
-import Link from "next/link";
 import { notFound } from "next/navigation";
 import type { Metadata } from "next";
-import { ArrowLeft, ArrowRight } from "lucide-react";
 
 import { Header } from "@/components/layout/Header";
 import { Footer } from "@/components/layout/Footer";
@@ -10,7 +8,6 @@ import { PageHero } from "@/components/layout/PageHero";
 import { PageNav } from "@/components/layout/PageNav";
 import { Prose } from "@/components/ui/Prose";
 import { Button } from "@/components/ui/Button";
-import { CaseStudies } from "@/components/sections/CaseStudies";
 import { Clients } from "@/components/sections/Clients";
 import { ContactForm } from "@/components/sections/ContactForm";
 import { ContactCTA } from "@/components/sections/ContactCTA";
@@ -24,7 +21,6 @@ import { Highlights } from "@/components/sections/Highlights";
 import { Faq } from "@/components/sections/Faq";
 import { Parallax } from "@/components/ui/Parallax";
 import { pages, pageBySlug, getSiblings, type PageData } from "@/lib/pages";
-import { caseStudies } from "@/lib/data";
 
 export function generateStaticParams() {
   return pages.map((p) => ({ slug: p.slug }));
@@ -64,11 +60,7 @@ export default async function DynamicPage({
 
   const { prev, next } = getSiblings(page.slug);
   const categoryHref =
-    page.type === "case-detail"
-      ? "/nos-cas-clients"
-      : page.type === "content"
-        ? "/#expertises"
-        : undefined;
+    page.type === "content" ? "/#expertises" : undefined;
 
   return (
     <>
@@ -92,8 +84,6 @@ function renderBody(page: PageData) {
   switch (page.type) {
     case "cases-index":
       return <CasesIndexBody page={page} />;
-    case "case-detail":
-      return <CaseDetailBody page={page} />;
     case "about":
       return <AboutBody page={page} />;
     case "articles":
@@ -200,7 +190,6 @@ function ContentBody({ page }: { page: PageData }) {
 
       {hasRichBody ? (
         <>
-          {page.services && page.services.length > 0 && <CaseStudies />}
           <ContactCTA />
         </>
       ) : (
@@ -403,118 +392,23 @@ function CasesIndexBody({ page }: { page: PageData }) {
       </section>
 
       <section className="bg-white py-14">
-        <div className="container-narrow grid gap-8 sm:grid-cols-2 lg:grid-cols-2">
-          {caseStudies.map((cs) => (
-            <article
-              key={cs.title}
-              className="group flex flex-col overflow-hidden rounded-3xl border border-black/5 bg-white shadow-sm transition-all duration-300 hover:-translate-y-1.5 hover:shadow-xl"
-            >
-              <Link
-                href={cs.href}
-                className="relative block h-56 overflow-hidden"
-              >
-                <Image
-                  src={cs.image}
-                  alt={cs.title}
-                  fill
-                  sizes="(max-width: 768px) 100vw, 50vw"
-                  className="object-cover transition-transform duration-500 group-hover:scale-105"
-                />
-                {cs.tag && (
-                  <span className="absolute left-4 top-4 rounded-full bg-pink px-3 py-1 text-xs font-bold uppercase text-white">
-                    {cs.tag}
-                  </span>
-                )}
-              </Link>
-              <div className="flex flex-1 flex-col p-7">
-                <p className="mb-3 text-xs font-bold uppercase tracking-wide text-teal">
-                  {cs.category}
-                </p>
-                <h3 className="mb-6 flex-1 font-heading text-lg font-bold leading-snug text-ink">
-                  {cs.title}
-                </h3>
-                <Link
-                  href={cs.href}
-                  className="inline-flex items-center gap-2 self-start font-heading text-sm font-bold uppercase tracking-wide text-pink transition-colors hover:text-teal"
-                >
-                  En savoir <ArrowRight className="h-4 w-4" />
-                </Link>
-              </div>
-            </article>
-          ))}
+        <div className="container-narrow max-w-3xl rounded-3xl border border-dashed border-teal/30 bg-peach/20 p-10 text-center">
+          <p className="font-heading text-lg font-bold text-teal">
+            Nos témoignages arrivent bientôt
+          </p>
+          <p className="mx-auto mt-3 max-w-xl text-sm leading-relaxed text-ink/70">
+            Nous préparons une sélection de retours de nos participants et de nos
+            partenaires. En attendant, parlons de votre projet — nous serons
+            ravis de vous présenter des références de votre secteur.
+          </p>
+          <div className="mt-6">
+            <Button href="/contact" variant="pink">
+              Nous contacter
+            </Button>
+          </div>
         </div>
       </section>
       <Clients />
     </>
   );
-}
-
-function CaseDetailBody({ page }: { page: PageData }) {
-  const [metaPara, ...rest] = page.paragraphs;
-  const meta = parseMeta(metaPara ?? "");
-  const body = meta.length ? rest : page.paragraphs;
-
-  return (
-    <>
-      <section className="bg-white py-16 lg:py-24">
-        <div className="container-narrow grid gap-12 lg:grid-cols-[1.4fr_1fr]">
-          <div>
-            {page.image && (
-              <div className="mb-10 overflow-hidden rounded-[2rem] shadow-xl">
-                <Image
-                  src={page.image}
-                  alt={page.h1}
-                  width={860}
-                  height={480}
-                  className="h-full w-full object-cover"
-                />
-              </div>
-            )}
-            <Prose paragraphs={body} />
-            <div className="mt-10">
-              <Button href="/nos-cas-clients" variant="outline">
-                <ArrowLeft className="h-4 w-4" /> Tous les cas clients
-              </Button>
-            </div>
-          </div>
-
-          <aside className="h-fit rounded-3xl bg-teal p-8 text-white lg:sticky lg:top-28">
-            <h3 className="mb-6 font-heading text-lg font-bold">
-              Le projet en bref
-            </h3>
-            <dl className="space-y-4 text-sm">
-              {meta.length ? (
-                meta.map((m) => (
-                  <div key={m.label}>
-                    <dt className="font-bold text-orange">{m.label}</dt>
-                    <dd className="text-white/90">{m.value}</dd>
-                  </div>
-                ))
-              ) : (
-                <p className="text-white/90">{page.category}</p>
-              )}
-            </dl>
-          </aside>
-        </div>
-      </section>
-    </>
-  );
-}
-
-/* Parse "Structure : … Secteur : … Effectif : … Mission : …" into pairs. */
-function parseMeta(text: string): { label: string; value: string }[] {
-  const labels = ["Structure", "Secteur", "Effectif", "Mission"];
-  const found: { label: string; value: string }[] = [];
-  const positions = labels
-    .map((l) => ({ l, i: text.indexOf(l + " :") }))
-    .filter((p) => p.i >= 0)
-    .sort((a, b) => a.i - b.i);
-
-  positions.forEach((p, idx) => {
-    const start = p.i + (p.l + " :").length;
-    const end =
-      idx + 1 < positions.length ? positions[idx + 1].i : text.length;
-    found.push({ label: p.l, value: text.slice(start, end).trim() });
-  });
-  return found;
 }
