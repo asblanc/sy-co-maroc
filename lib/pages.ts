@@ -99,31 +99,37 @@ export const pages: PageData[] = [
         title: "TOP MANAGER — Forum Stratégie & Innovation Digitale",
         description:
           "Innover, transformer et créer une valeur durable entre décideurs.",
+        image: "/images/services/diagnostic-strategique.jpg",
       },
       {
         title: "SHE TALK — Forum des Femmes Leaders",
         description:
           "Développer son influence, partager des expériences et élargir son réseau lors d'un cocktail de réseautage.",
+        image: "/images/services/Coaching-de-dirigeant-et-dequipe-1.jpg",
       },
       {
         title: "Rencontre des DAF",
         description:
           "Décrypter les enjeux financiers, partager les meilleures pratiques et anticiper les évolutions de la fonction Finance.",
+        image: "/images/services/Business-design.jpg",
       },
       {
         title: "Rencontre des DRH",
         description:
           "Échanger sur les défis du capital humain, du leadership et de la transformation des organisations.",
+        image: "/images/services/team-learning.jpg",
       },
       {
         title: "Rencontre des RAF",
         description:
           "Renforcer le pilotage de la performance, optimiser les processus et partager des solutions opérationnelles.",
+        image: "/images/services/pilotage-projet.jpg",
       },
       {
         title: "Rencontre des Assistantes de Direction & Secrétaires Exécutives",
         description:
           "Développer les compétences stratégiques, maîtriser les nouveaux outils et valoriser le rôle de partenaire de la direction.",
+        image: "/images/services/co-developpement.jpg",
       },
     ],
     paragraphs: [
