@@ -36,7 +36,7 @@ export const articles: Article[] = [
     content: [
       {
         paragraphs: [
-          "On peut suivre des dizaines d'heures de formation en ligne sans jamais changer une seule habitude. À l'inverse, quelques jours d'immersion, coupés du bureau et des sollicitations, suffisent parfois à transformer durablement la posture d'un dirigeant. C'est tout le pari du format résidentiel, au cœur de notre démarche FormAction.",
+          "On peut suivre des dizaines d'heures de formation en ligne sans jamais changer une seule habitude. À l'inverse, quelques jours d'immersion, coupés du bureau et des sollicitations, suffisent parfois à transformer durablement la posture d'un dirigeant. C'est tout le pari du format résidentiel, au cœur de notre démarche Form’Action.",
         ],
       },
       {
@@ -56,7 +56,7 @@ export const articles: Article[] = [
       {
         heading: "Repartir avec un plan d'action, pas des notes",
         paragraphs: [
-          "Un séjour résidentiel n'a de sens que s'il produit du concret. C'est pourquoi chaque programme FormAction se conclut par l'élaboration, par chaque participant, d'un plan d'action personnel — directement transposable dans son organisation dès le retour.",
+          "Un séjour résidentiel n'a de sens que s'il produit du concret. C'est pourquoi chaque programme Form’Action se conclut par l'élaboration, par chaque participant, d'un plan d'action personnel — directement transposable dans son organisation dès le retour.",
           "De la finance publique à la gouvernance ou au leadership digital, cette exigence de résultat est ce qui distingue une parenthèse agréable d'un véritable levier de performance.",
         ],
       },

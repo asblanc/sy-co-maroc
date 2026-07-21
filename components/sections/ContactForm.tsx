@@ -81,7 +81,7 @@ export function ContactForm() {
                 <option value="" disabled>
                   Sélectionnez…
                 </option>
-                <option>FormAction — Formation résidentielle</option>
+                <option>Form’Action — Formation résidentielle</option>
                 <option>Meet &amp; Share — Rencontre entre pairs</option>
                 <option>Formation sur mesure (intra-entreprise)</option>
                 <option>Coaching / accompagnement conseil</option>

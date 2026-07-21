@@ -10,7 +10,7 @@ export const faqs: Faq[] = [
   {
     question: "Où et combien de temps durent les formations résidentielles ?",
     answer:
-      "Nos séminaires FormAction durent de 7 à 10 jours et se déroulent à Casablanca, Agadir, Tanger, Marrakech, Dakar ou Abidjan. Chaque pack est « tout inclus » : formation, hébergement, restauration et logistique complète, de l'inscription au retour à l'aéroport.",
+      "Nos séminaires Form’Action durent de 7 à 10 jours et se déroulent à Casablanca, Agadir, Tanger, Marrakech, Dakar ou Abidjan. Chaque pack est « tout inclus » : formation, hébergement, restauration et logistique complète, de l'inscription au retour à l'aéroport.",
   },
   {
     question: "Proposez-vous des formations en intra-entreprise ?",

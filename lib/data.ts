@@ -13,7 +13,7 @@ export type NavColumn = {
 
 export const megaMenu: NavColumn[] = [
   {
-    title: "FormAction",
+    title: "Form’Action",
     children: [
       { label: "Formations résidentielles", href: "/form-action" },
       { label: "Nos thématiques d’expertise", href: "/form-action" },
@@ -53,7 +53,7 @@ export type Expertise = {
 
 export const expertises: Expertise[] = [
   {
-    title: "FormAction",
+    title: "Form’Action",
     description:
       "Des formations résidentielles immersives, conçues avec des experts internationaux, pour un impact opérationnel immédiat sur vos cadres et dirigeants.",
     color: "#097D7A",
@@ -178,13 +178,13 @@ export type Realization = {
 /** Programmes phares de SY&CO — formations résidentielles & rencontres entre pairs. */
 export const realizations: Realization[] = [
   {
-    tag: "FormAction",
+    tag: "Form’Action",
     title: "Finance publique, verte & durable",
     location: "Casablanca",
     image: "/images/services/ev-convention.jpg",
   },
   {
-    tag: "FormAction",
+    tag: "Form’Action",
     title: "Leadership & transformation digitale",
     location: "Marrakech",
     image: "/images/services/ev-seminaire.jpg",
@@ -202,7 +202,7 @@ export const realizations: Realization[] = [
     image: "/images/services/ev-teambuilding.jpg",
   },
   {
-    tag: "FormAction",
+    tag: "Form’Action",
     title: "Gouvernance, audit & conformité",
     location: "Abidjan",
     image: "/images/cases/conseil.jpg",
@@ -224,7 +224,7 @@ export const contactInfo = {
 };
 
 export const footerExpertises: NavChild[] = [
-  { label: "FormAction — Formations résidentielles", href: "/form-action" },
+  { label: "Form’Action — Formations résidentielles", href: "/form-action" },
   { label: "Meet & Share — Nos rencontres", href: "/meet-and-share" },
   { label: "Formation sur mesure", href: "/formation-sur-mesure" },
   { label: "Nos offres", href: "/nos-offres" },

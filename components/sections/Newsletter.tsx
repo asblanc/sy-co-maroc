@@ -46,7 +46,7 @@ export function Newsletter() {
           Restez informé·e
         </h3>
         <p className="mt-2 text-sm leading-relaxed text-white/80">
-          Nouvelles sessions FormAction, rencontres Meet &amp; Share et
+          Nouvelles sessions Form’Action, rencontres Meet &amp; Share et
           calendrier 2027 : recevez nos actualités directement par e-mail.
         </p>
       </div>

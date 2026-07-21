@@ -30,7 +30,7 @@ export function Hero() {
           <TextReveal
             as="p"
             text={
-              "Le cabinet de formation et de conseil qui transforme vos cadres et dirigeants en leaders de demain — FormAction · Meet & Share · Event."
+              "Le cabinet de formation et de conseil qui transforme vos cadres et dirigeants en leaders de demain — Form’Action · Meet & Share · Event."
             }
             delay={0.6}
             stagger={0.03}

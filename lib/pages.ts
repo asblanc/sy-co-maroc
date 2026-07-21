@@ -33,15 +33,15 @@ export type PageData = {
 };
 
 export const pages: PageData[] = [
-  /* ---------- Pilier 1 : FormAction ---------- */
+  /* ---------- Pilier 1 : Form’Action ---------- */
   {
     slug: "form-action",
     type: "content",
-    title: "FormAction — Formations résidentielles immersives | SY&CO",
-    h1: "FormAction",
-    category: "FormAction",
+    title: "Form’Action — Formations résidentielles immersives | SY&CO",
+    h1: "Form’Action",
+    category: "Form’Action",
     description:
-      "FormAction : des formations résidentielles immersives de 7 à 10 jours, conçues avec des experts internationaux, pour un impact opérationnel immédiat sur vos cadres et dirigeants.",
+      "Form’Action : des formations résidentielles immersives de 7 à 10 jours, conçues avec des experts internationaux, pour un impact opérationnel immédiat sur vos cadres et dirigeants.",
     heroImage: "/images/pages/header-pedagogie.jpg",
     introHeading: "Des formations",
     introSubheading: "résidentielles immersives",
@@ -75,7 +75,7 @@ export const pages: PageData[] = [
       },
     ],
     paragraphs: [
-      "FormAction, c'est le cœur de SY&CO : des formations résidentielles immersives qui transforment durablement les pratiques de vos cadres et dirigeants.",
+      "Form’Action, c'est le cœur de SY&CO : des formations résidentielles immersives qui transforment durablement les pratiques de vos cadres et dirigeants.",
       "Conçus avec des experts internationaux, nos programmes allient apports de haut niveau, études de cas réels et mise en pratique immédiate — pour un impact opérationnel dès le retour au bureau.",
       "Du diagnostic du besoin à la logistique sur place, nous nous occupons de tout : vous n'avez qu'à vous concentrer sur l'essentiel, apprendre et progresser.",
     ],
@@ -178,17 +178,17 @@ export const pages: PageData[] = [
     ],
   },
 
-  /* ---------- Nos offres (packs FormAction) ---------- */
+  /* ---------- Nos offres (packs Form’Action) ---------- */
   {
     slug: "nos-offres",
     type: "content",
-    title: "Nos offres — Packs FormAction | SY&CO",
+    title: "Nos offres — Packs Form’Action | SY&CO",
     h1: "Nos offres",
     category: "Nos offres",
     description:
-      "FormAction : des séminaires résidentiels immersifs de 7 à 10 jours à Casablanca, Agadir, Tanger, Marrakech, Dakar et Abidjan, tout inclus, de l'inscription au retour à l'aéroport.",
+      "Form’Action : des séminaires résidentiels immersifs de 7 à 10 jours à Casablanca, Agadir, Tanger, Marrakech, Dakar et Abidjan, tout inclus, de l'inscription au retour à l'aéroport.",
     heroImage: "/images/pages/header-innovation.jpg",
-    introHeading: "FormAction",
+    introHeading: "Form’Action",
     introSubheading: "nos formations résidentielles",
     introImage: "/images/pages/intro-innovation.jpg",
     needsEyebrow: "Votre pack",
@@ -218,7 +218,7 @@ export const pages: PageData[] = [
       },
     ],
     paragraphs: [
-      "Nos formations résidentielles FormAction se déroulent sous forme de séminaires immersifs de 7 à 10 jours, dans des destinations propices à la concentration et à l'ouverture : Casablanca, Agadir, Tanger, Marrakech, Dakar et Abidjan.",
+      "Nos formations résidentielles Form’Action se déroulent sous forme de séminaires immersifs de 7 à 10 jours, dans des destinations propices à la concentration et à l'ouverture : Casablanca, Agadir, Tanger, Marrakech, Dakar et Abidjan.",
       "Chaque pack est pensé « tout inclus » : formation, hébergement, restauration, logistique et visites d'entreprises partenaires pour un benchmarking de terrain.",
       "La grille tarifaire détaillée des packs est disponible sur demande — contactez-nous pour recevoir l'offre adaptée à votre projet.",
     ],
@@ -232,11 +232,11 @@ export const pages: PageData[] = [
     h1: "Calendrier 2027",
     category: "Calendrier",
     description:
-      "Le calendrier 2027 des formations résidentielles FormAction et des rencontres Meet & Share de SY&CO.",
+      "Le calendrier 2027 des formations résidentielles Form’Action et des rencontres Meet & Share de SY&CO.",
     heroImage: "/images/pages/header-kickoff.jpg",
     noindex: true,
     paragraphs: [
-      "Le calendrier 2027 de nos formations résidentielles FormAction et de nos rencontres Meet & Share est en cours de finalisation.",
+      "Le calendrier 2027 de nos formations résidentielles Form’Action et de nos rencontres Meet & Share est en cours de finalisation.",
       "Dates, thématiques et destinations seront publiées ici prochainement. Pour être informé en avant-première ou réserver votre place, écrivez-nous à seminairesyco@gmail.com.",
       "Vous préparez déjà votre plan de formation 2027 ? Contactez-nous pour construire ensemble le parcours de vos cadres et dirigeants.",
     ],

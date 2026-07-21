@@ -18,7 +18,7 @@ export function Expertises() {
             <span className="text-orange">votre réussite</span>
           </h2>
           <p className="mt-6 font-heading text-lg font-bold text-ink/70">
-            Nos trois piliers : FormAction · Meet &amp; Share · Event.
+            Nos trois piliers : Form’Action · Meet &amp; Share · Event.
           </p>
         </Reveal>
 

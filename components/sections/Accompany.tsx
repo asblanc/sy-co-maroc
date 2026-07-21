@@ -6,7 +6,7 @@ const agilePoints = [
   "un accompagnement complet, de l'inscription à la logistique sur place,",
   "une expertise internationale, académique et issue de l'entreprise,",
   "un impact mesuré : chaque participant repart avec un plan d'action concret,",
-  "des formations résidentielles immersives (FormAction),",
+  "des formations résidentielles immersives (Form’Action),",
   "des rencontres entre pairs pour échanger sans filtre (Meet & Share),",
   "un ancrage panafricain : Maroc, Sénégal, Côte d'Ivoire.",
 ];

@@ -15,7 +15,7 @@
  * ========================================================================== */
 
 /* -----------------------------------------------------------------------------
- * 1) GRILLE TARIFAIRE — Packs FormAction (page « Nos offres »)
+ * 1) GRILLE TARIFAIRE — Packs Form’Action (page « Nos offres »)
  * -------------------------------------------------------------------------- */
 export type Pack = {
   name: string; // ex : "Pack Casablanca"
@@ -38,15 +38,15 @@ export const packs: Pack[] = [
  * -------------------------------------------------------------------------- */
 export type Session = {
   program: string; // ex : "Finance publique, verte & durable"
-  pillar: string; // "FormAction" ou "Meet & Share"
+  pillar: string; // "Form’Action" ou "Meet & Share"
   dates: string; // ex : "12 – 18 mars 2027"
   city: string; // ex : "Casablanca"
   status?: "Ouvert" | "Bientôt" | "Complet"; // optionnel (défaut : "Ouvert")
 };
 
 export const sessions2027: Session[] = [
-  // { program: "Finance publique, verte & durable", pillar: "FormAction", dates: "12 – 18 mars 2027", city: "Casablanca", status: "Ouvert" },
-  // { program: "Leadership & transformation digitale", pillar: "FormAction", dates: "9 – 16 avril 2027", city: "Marrakech", status: "Ouvert" },
+  // { program: "Finance publique, verte & durable", pillar: "Form’Action", dates: "12 – 18 mars 2027", city: "Casablanca", status: "Ouvert" },
+  // { program: "Leadership & transformation digitale", pillar: "Form’Action", dates: "9 – 16 avril 2027", city: "Marrakech", status: "Ouvert" },
   // { program: "TOP MANAGER — Stratégie & Innovation", pillar: "Meet & Share", dates: "22 mai 2027", city: "Casablanca", status: "Bientôt" },
   // { program: "SHE TALK — Femmes Leaders", pillar: "Meet & Share", dates: "14 juin 2027", city: "Dakar", status: "Bientôt" },
 ];

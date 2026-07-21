@@ -4,7 +4,7 @@ import { Reveal } from "@/components/ui/Reveal";
 import { Button } from "@/components/ui/Button";
 
 /**
- * Grille tarifaire des packs FormAction (page « Nos offres »).
+ * Grille tarifaire des packs Form’Action (page « Nos offres »).
  * Ne s'affiche que si `packs` (lib/a-completer.ts) contient au moins un pack —
  * sinon la page conserve sa mention « grille sur demande ».
  */
@@ -19,7 +19,7 @@ export function PricingGrid() {
             Nos packs
           </p>
           <h2 className="mt-1 text-3xl font-bold text-teal sm:text-4xl">
-            Grille tarifaire FormAction
+            Grille tarifaire Form’Action
           </h2>
         </Reveal>
 

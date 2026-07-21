@@ -10,8 +10,8 @@ Site vitrine de **SY&CO (Synergie & Compétences)** — **cabinet de formation e
 conseil** créé en 2020, **filiale du Groupe VISION & STRATÉGIE**, qui développe les
 compétences des cadres, dirigeants et organisations d'**Afrique francophone**
 (Maroc, Sénégal, Côte d'Ivoire). Slogan : *« Vous guider vers la réussite »*.
-Baseline / 3 piliers : **FormAction · Meet & Share · Event**.
-- **FormAction** : formations résidentielles immersives (7–10 j) — 7 thématiques
+Baseline / 3 piliers : **Form’Action · Meet & Share · Event**.
+- **Form’Action** : formations résidentielles immersives (7–10 j) — 7 thématiques
   (finance publique/verte/durable, leadership & transfo digitale, gouvernance/audit,
   RH stratégique & data RH, gestion de projet & suivi-évaluation, RSE, agriculture/agribusiness).
 - **Meet & Share** : rencontres entre pairs (TOP MANAGER, SHE TALK, Rencontres DAF/DRH/RAF/Assistantes).
@@ -65,7 +65,7 @@ Lucide React · Supabase (formulaire de devis) · ESLint (flat config). Déploie
   (placeholders). Le composant `Clients` affiche un vrai logo si `logo` est renseigné
   (déposer les fichiers dans `public/images/clients/`). N'afficher que de **vrais** clients.
 - **Réalisations** (`realizations`) : formats d'événements illustratifs, **sans nom de client réel**.
-- **Menu / rubriques** : méga-menu « Nos programmes » = **FormAction / Meet & Share /
+- **Menu / rubriques** : méga-menu « Nos programmes » = **Form’Action / Meet & Share /
   Formation sur mesure** ; navLinks « Nos offres », « Calendrier 2027 », « L'agence »,
   « Le Blog ». Pages piliers : `/form-action`, `/meet-and-share`, `/formation-sur-mesure`,
   plus `/nos-offres`, `/calendrier-2027`. La page `/nos-cas-clients` = « Ils nous font
@@ -105,7 +105,7 @@ npx eslint .     # lint
 ## 9. Reste à faire (côté client, non technique)
 
 - **Contenus à coller** dans **`lib/a-completer.ts`** (un seul fichier, modèles
-  prêts à décommenter) : **grille tarifaire** (packs FormAction → page Nos offres),
+  prêts à décommenter) : **grille tarifaire** (packs Form’Action → page Nos offres),
   **calendrier 2027** (sessions → page Calendrier) et **témoignages** (page Ils nous
   font confiance). Tant qu'une liste est vide, la page affiche un message d'attente
   propre ; dès qu'elle est remplie, le contenu apparaît (composants `PricingGrid`,

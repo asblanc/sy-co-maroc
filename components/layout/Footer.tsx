@@ -31,7 +31,7 @@ export function Footer() {
           <p className="text-sm leading-relaxed text-white/80">
             SY&CO — Synergie &amp; Compétences : cabinet de formation et de
             conseil qui transforme cadres et dirigeants d&apos;Afrique
-            francophone en leaders de demain. FormAction · Meet &amp; Share ·
+            francophone en leaders de demain. Form’Action · Meet &amp; Share ·
             Event.
           </p>
         </div>

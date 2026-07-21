@@ -33,7 +33,7 @@ function resolveSiteUrl(): string {
 export const siteConfig = {
   name: "SY&CO",
   legalName: "SY&CO — Synergie & Compétences",
-  slogan: "FormAction · Meet & Share · Event",
+  slogan: "Form’Action · Meet & Share · Event",
   description:
     "SY&CO (Synergie & Compétences) — cabinet de formation et de conseil qui transforme cadres et dirigeants d'Afrique francophone en leaders de demain. Formations résidentielles, rencontres entre pairs et formation sur mesure, au Maroc et à l'international.",
   url: resolveSiteUrl(),
