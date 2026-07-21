@@ -39,6 +39,7 @@ export async function generateMetadata({
     title: page.h1,
     description: page.description || undefined,
     alternates: { canonical: `/${page.slug}` },
+    robots: page.noindex ? { index: false, follow: true } : undefined,
     openGraph: {
       type: "article",
       title: page.h1,

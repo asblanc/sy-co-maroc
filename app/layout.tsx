@@ -1,6 +1,8 @@
 import type { Metadata } from "next";
 import { Arvo, Open_Sans, Artifika } from "next/font/google";
 import "./globals.css";
+import { Analytics } from "@vercel/analytics/next";
+import { SpeedInsights } from "@vercel/speed-insights/next";
 import { ScrollProgress } from "@/components/ui/ScrollProgress";
 import { siteConfig } from "@/lib/site";
 
@@ -69,7 +71,12 @@ const orgJsonLd = {
   url: siteConfig.url,
   image: `${siteConfig.url}${siteConfig.ogImage}`,
   description: siteConfig.description,
-  areaServed: "MA",
+  areaServed: [
+    { "@type": "Country", name: "Maroc" },
+    { "@type": "Country", name: "Sénégal" },
+    { "@type": "Country", name: "Côte d'Ivoire" },
+  ],
+  knowsLanguage: "fr",
   telephone: siteConfig.contact.phone,
   email: siteConfig.contact.email,
   address: {
@@ -112,6 +119,8 @@ export default function RootLayout({
         </a>
         <ScrollProgress />
         {children}
+        <Analytics />
+        <SpeedInsights />
       </body>
     </html>
   );

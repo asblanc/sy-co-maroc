@@ -82,8 +82,14 @@ Lucide React · Supabase (formulaire de devis) · ESLint (flat config). Déploie
 
 ## 7. SEO & a11y
 
-- Metadata par page + `app/sitemap.ts`, `app/robots.ts`, JSON-LD (Organization, WebSite,
-  BlogPosting, FAQPage), image OG dédiée (`public/images/og-sy-co.jpg`).
+- Metadata par page + `app/sitemap.ts`, `app/robots.ts`, JSON-LD (ProfessionalService
+  `areaServed` = Maroc/Sénégal/Côte d'Ivoire, WebSite, BlogPosting, FAQPage), image OG
+  dédiée (`public/images/og-sy-co.jpg`).
+- **Analytics** : `@vercel/Analytics` + `@vercel/SpeedInsights` dans `app/layout.tsx`
+  (injection client-side, active en prod Vercel).
+- **noindex** : champ `PageData.noindex` (metadata `robots` + exclusion du sitemap).
+  Actuellement sur `calendrier-2027` et `nos-cas-clients` (contenu placeholder) — à
+  **retirer** quand le vrai contenu (dates 2027 / témoignages) est fourni.
 - Skip-link « Aller au contenu » + landmarks `<main id="main-content">`, `prefers-reduced-motion`.
 - Images en `next/image`, optimisées ; total `public/images` ≈ 6–7 Mo.
 

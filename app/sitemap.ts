@@ -12,12 +12,14 @@ export default function sitemap(): MetadataRoute.Sitemap {
     priority: 1,
   };
 
-  const rest: MetadataRoute.Sitemap = pages.map((p) => ({
-    url: `${siteConfig.url}/${p.slug}`,
-    lastModified: now,
-    changeFrequency: "monthly",
-    priority: p.type === "legal" ? 0.3 : 0.8,
-  }));
+  const rest: MetadataRoute.Sitemap = pages
+    .filter((p) => !p.noindex)
+    .map((p) => ({
+      url: `${siteConfig.url}/${p.slug}`,
+      lastModified: now,
+      changeFrequency: "monthly",
+      priority: p.type === "legal" ? 0.3 : 0.8,
+    }));
 
   const posts: MetadataRoute.Sitemap = articles.map((a) => ({
     url: `${siteConfig.url}/articles/${a.slug}`,

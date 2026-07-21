@@ -17,8 +17,8 @@ export function Method() {
             ÉCLAT
           </h2>
           <p className="text-base leading-relaxed text-ink/80">
-            Pour concevoir des événements et des formations qui marquent, nous
-            suivons une démarche en cinq temps —{" "}
+            Pour concevoir des formations et des accompagnements qui marquent,
+            nous suivons une démarche en cinq temps —{" "}
             <span className="font-semibold text-teal">
               Écoute, Conception, Lancement, Animation, Traces
             </span>{" "}

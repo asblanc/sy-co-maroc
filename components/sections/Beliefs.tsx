@@ -31,7 +31,7 @@ export function Beliefs() {
           <div className="blob-a relative aspect-[5/4] w-full overflow-hidden shadow-xl">
             <Image
               src="/images/illustration-home.jpg"
-              alt="Équipes SY&CO réunies lors d'un événement"
+              alt="Cadres et dirigeants en formation avec SY&CO"
               fill
               sizes="(max-width: 1024px) 90vw, 560px"
               className="object-cover"

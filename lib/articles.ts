@@ -24,7 +24,7 @@ export const articles: Article[] = [
     slug: "formation-residentielle-dirigeants-afrique",
     title:
       "Formation résidentielle des dirigeants : pourquoi l'immersion change tout",
-    image: "/images/articles/art-iddea.jpg",
+    image: "/images/articles/art-formation-residentielle.jpg",
     excerpt:
       "Sortir les cadres et dirigeants de leur quotidien pendant plusieurs jours n'est pas un luxe : c'est la condition d'un vrai changement de posture. Retour sur la force du format résidentiel.",
     category: "Leadership & dirigeants",
@@ -239,7 +239,7 @@ export const articles: Article[] = [
     slug: "leadership-au-feminin-influence-reseau",
     title:
       "Leadership au féminin : développer son influence et élargir son réseau",
-    image: "/images/articles/art-axa.jpg",
+    image: "/images/articles/art-leadership-feminin.jpg",
     excerpt:
       "Les femmes leaders d'Afrique francophone font bouger les organisations. Développer son influence et son réseau devient un levier de carrière et de transformation.",
     category: "Leadership & dirigeants",

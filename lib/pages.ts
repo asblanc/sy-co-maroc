@@ -27,6 +27,8 @@ export type PageData = {
   servicesEyebrow?: string;
   servicesTitle?: string;
   highlights?: { title: string; description: string }[];
+  /** Exclut la page de l'indexation (contenu placeholder en attente). */
+  noindex?: boolean;
   paragraphs: string[];
 };
 
@@ -232,6 +234,7 @@ export const pages: PageData[] = [
     description:
       "Le calendrier 2027 des formations résidentielles FormAction et des rencontres Meet & Share de SY&CO.",
     heroImage: "/images/pages/header-kickoff.jpg",
+    noindex: true,
     paragraphs: [
       "Le calendrier 2027 de nos formations résidentielles FormAction et de nos rencontres Meet & Share est en cours de finalisation.",
       "Dates, thématiques et destinations seront publiées ici prochainement. Pour être informé en avant-première ou réserver votre place, écrivez-nous à seminairesyco@gmail.com.",
@@ -247,6 +250,7 @@ export const pages: PageData[] = [
     title: "Ils nous font confiance | SY&CO",
     h1: "Ils nous font confiance",
     category: "Références",
+    noindex: true,
     description:
       "Nos clients apprécient notre souci de développer des formations concrètes et pertinentes, et la qualité de notre pilotage projet — réactif, agile et engagé à leurs côtés.",
     paragraphs: [
