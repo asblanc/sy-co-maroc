@@ -19,6 +19,10 @@ import { TeamGrid } from "@/components/sections/TeamGrid";
 import { ArticlesGrid } from "@/components/sections/ArticlesGrid";
 import { Highlights } from "@/components/sections/Highlights";
 import { Faq } from "@/components/sections/Faq";
+import { PricingGrid } from "@/components/sections/PricingGrid";
+import { Sessions } from "@/components/sections/Sessions";
+import { Testimonials } from "@/components/sections/Testimonials";
+import { testimonials } from "@/lib/a-completer";
 import { Parallax } from "@/components/ui/Parallax";
 import { pages, pageBySlug, getSiblings, type PageData } from "@/lib/pages";
 
@@ -218,6 +222,8 @@ function ContentBody({ page }: { page: PageData }) {
         <Highlights items={page.highlights} />
       )}
       {page.slug === "form-action" && <Faq />}
+      {page.slug === "nos-offres" && <PricingGrid />}
+      {page.slug === "calendrier-2027" && <Sessions />}
       {(page.slug === "calendrier-2027" || page.slug === "nos-offres") && (
         <ReservationCTA />
       )}
@@ -425,23 +431,27 @@ function CasesIndexBody({ page }: { page: PageData }) {
         </div>
       </section>
 
-      <section className="bg-white py-14">
-        <div className="container-narrow max-w-3xl rounded-3xl border border-dashed border-teal/30 bg-peach/20 p-10 text-center">
-          <p className="font-heading text-lg font-bold text-teal">
-            Nos témoignages arrivent bientôt
-          </p>
-          <p className="mx-auto mt-3 max-w-xl text-sm leading-relaxed text-ink/70">
-            Nous préparons une sélection de retours de nos participants et de nos
-            partenaires. En attendant, parlons de votre projet — nous serons
-            ravis de vous présenter des références de votre secteur.
-          </p>
-          <div className="mt-6">
-            <Button href="/contact" variant="pink">
-              Nous contacter
-            </Button>
+      {testimonials.length > 0 ? (
+        <Testimonials />
+      ) : (
+        <section className="bg-white py-14">
+          <div className="container-narrow max-w-3xl rounded-3xl border border-dashed border-teal/30 bg-peach/20 p-10 text-center">
+            <p className="font-heading text-lg font-bold text-teal">
+              Nos témoignages arrivent bientôt
+            </p>
+            <p className="mx-auto mt-3 max-w-xl text-sm leading-relaxed text-ink/70">
+              Nous préparons une sélection de retours de nos participants et de
+              nos partenaires. En attendant, parlons de votre projet — nous
+              serons ravis de vous présenter des références de votre secteur.
+            </p>
+            <div className="mt-6">
+              <Button href="/contact" variant="pink">
+                Nous contacter
+              </Button>
+            </div>
           </div>
-        </div>
-      </section>
+        </section>
+      )}
       <Clients />
     </>
   );

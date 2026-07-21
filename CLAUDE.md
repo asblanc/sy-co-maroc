@@ -104,9 +104,20 @@ npx eslint .     # lint
 
 ## 9. Reste à faire (côté client, non technique)
 
+- **Contenus à coller** dans **`lib/a-completer.ts`** (un seul fichier, modèles
+  prêts à décommenter) : **grille tarifaire** (packs FormAction → page Nos offres),
+  **calendrier 2027** (sessions → page Calendrier) et **témoignages** (page Ils nous
+  font confiance). Tant qu'une liste est vide, la page affiche un message d'attente
+  propre ; dès qu'elle est remplie, le contenu apparaît (composants `PricingGrid`,
+  `Sessions`, `Testimonials`, chacun rend `null` si vide).
+  ⚠️ Après remplissage du calendrier / des témoignages, retirer `noindex: true` de
+  la page concernée dans `lib/pages.ts` (voir §7).
 - Fournir **RC / ICE / IF** pour les mentions légales (placeholders `[à compléter]`).
-- Fournir **vrais noms + photos** de l'équipe (remplacent les avatars).
-- Fournir **logos de vrais clients** (mur de partenaires).
+- Fournir **vrais noms + photos** de l'équipe (remplacent les avatars) et **l'adresse**
+  définitive du siège (placeholder actuel dans `lib/data.ts`).
+- Fournir **logos de vrais clients** (le mur affiche pour l'instant des **secteurs**,
+  pas de clients nommés — cf. `partners` dans `data.ts`).
+- Ajouter le **catalogue 2026 (PDF)** comme lead magnet quand il sera fourni.
 - Brancher le **nom de domaine `.ma`** et définir les variables Supabase dans Vercel.
 
 ## 10. Workflow attendu de Claude
