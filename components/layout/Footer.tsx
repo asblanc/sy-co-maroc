@@ -3,6 +3,7 @@ import Link from "next/link";
 import { Linkedin, Phone, MapPin, Mail } from "lucide-react";
 import { Button } from "@/components/ui/Button";
 import { TrustSeal } from "@/components/ui/TrustSeal";
+import { Newsletter } from "@/components/sections/Newsletter";
 import {
   contactInfo,
   footerExpertises,
@@ -12,6 +13,9 @@ import {
 export function Footer() {
   return (
     <footer className="bg-teal text-white">
+      <div className="container-narrow pt-14">
+        <Newsletter />
+      </div>
       <div className="container-narrow grid gap-12 py-16 md:grid-cols-2 lg:grid-cols-4">
         {/* Brand */}
         <div>

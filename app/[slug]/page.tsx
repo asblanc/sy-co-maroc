@@ -111,6 +111,36 @@ function ContactCta() {
   );
 }
 
+/** Bande "Réserver ma place" — pages calendrier & offres (intent de conversion). */
+function ReservationCTA() {
+  return (
+    <section className="bg-teal py-16 lg:py-20">
+      <div className="container-narrow">
+        <div className="mx-auto max-w-3xl rounded-3xl bg-white/10 p-8 text-center ring-1 ring-white/15 sm:p-12">
+          <p className="font-heading text-sm font-bold uppercase tracking-widest text-orange">
+            Places limitées
+          </p>
+          <h2 className="mt-2 text-2xl font-bold text-white sm:text-3xl">
+            Prêt·e à réserver votre place&nbsp;?
+          </h2>
+          <p className="mx-auto mt-4 max-w-xl text-sm leading-relaxed text-white/85">
+            Indiquez-nous la formation ou la rencontre qui vous intéresse : notre
+            équipe vous recontacte rapidement pour finaliser votre inscription.
+          </p>
+          <div className="mt-8 flex flex-wrap items-center justify-center gap-4">
+            <Button href="/contact" variant="pink" size="lg">
+              Demander mon inscription
+            </Button>
+            <Button href="/contact" variant="white" size="lg">
+              Poser une question
+            </Button>
+          </div>
+        </div>
+      </div>
+    </section>
+  );
+}
+
 function IntroBlock({ page }: { page: PageData }) {
   return (
     <section className="bg-white py-16 lg:py-24">
@@ -188,6 +218,9 @@ function ContentBody({ page }: { page: PageData }) {
         <Highlights items={page.highlights} />
       )}
       {page.slug === "form-action" && <Faq />}
+      {(page.slug === "calendrier-2027" || page.slug === "nos-offres") && (
+        <ReservationCTA />
+      )}
 
       {hasRichBody ? (
         <>

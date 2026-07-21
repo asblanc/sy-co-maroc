@@ -12,7 +12,11 @@ type Payload = {
   eventType?: string;
   participants?: string;
   eventDate?: string;
+  source?: string;
 };
+
+/** Sources autorisées pour tagger l'origine du lead (défaut : contact). */
+const SOURCES = new Set(["formulaire_contact", "newsletter", "reservation"]);
 
 const isEmail = (v: string) => /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(v);
 const clip = (v: unknown, max = 500) => String(v ?? "").trim().slice(0, max);
@@ -33,6 +37,8 @@ export async function POST(request: Request) {
   const eventType = clip(body.eventType, 80);
   const participants = clip(body.participants, 80);
   const eventDate = clip(body.eventDate, 80);
+  const rawSource = clip(body.source, 40);
+  const source = SOURCES.has(rawSource) ? rawSource : "formulaire_contact";
 
   if (!firstName || !lastName || !email || !message || !isEmail(email)) {
     return NextResponse.json(
@@ -58,7 +64,7 @@ export async function POST(request: Request) {
     event_type: eventType || null,
     participants: participants || null,
     event_date: eventDate || null,
-    source: "devis_evenementiel",
+    source,
   });
 
   if (error) {
