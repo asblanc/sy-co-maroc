@@ -21,13 +21,13 @@ export type Article = {
 
 export const articles: Article[] = [
   {
-    slug: "seminaire-entreprise-reussi-7-cles",
+    slug: "formation-residentielle-dirigeants-afrique",
     title:
-      "Séminaire d'entreprise réussi : les 7 clés d'un événement qui fédère vraiment",
+      "Formation résidentielle des dirigeants : pourquoi l'immersion change tout",
     image: "/images/articles/art-iddea.jpg",
     excerpt:
-      "Un séminaire n'est pas une récompense, c'est un outil de management. Voici comment en faire un véritable levier de cohésion et de performance.",
-    category: "Séminaires & conventions",
+      "Sortir les cadres et dirigeants de leur quotidien pendant plusieurs jours n'est pas un luxe : c'est la condition d'un vrai changement de posture. Retour sur la force du format résidentiel.",
+    category: "Leadership & dirigeants",
     author: "Youssef Amrani",
     authorRole: "Directeur associé, Développement & partenariats",
     date: "2026-05-14",
@@ -36,33 +36,28 @@ export const articles: Article[] = [
     content: [
       {
         paragraphs: [
-          "Chaque année, les entreprises investissent des budgets importants dans leurs séminaires. Pourtant, beaucoup en ressortent avec un simple souvenir agréable, sans effet durable sur les équipes. La différence entre un moment sympathique et un séminaire véritablement transformateur ne tient pas au lieu ou au budget : elle tient à la méthode.",
+          "On peut suivre des dizaines d'heures de formation en ligne sans jamais changer une seule habitude. À l'inverse, quelques jours d'immersion, coupés du bureau et des sollicitations, suffisent parfois à transformer durablement la posture d'un dirigeant. C'est tout le pari du format résidentiel, au cœur de notre démarche FormAction.",
         ],
       },
       {
-        heading: "1. Partir d'un objectif clair, pas d'une date",
+        heading: "Couper pour mieux apprendre",
         paragraphs: [
-          "Un séminaire réussi répond à une intention précise : aligner une vision, lancer un projet, renforcer la cohésion, célébrer un cap. Formuler cet objectif en une phrase avant toute chose oriente l'ensemble des choix — contenu, format, animation, lieu.",
+          "L'apprentissage profond exige de l'attention continue. En résidentiel, le participant n'est plus happé toutes les dix minutes par un e-mail ou une réunion : il se consacre pleinement au sujet, avec ses pairs. Cette continuité crée un espace rare pour prendre du recul, questionner ses pratiques et expérimenter sans risque.",
         ],
       },
       {
-        heading: "2. à 6. Concevoir une expérience, pas une suite de réunions",
+        heading: "Apprendre entre pairs, autant que du formateur",
         paragraphs: [
-          "Les séminaires qui marquent respectent quelques principes simples que nous appliquons systématiquement chez SY&CO :",
+          "Réunir des cadres et dirigeants de plusieurs organisations — et de plusieurs pays — démultiplie la valeur. Les études de cas réels, les échanges informels le soir, la confrontation des contextes marocains, sénégalais ou ivoiriens : ce sont souvent ces moments qui laissent la trace la plus durable.",
         ],
-        list: [
-          "Alterner les temps : plénières courtes, ateliers en sous-groupes, moments informels — l'attention se régénère par la variété.",
-          "Faire participer plutôt que subir : un collaborateur qui contribue retient et s'engage davantage qu'un spectateur.",
-          "Soigner la scénographie et le fil narratif : un événement se raconte comme une histoire, avec un début, des temps forts et une chute.",
-          "Prévoir des livrables concrets : décisions, plan d'action, engagements — pour que le lundi suivant, quelque chose ait changé.",
-          "Confier l'animation à un facilitateur : un regard extérieur libère la parole et garde le cap sur les objectifs.",
-        ],
+        quote:
+          "En immersion, on ne forme pas seulement des compétences : on transforme des postures et on tisse un réseau.",
       },
       {
-        heading: "7. Mesurer et prolonger l'impact",
+        heading: "Repartir avec un plan d'action, pas des notes",
         paragraphs: [
-          "Le séminaire ne s'arrête pas quand les lumières s'éteignent. Un questionnaire à chaud, un suivi des engagements pris et une communication interne bien pensée transforment l'énergie du moment en dynamique durable.",
-          "C'est cette exigence de résultat — de l'idée à l'après-événement — qui distingue un prestataire d'un véritable partenaire.",
+          "Un séjour résidentiel n'a de sens que s'il produit du concret. C'est pourquoi chaque programme FormAction se conclut par l'élaboration, par chaque participant, d'un plan d'action personnel — directement transposable dans son organisation dès le retour.",
+          "De la finance publique à la gouvernance ou au leadership digital, cette exigence de résultat est ce qui distingue une parenthèse agréable d'un véritable levier de performance.",
         ],
       },
     ],
@@ -199,80 +194,85 @@ export const articles: Article[] = [
     ],
   },
   {
-    slug: "team-building-maroc-cohesion-performance",
+    slug: "finance-verte-durable-cadres-africains",
     title:
-      "Team building au Maroc : transformer la cohésion d'équipe en performance durable",
+      "Finance verte et finance durable : le nouveau défi des cadres financiers africains",
     image: "/images/articles/art-pratiques.jpg",
     excerpt:
-      "Entre désert, montagne et médinas, le Maroc offre un terrain de jeu exceptionnel pour le team building. À condition d'en faire un vrai levier managérial.",
-    category: "Team building",
+      "La finance durable n'est plus une option. Pour les cadres et dirigeants financiers d'Afrique francophone, c'est un champ de compétences à maîtriser dès maintenant.",
+    category: "Finance & gouvernance",
     author: "Sylviane KOFFI AMA",
     authorRole: "Directrice Générale",
     date: "2025-11-20",
     dateLabel: "20 novembre 2025",
-    readingTime: "5 min",
+    readingTime: "6 min",
     content: [
       {
         paragraphs: [
-          "Une journée de rafting, un dîner dans le désert, un atelier cuisine : le team building fait rêver. Mais pour qu'il produise plus qu'un bon souvenir, il doit être pensé comme un dispositif de développement de l'équipe, pas seulement comme une sortie.",
+          "Longtemps cantonnée aux discours, la finance durable s'impose désormais dans les faits : bailleurs, régulateurs et investisseurs conditionnent de plus en plus leurs engagements à des critères environnementaux, sociaux et de gouvernance. Pour les directions financières africaines, c'est un changement de paradigme qu'il faut anticiper.",
         ],
       },
       {
-        heading: "Pourquoi la cohésion est un actif stratégique",
+        heading: "De la finance publique à la finance verte",
         paragraphs: [
-          "Une équipe soudée communique mieux, coopère plus vite et traverse les tensions sans se briser. La qualité des relations est l'un des meilleurs prédicteurs de la performance collective — bien avant les compétences individuelles prises séparément.",
+          "Financement climat, obligations vertes, budgétisation sensible au genre ou à l'environnement : les outils se multiplient. Les cadres de la finance publique comme privée doivent apprendre à les lire, à les piloter et à en rendre compte — sans quoi ils passent à côté de ressources et d'opportunités majeures.",
         ],
       },
       {
-        heading: "Le Maroc, un terrain d'expérience unique",
+        heading: "Un enjeu de compétences, pas seulement de réglementation",
         paragraphs: [
-          "De Marrakech à Agadir, du désert d'Agafay aux vallées de l'Atlas, le pays offre une diversité de décors qui sort les équipes de leur quotidien. Ce dépaysement est un puissant accélérateur : il crée des souvenirs communs forts et abaisse les barrières hiérarchiques.",
+          "Maîtriser la finance durable, ce n'est pas cocher des cases. C'est comprendre la logique de la création de valeur durable, savoir dialoguer avec les parties prenantes et intégrer le risque climatique dans les décisions d'investissement.",
         ],
+        quote:
+          "La finance durable est d'abord une compétence de dirigeant : celle de conjuguer performance, responsabilité et vision de long terme.",
       },
       {
-        heading: "Faire le lien avec le quotidien",
+        heading: "Se former pour prendre une longueur d'avance",
         paragraphs: [
-          "La clé d'un team building utile tient dans le débriefing : que retenons-nous de cette expérience pour notre façon de travailler ensemble ? Sans ce temps de sens, l'activité reste une parenthèse. Avec lui, elle devient un point d'appui durable.",
-          "C'est cette alliance entre émotion et intention qui fait, selon nous, la différence entre un divertissement et un véritable investissement.",
+          "C'est précisément l'objet de nos programmes dédiés à la finance publique, verte et durable : donner aux cadres financiers d'Afrique francophone les cadres d'analyse et les outils concrets pour agir, à partir de cas réels et des meilleures pratiques internationales.",
+          "Les organisations qui investissent aujourd'hui dans ces compétences seront celles qui capteront demain les financements — et la confiance — de leurs partenaires.",
         ],
       },
     ],
   },
   {
-    slug: "convention-annuelle-levier-de-culture",
+    slug: "leadership-au-feminin-influence-reseau",
     title:
-      "Convention annuelle : faire de votre événement corporate un levier de culture",
+      "Leadership au féminin : développer son influence et élargir son réseau",
     image: "/images/articles/art-axa.jpg",
     excerpt:
-      "La convention réunit toute l'entreprise une fois par an. Trop rare pour être gâchée : voici comment en faire un moment fondateur de votre culture.",
-    category: "Séminaires & conventions",
-    author: "Youssef Amrani",
-    authorRole: "Directeur associé, Développement & partenariats",
+      "Les femmes leaders d'Afrique francophone font bouger les organisations. Développer son influence et son réseau devient un levier de carrière et de transformation.",
+    category: "Leadership & dirigeants",
+    author: "Nadia Chraibi",
+    authorRole: "Coach en leadership & intelligence émotionnelle",
     date: "2025-10-07",
     dateLabel: "7 octobre 2025",
     readingTime: "5 min",
     content: [
       {
         paragraphs: [
-          "La convention annuelle est souvent le seul moment où l'ensemble des collaborateurs se retrouvent physiquement réunis. C'est une occasion unique — et coûteuse — qui mérite bien plus qu'une succession de discours de direction.",
+          "De plus en plus de femmes accèdent à des postes de direction en Afrique francophone. Mais accéder au poste ne suffit pas : encore faut-il pouvoir peser sur les décisions, porter sa vision et s'entourer. Le leadership au féminin se joue là, dans l'influence réelle et le réseau.",
         ],
       },
       {
-        heading: "Un moment qui dit qui vous êtes",
+        heading: "L'influence, une compétence qui se travaille",
         paragraphs: [
-          "Tout, dans une convention, parle de la culture de l'entreprise : la manière dont on prend la parole, la place laissée aux équipes, le soin apporté aux détails. Consciemment ou non, chaque collaborateur y lit les valeurs réelles de l'organisation.",
+          "L'influence n'est pas une question de charisme inné : c'est un ensemble de savoir-faire qui s'apprennent. Savoir formuler une position avec assertivité, argumenter, gérer les rapports de pouvoir, poser ses limites : autant de compétences que le développement du self leadership et de l'intelligence émotionnelle vient renforcer.",
         ],
       },
       {
-        heading: "Informer, embarquer, célébrer",
+        heading: "La force du réseau et du témoignage",
         paragraphs: [
-          "Une convention réussie articule trois intentions : partager le cap et les résultats, embarquer les équipes dans les projets à venir, et célébrer les réussites et les personnes. L'équilibre entre ces trois temps évite l'écueil du monologue descendant.",
+          "On progresse rarement seule. Échanger avec des pairs qui vivent les mêmes situations, s'inspirer de parcours de dirigeantes précurseures, oser demander conseil : le réseau est un accélérateur de trajectoire souvent sous-estimé.",
         ],
+        quote:
+          "Développer son influence, ce n'est pas imiter les codes des autres : c'est assumer pleinement sa propre voix de leader.",
       },
       {
-        heading: "Faire vivre, pas seulement écouter",
+        heading: "Un espace pour grandir ensemble",
         paragraphs: [
-          "Les conventions les plus mémorables font vivre le message plutôt que de l'énoncer : ateliers, mises en situation, prises de parole de collaborateurs, formats interactifs. Ce qui est vécu se retient et s'incarne bien mieux que ce qui est simplement entendu.",
+          "C'est l'esprit de notre forum SHE TALK, au sein de nos rencontres Meet & Share : un temps dédié aux femmes leaders pour partager leurs expériences sans filtre, développer leur influence et élargir leur réseau lors d'un cocktail de réseautage.",
+          "Parce qu'une Afrique qui construit ses dirigeants de la réussite a tout à gagner à faire toute leur place aux femmes qui la transforment.",
         ],
       },
     ],
@@ -352,7 +352,7 @@ export const articles: Article[] = [
       {
         heading: "Faire vivre la culture par l'expérience",
         paragraphs: [
-          "Séminaires, rituels, symboles, moments partagés : la culture se transmet par l'expérience collective bien plus que par la communication. C'est là que l'événementiel prend tout son sens — en donnant à ressentir, concrètement, l'identité de l'entreprise.",
+          "Rituels d'équipe, symboles, moments d'apprentissage partagés : la culture se transmet par l'expérience collective bien plus que par la communication. C'est là que les dispositifs de formation et d'accompagnement prennent tout leur sens — en donnant à ressentir, concrètement, l'identité et les valeurs de l'organisation.",
         ],
       },
     ],
@@ -404,15 +404,14 @@ export const articles: Article[] = [
 ];
 
 export const articleTopics: string[] = [
-  "Événementiel corporate",
-  "Séminaires & conventions",
-  "Team building",
+  "Leadership & dirigeants",
+  "Finance & gouvernance",
+  "Management & leadership",
   "Formation & pédagogie",
   "Intelligence collective",
   "Conduite du changement",
-  "Management & leadership",
+  "Transformation organisationnelle",
   "Actualités SY&CO",
-  "Le Maroc qui bouge",
 ];
 
 export const articleBySlug = (slug: string) =>
