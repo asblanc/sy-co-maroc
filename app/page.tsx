@@ -7,6 +7,7 @@ import { Accompany } from "@/components/sections/Accompany";
 import { Team } from "@/components/sections/Team";
 import { Method } from "@/components/sections/Method";
 import { Portfolio } from "@/components/sections/Portfolio";
+import { Gallery } from "@/components/sections/Gallery";
 import { Clients } from "@/components/sections/Clients";
 import { Stats } from "@/components/sections/Stats";
 import { ContactCTA } from "@/components/sections/ContactCTA";
@@ -22,7 +23,9 @@ export default function Home() {
         <Accompany />
         <Team />
         <Method />
-        <Portfolio />        <Clients />
+        <Portfolio />
+        <Gallery tinted />
+        <Clients />
         <Stats />
         <ContactCTA />
       </main>

@@ -5,12 +5,13 @@ import { Reveal } from "@/components/ui/Reveal";
 /**
  * Galerie « Nos formations en action » — grille de vraies photos d'événements.
  * Tuile `featured` = 2 colonnes. Rend null si la sélection est vide.
+ * `tinted` = fond pêche (pour alterner avec les sections blanches voisines).
  */
-export function Gallery() {
+export function Gallery({ tinted = false }: { tinted?: boolean }) {
   if (galleryPhotos.length === 0) return null;
 
   return (
-    <section className="bg-white py-16 lg:py-24">
+    <section className={`${tinted ? "bg-peach/20" : "bg-white"} py-16 lg:py-24`}>
       <div className="container-narrow">
         <Reveal className="mb-10 text-center">
           <p className="font-heading text-sm font-bold uppercase tracking-widest text-orange">
