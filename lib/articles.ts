@@ -239,7 +239,7 @@ export const articles: Article[] = [
     slug: "leadership-au-feminin-influence-reseau",
     title:
       "Leadership au féminin : développer son influence et élargir son réseau",
-    image: "/images/articles/art-leadership-feminin.jpg",
+    image: "/images/evenements/leadership-feminin-2025/leadership-feminin-2025-05.jpg",
     excerpt:
       "Les femmes leaders d'Afrique francophone font bouger les organisations. Développer son influence et son réseau devient un levier de carrière et de transformation.",
     category: "Leadership & dirigeants",

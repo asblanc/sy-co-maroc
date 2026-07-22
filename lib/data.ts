@@ -199,7 +199,7 @@ export const realizations: Realization[] = [
     tag: "Meet & Share",
     title: "SHE TALK — Forum des Femmes Leaders",
     location: "Dakar",
-    image: "/images/services/ev-teambuilding.jpg",
+    image: "/images/evenements/leadership-feminin-2025/leadership-feminin-2025-05.jpg",
   },
   {
     tag: "Form’Action",

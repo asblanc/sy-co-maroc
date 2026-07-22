@@ -112,7 +112,15 @@ npx eslint .     # lint
   `Sessions`, `Testimonials`, chacun rend `null` si vide).
   ⚠️ Après remplissage du calendrier / des témoignages, retirer `noindex: true` de
   la page concernée dans `lib/pages.ts` (voir §7).
+- **Photos réelles d'événements** : rangées et optimisées (≤1600px, ~300 Ko) dans
+  `public/images/evenements/<événement>/` — 4 séries : `agriculture-meknes`,
+  `evaluation-impact`, `gestion-projet-2024`, `leadership-feminin-2025`. Déjà branchées :
+  article Leadership au féminin, service SHE TALK, tuile réalisation SHE TALK. ⚠️ Beaucoup
+  de photos montrent un **kakémono à l'ancienne identité** (bleu/rouge, « EVENT-MEET-TRAINING »,
+  slogan « Diriger le changement ») — préférer les photos de session sans kakémono.
 - Fournir **RC / ICE / IF** pour les mentions légales (placeholders `[à compléter]`).
+  Note : ces numéros apparaissent sur les feuilles de présence SY&CO (série `agriculture-meknes`)
+  — à fournir au propre pour éviter toute erreur de transcription.
 - Fournir **vrais noms + photos** de l'équipe (remplacent les avatars) et **l'adresse**
   définitive du siège (placeholder actuel dans `lib/data.ts`).
 - Fournir **logos de vrais clients** (le mur affiche pour l'instant des **secteurs**,

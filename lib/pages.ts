@@ -107,7 +107,7 @@ export const pages: PageData[] = [
         title: "SHE TALK — Forum des Femmes Leaders",
         description:
           "Développer son influence, partager des expériences et élargir son réseau lors d'un cocktail de réseautage.",
-        image: "/images/services/Coaching-de-dirigeant-et-dequipe-1.jpg",
+        image: "/images/evenements/leadership-feminin-2025/leadership-feminin-2025-03.jpg",
       },
       {
         title: "Rencontre des DAF",
