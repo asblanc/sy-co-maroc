@@ -22,6 +22,7 @@ import { Faq } from "@/components/sections/Faq";
 import { PricingGrid } from "@/components/sections/PricingGrid";
 import { Sessions } from "@/components/sections/Sessions";
 import { Testimonials } from "@/components/sections/Testimonials";
+import { Gallery } from "@/components/sections/Gallery";
 import { testimonials } from "@/lib/a-completer";
 import { Parallax } from "@/components/ui/Parallax";
 import { pages, pageBySlug, getSiblings, type PageData } from "@/lib/pages";
@@ -452,6 +453,7 @@ function CasesIndexBody({ page }: { page: PageData }) {
           </div>
         </section>
       )}
+      <Gallery />
       <Clients />
     </>
   );

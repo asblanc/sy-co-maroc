@@ -88,8 +88,10 @@ Lucide React · Supabase (formulaire de devis) · ESLint (flat config). Déploie
 - **Analytics** : `@vercel/Analytics` + `@vercel/SpeedInsights` dans `app/layout.tsx`
   (injection client-side, active en prod Vercel).
 - **noindex** : champ `PageData.noindex` (metadata `robots` + exclusion du sitemap).
-  Actuellement sur `calendrier-2027` et `nos-cas-clients` (contenu placeholder) — à
-  **retirer** quand le vrai contenu (dates 2027 / témoignages) est fourni.
+  Actuellement sur `calendrier-2027` (placeholder) — à **retirer** quand les dates 2027
+  sont fournies. `nos-cas-clients` est réindexée depuis l'ajout de la galerie photos.
+- **Galerie** « Nos formations en action » : `components/sections/Gallery.tsx` +
+  sélection curatée dans `lib/gallery.ts` (page « Ils nous font confiance »).
 - Skip-link « Aller au contenu » + landmarks `<main id="main-content">`, `prefers-reduced-motion`.
 - Images en `next/image`, optimisées ; total `public/images` ≈ 6–7 Mo.
 

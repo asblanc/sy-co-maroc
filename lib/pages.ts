@@ -250,7 +250,6 @@ export const pages: PageData[] = [
     title: "Ils nous font confiance | SY&CO",
     h1: "Ils nous font confiance",
     category: "Références",
-    noindex: true,
     description:
       "Nos clients apprécient notre souci de développer des formations concrètes et pertinentes, et la qualité de notre pilotage projet — réactif, agile et engagé à leurs côtés.",
     paragraphs: [
