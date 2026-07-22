@@ -41,6 +41,7 @@ export const navLinks: NavChild[] = [
   { label: "Nos offres", href: "/nos-offres" },
   { label: "Calendrier 2027", href: "/calendrier-2027" },
   { label: "L’agence", href: "/qui-sommes-nous" },
+  { label: "Références", href: "/nos-cas-clients" },
   { label: "Le Blog", href: "/nos-articles" },
 ];
 
