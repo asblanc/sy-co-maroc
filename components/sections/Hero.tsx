@@ -78,8 +78,8 @@ export function Hero() {
           />
           <div className="relative z-10 aspect-[4/5] w-full overflow-hidden rounded-[1.75rem] shadow-2xl sm:rounded-[2.25rem]">
             <Image
-              src="/images/hero-team1.jpg"
-              alt="L'équipe SY&CO"
+              src="/images/evenements/leadership-feminin-2025/leadership-feminin-2025-04.jpg"
+              alt="Cadres en formation lors d'un programme SY&CO"
               fill
               priority
               sizes="(max-width: 1024px) 90vw, 440px"

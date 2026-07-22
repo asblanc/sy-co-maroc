@@ -24,7 +24,7 @@ export const articles: Article[] = [
     slug: "formation-residentielle-dirigeants-afrique",
     title:
       "Formation résidentielle des dirigeants : pourquoi l'immersion change tout",
-    image: "/images/articles/art-formation-residentielle.jpg",
+    image: "/images/evenements/agriculture-meknes/agriculture-meknes-10.jpg",
     excerpt:
       "Sortir les cadres et dirigeants de leur quotidien pendant plusieurs jours n'est pas un luxe : c'est la condition d'un vrai changement de posture. Retour sur la force du format résidentiel.",
     category: "Leadership & dirigeants",
@@ -197,7 +197,7 @@ export const articles: Article[] = [
     slug: "finance-verte-durable-cadres-africains",
     title:
       "Finance verte et finance durable : le nouveau défi des cadres financiers africains",
-    image: "/images/articles/art-pratiques.jpg",
+    image: "/images/evenements/agriculture-meknes/agriculture-meknes-02.jpg",
     excerpt:
       "La finance durable n'est plus une option. Pour les cadres et dirigeants financiers d'Afrique francophone, c'est un champ de compétences à maîtriser dès maintenant.",
     category: "Finance & gouvernance",

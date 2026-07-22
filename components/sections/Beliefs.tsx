@@ -30,7 +30,7 @@ export function Beliefs() {
           <span className="absolute -right-6 -top-6 -z-10 h-32 w-32 rounded-full bg-orange/20" />
           <div className="blob-a relative aspect-[5/4] w-full overflow-hidden shadow-xl">
             <Image
-              src="/images/illustration-home.jpg"
+              src="/images/evenements/agriculture-meknes/agriculture-meknes-10.jpg"
               alt="Cadres et dirigeants en formation avec SY&CO"
               fill
               sizes="(max-width: 1024px) 90vw, 560px"

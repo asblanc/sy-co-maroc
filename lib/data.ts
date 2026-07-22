@@ -181,19 +181,19 @@ export const realizations: Realization[] = [
     tag: "Form’Action",
     title: "Finance publique, verte & durable",
     location: "Casablanca",
-    image: "/images/services/ev-convention.jpg",
+    image: "/images/evenements/gestion-projet-2024/gestion-projet-2024-02.jpg",
   },
   {
     tag: "Form’Action",
     title: "Leadership & transformation digitale",
     location: "Marrakech",
-    image: "/images/services/ev-seminaire.jpg",
+    image: "/images/evenements/leadership-feminin-2025/leadership-feminin-2025-07.jpg",
   },
   {
     tag: "Meet & Share",
     title: "TOP MANAGER — Stratégie & Innovation",
     location: "Casablanca",
-    image: "/images/services/ev-incentive.jpg",
+    image: "/images/evenements/agriculture-meknes/agriculture-meknes-02.jpg",
   },
   {
     tag: "Meet & Share",
@@ -205,13 +205,13 @@ export const realizations: Realization[] = [
     tag: "Form’Action",
     title: "Gouvernance, audit & conformité",
     location: "Abidjan",
-    image: "/images/cases/conseil.jpg",
+    image: "/images/evenements/leadership-feminin-2025/leadership-feminin-2025-03.jpg",
   },
   {
     tag: "Sur mesure",
     title: "Formation intra-entreprise personnalisée",
     location: "Tanger",
-    image: "/images/services/ev-formation.jpg",
+    image: "/images/evenements/agriculture-meknes/agriculture-meknes-08.jpg",
   },
 ];
 

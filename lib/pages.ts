@@ -42,7 +42,7 @@ export const pages: PageData[] = [
     category: "Form’Action",
     description:
       "Form’Action : des formations résidentielles immersives de 7 à 10 jours, conçues avec des experts internationaux, pour un impact opérationnel immédiat sur vos cadres et dirigeants.",
-    heroImage: "/images/pages/header-pedagogie.jpg",
+    heroImage: "/images/evenements/agriculture-meknes/agriculture-meknes-10.jpg",
     introHeading: "Des formations",
     introSubheading: "résidentielles immersives",
     introImage: "/images/pages/intro-pedagogie.jpg",
@@ -90,7 +90,7 @@ export const pages: PageData[] = [
     category: "Meet & Share",
     description:
       "Meet & Share : des rencontres professionnelles entre pairs — tables rondes, témoignages, réseautage — pour échanger sans filtre sur les vrais enjeux du métier.",
-    heroImage: "/images/pages/header-strategie.jpg",
+    heroImage: "/images/evenements/leadership-feminin-2025/leadership-feminin-2025-07.jpg",
     introHeading: "Rencontrer",
     introSubheading: "et partager entre pairs",
     introImage: "/images/pages/intro-strategie.jpg",
@@ -150,7 +150,7 @@ export const pages: PageData[] = [
     category: "Formation sur mesure",
     description:
       "Un projet de formation pour votre équipe ? À partir de 5 personnes, un formateur SY&CO intervient dans vos locaux ou en classe virtuelle, avec un programme personnalisé adapté à votre besoin réel.",
-    heroImage: "/images/pages/header-management.jpg",
+    heroImage: "/images/evenements/evaluation-impact/evaluation-impact-03.jpg",
     introHeading: "Une formation",
     introSubheading: "conçue pour votre équipe",
     introImage: "/images/pages/intro-competences.jpg",
@@ -187,7 +187,7 @@ export const pages: PageData[] = [
     category: "Nos offres",
     description:
       "Form’Action : des séminaires résidentiels immersifs de 7 à 10 jours à Casablanca, Agadir, Tanger, Marrakech, Dakar et Abidjan, tout inclus, de l'inscription au retour à l'aéroport.",
-    heroImage: "/images/pages/header-innovation.jpg",
+    heroImage: "/images/evenements/gestion-projet-2024/gestion-projet-2024-02.jpg",
     introHeading: "Form’Action",
     introSubheading: "nos formations résidentielles",
     introImage: "/images/pages/intro-innovation.jpg",
