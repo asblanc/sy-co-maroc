@@ -24,7 +24,7 @@ export default function Home() {
         <Team />
         <Method />
         <Portfolio />
-        <Gallery tinted />
+        <Gallery tinted limit={9} />
         <Clients />
         <Stats />
         <ContactCTA />

@@ -1,14 +1,26 @@
 import Image from "next/image";
 import { galleryPhotos } from "@/lib/gallery";
 import { Reveal } from "@/components/ui/Reveal";
+import { Button } from "@/components/ui/Button";
 
 /**
  * Galerie « Nos formations en action » — grille de vraies photos d'événements.
  * Tuile `featured` = 2 colonnes. Rend null si la sélection est vide.
  * `tinted` = fond pêche (pour alterner avec les sections blanches voisines).
+ * `limit` = n'affiche que les N premières + un lien « Voir toutes les photos »
+ * (utilisé sur l'accueil ; la page Références montre toute la galerie).
  */
-export function Gallery({ tinted = false }: { tinted?: boolean }) {
+export function Gallery({
+  tinted = false,
+  limit,
+}: {
+  tinted?: boolean;
+  limit?: number;
+}) {
   if (galleryPhotos.length === 0) return null;
+
+  const isLimited = limit != null && galleryPhotos.length > limit;
+  const photos = isLimited ? galleryPhotos.slice(0, limit) : galleryPhotos;
 
   return (
     <section className={`${tinted ? "bg-peach/20" : "bg-white"} py-16 lg:py-24`}>
@@ -27,7 +39,7 @@ export function Gallery({ tinted = false }: { tinted?: boolean }) {
         </Reveal>
 
         <div className="grid auto-rows-[1fr] grid-cols-2 gap-3 sm:gap-4 md:grid-cols-3">
-          {galleryPhotos.map((p, i) => (
+          {photos.map((p, i) => (
             <Reveal
               key={p.src}
               delay={(i % 3) * 0.06}
@@ -55,6 +67,14 @@ export function Gallery({ tinted = false }: { tinted?: boolean }) {
             </Reveal>
           ))}
         </div>
+
+        {isLimited && (
+          <Reveal className="mt-10 text-center">
+            <Button href="/nos-cas-clients" variant="outline">
+              Voir toutes les photos
+            </Button>
+          </Reveal>
+        )}
       </div>
     </section>
   );
