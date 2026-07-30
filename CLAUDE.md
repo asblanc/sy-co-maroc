@@ -118,6 +118,11 @@ npx eslint .     # lint
   `Sessions`, `Testimonials`, chacun rend `null` si vide).
   ⚠️ Après remplissage du calendrier / des témoignages, retirer `noindex: true` de
   la page concernée dans `lib/pages.ts` (voir §7).
+- **Fiches techniques des 7 thématiques** : déposer les PDF dans `public/fiches/`
+  (cf. README) puis renseigner `datasheet: "/fiches/<slug>.pdf"` dans `thematicSpecs`
+  (`lib/pages.ts`). Sans PDF, la page thématique affiche un bouton « Demander la fiche ».
+  Les 7 thématiques alimentent aussi la section « Nos programmes » de l'accueil
+  (composant `Thematics`) et ont chacune une page dédiée (bulle-photo + sous-thèmes).
 - **Photos réelles d'événements** : rangées et optimisées (≤1600px, ~300 Ko) dans
   `public/images/evenements/<événement>/` — 4 séries : `agriculture-meknes`,
   `evaluation-impact`, `gestion-projet-2024`, `leadership-feminin-2025`. Déjà branchées :

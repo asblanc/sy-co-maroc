@@ -6,7 +6,7 @@ import { Beliefs } from "@/components/sections/Beliefs";
 import { Accompany } from "@/components/sections/Accompany";
 import { Team } from "@/components/sections/Team";
 import { Method } from "@/components/sections/Method";
-import { Portfolio } from "@/components/sections/Portfolio";
+import { Thematics } from "@/components/sections/Thematics";
 import { Gallery } from "@/components/sections/Gallery";
 import { Clients } from "@/components/sections/Clients";
 import { Stats } from "@/components/sections/Stats";
@@ -23,7 +23,7 @@ export default function Home() {
         <Accompany />
         <Team />
         <Method />
-        <Portfolio />
+        <Thematics />
         <Gallery tinted limit={9} />
         <Clients />
         <Stats />

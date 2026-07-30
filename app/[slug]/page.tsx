@@ -1,6 +1,7 @@
 import Image from "next/image";
 import { notFound } from "next/navigation";
 import type { Metadata } from "next";
+import { Download } from "lucide-react";
 
 import { Header } from "@/components/layout/Header";
 import { Footer } from "@/components/layout/Footer";
@@ -116,6 +117,43 @@ function ContactCta() {
   );
 }
 
+/** Bloc « Fiche technique » — pages thématiques. href vide = fiche à venir. */
+function DatasheetBlock({ href }: { href: string }) {
+  const hasFile = href.length > 0;
+  return (
+    <section className="bg-white py-12 lg:py-16">
+      <div className="container-narrow max-w-4xl">
+        <div className="flex flex-wrap items-center gap-6 rounded-3xl bg-teal p-8 text-white sm:p-10">
+          <div className="min-w-[240px] flex-1">
+            <p className="font-heading text-sm font-bold uppercase tracking-widest text-orange">
+              Fiche technique
+            </p>
+            <p className="mt-2 text-base leading-relaxed text-white/90">
+              {hasFile
+                ? "Téléchargez le programme détaillé de cette thématique (objectifs, contenu, public, durée)."
+                : "La fiche technique détaillée de cette thématique (objectifs, contenu, public, durée) sera bientôt disponible. Contactez-nous pour la recevoir dès à présent."}
+            </p>
+          </div>
+          {hasFile ? (
+            <a
+              href={href}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-2 rounded-full bg-white px-6 py-3 font-heading text-sm font-bold text-teal transition-transform hover:scale-105"
+            >
+              <Download className="h-4 w-4" /> Télécharger la fiche (PDF)
+            </a>
+          ) : (
+            <Button href="/contact" variant="white" size="lg">
+              Demander la fiche
+            </Button>
+          )}
+        </div>
+      </div>
+    </section>
+  );
+}
+
 /** Bande "Réserver ma place" — pages calendrier & offres (intent de conversion). */
 function ReservationCTA() {
   return (
@@ -228,6 +266,7 @@ function ContentBody({ page }: { page: PageData }) {
       {(page.slug === "calendrier-2027" || page.slug === "nos-offres") && (
         <ReservationCTA />
       )}
+      {page.datasheet !== undefined && <DatasheetBlock href={page.datasheet} />}
 
       {hasRichBody ? (
         <>

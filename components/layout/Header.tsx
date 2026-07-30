@@ -57,6 +57,18 @@ export function Header() {
 
           {/* Desktop nav */}
           <nav className="hidden items-center gap-1 lg:flex">
+            <Link
+              href="/"
+              className={cn(
+                "relative whitespace-nowrap rounded-full px-3 py-2 font-heading text-[15px] font-bold transition-colors after:absolute after:bottom-1 after:left-3 after:h-0.5 after:rounded-full after:bg-orange after:transition-all after:duration-300 hover:text-teal",
+                pathname === "/"
+                  ? "text-teal after:w-[calc(100%-1.5rem)]"
+                  : "text-ink after:w-0 hover:after:w-[calc(100%-1.5rem)]"
+              )}
+            >
+              Accueil
+            </Link>
+
             <div className="group relative">
               <button
                 className={cn(
@@ -167,8 +179,15 @@ export function Header() {
               </div>
 
               <nav className="flex flex-col gap-1 overflow-y-auto">
+                <Link
+                  href="/"
+                  onClick={() => setMobileOpen(false)}
+                  className="py-3 font-heading text-lg font-bold text-ink"
+                >
+                  Accueil
+                </Link>
                 <button
-                  className="flex items-center justify-between py-3 font-heading text-lg font-bold text-ink"
+                  className="flex items-center justify-between border-t border-black/5 py-3 font-heading text-lg font-bold text-ink"
                   onClick={() => setExpertisesOpen((v) => !v)}
                 >
                   Nos expertises

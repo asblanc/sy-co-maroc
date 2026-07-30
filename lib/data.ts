@@ -168,53 +168,6 @@ export const partners: Partner[] = [
   { name: "Organisations internationales" },
 ];
 
-export type Realization = {
-  tag: string;
-  title: string;
-  location: string;
-  image: string;
-};
-
-/** Programmes phares de SY&CO — formations résidentielles & rencontres entre pairs. */
-export const realizations: Realization[] = [
-  {
-    tag: "Form’Action",
-    title: "Finance publique, verte & durable",
-    location: "Casablanca",
-    image: "/images/services/ev-convention.jpg",
-  },
-  {
-    tag: "Form’Action",
-    title: "Leadership & transformation digitale",
-    location: "Marrakech",
-    image: "/images/services/ev-seminaire.jpg",
-  },
-  {
-    tag: "Meet & Share",
-    title: "TOP MANAGER — Stratégie & Innovation",
-    location: "Casablanca",
-    image: "/images/services/ev-incentive.jpg",
-  },
-  {
-    tag: "Meet & Share",
-    title: "SHE TALK — Forum des Femmes Leaders",
-    location: "Dakar",
-    image: "/images/services/ev-teambuilding.jpg",
-  },
-  {
-    tag: "Form’Action",
-    title: "Gouvernance, audit & conformité",
-    location: "Abidjan",
-    image: "/images/cases/conseil.jpg",
-  },
-  {
-    tag: "Sur mesure",
-    title: "Formation intra-entreprise personnalisée",
-    location: "Tanger",
-    image: "/images/services/ev-formation.jpg",
-  },
-];
-
 export const contactInfo = {
   phone: "+212 699-820570",
   email: "seminairesyco@gmail.com",

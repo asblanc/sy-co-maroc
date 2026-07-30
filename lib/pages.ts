@@ -29,10 +29,12 @@ export type PageData = {
   highlights?: { title: string; description: string }[];
   /** Exclut la page de l'indexation (contenu placeholder en attente). */
   noindex?: boolean;
+  /** Fiche technique téléchargeable (PDF). "" = à venir (bouton « Demander »). */
+  datasheet?: string;
   paragraphs: string[];
 };
 
-export const pages: PageData[] = [
+const basePages: PageData[] = [
   /* ---------- Pilier 1 : Form’Action ---------- */
   {
     slug: "form-action",
@@ -378,6 +380,192 @@ export const pages: PageData[] = [
   },
 ];
 
+/* ---------- Thématiques d'expertise (Form’Action) ---------- */
+export type Thematic = { title: string; short: string; color: string; href: string };
+
+type ThematicSpec = {
+  slug: string;
+  title: string;
+  short: string;
+  color: string;
+  lead: string;
+  heroImage: string;
+  introImage: string;
+  paragraphs: string[];
+  needs: string[];
+  /** Fiche technique PDF, ex : "/fiches/finance.pdf". Vide = bouton « Demander ». */
+  datasheet?: string;
+};
+
+const thematicSpecs: ThematicSpec[] = [
+  {
+    slug: "finance-publique-verte-durable",
+    title: "Finance publique, finance verte & finance durable",
+    short:
+      "Maîtriser les nouveaux outils de la finance publique et durable : budgétisation verte, financements climat, reporting ESG.",
+    color: "#097D7A",
+    lead: "La finance au service du développement durable",
+    heroImage: "/images/pages/header-strategie.jpg",
+    introImage: "/images/services/diagnostic-strategique.jpg",
+    paragraphs: [
+      "Bailleurs, régulateurs et investisseurs conditionnent de plus en plus leurs engagements à des critères environnementaux, sociaux et de gouvernance. Cette thématique outille les cadres de la finance publique et privée pour piloter cette transition.",
+      "De la budgétisation sensible au climat aux obligations vertes, en passant par le reporting extra-financier, vous repartez avec des cadres d'analyse et des outils immédiatement actionnables.",
+    ],
+    needs: [
+      "Finance publique : cadrage budgétaire et pilotage de la dépense",
+      "Finance verte : obligations vertes, financements climat, taxonomie",
+      "Finance durable : intégration des critères ESG et reporting",
+      "Gestion des risques et création de valeur de long terme",
+    ],
+  },
+  {
+    slug: "leadership-transformation-digitale",
+    title: "Leadership et transformation digitale",
+    short:
+      "Conduire le changement à l'ère du numérique et incarner un leadership qui embarque les équipes.",
+    color: "#FD8B15",
+    lead: "Diriger le changement à l'ère du numérique",
+    heroImage: "/images/pages/header-management.jpg",
+    introImage: "/images/services/transformation-manageriale.jpg",
+    paragraphs: [
+      "La transformation digitale n'est pas qu'un enjeu technologique : c'est d'abord un défi de leadership. Cette thématique développe la posture et les compétences pour embarquer les équipes dans le changement.",
+      "Vous apprenez à conjuguer vision stratégique, culture digitale et intelligence relationnelle pour conduire des transformations qui tiennent dans la durée.",
+    ],
+    needs: [
+      "Self leadership et intelligence émotionnelle",
+      "Conduite du changement et management de la transformation",
+      "Culture et outils du numérique pour dirigeants",
+      "Animation d'équipes et posture de coach",
+    ],
+  },
+  {
+    slug: "gouvernance-audit-conformite",
+    title: "Gouvernance, audit et conformité",
+    short:
+      "Renforcer la gouvernance, sécuriser l'audit interne et ancrer une culture de la conformité.",
+    color: "#ED0F7D",
+    lead: "Une gouvernance solide, une conformité maîtrisée",
+    heroImage: "/images/pages/header-cohesion.jpg",
+    introImage: "/images/services/gouvernance-responsable.jpg",
+    paragraphs: [
+      "Renforcer la gouvernance et sécuriser les dispositifs de contrôle est devenu un impératif pour toute organisation performante et crédible auprès de ses partenaires.",
+      "Cette thématique couvre l'audit interne, la maîtrise des risques et l'ancrage d'une véritable culture de la conformité.",
+    ],
+    needs: [
+      "Principes et instances de bonne gouvernance",
+      "Audit interne et maîtrise des risques",
+      "Conformité, éthique et lutte contre la fraude",
+      "Contrôle interne et dispositifs de reporting",
+    ],
+  },
+  {
+    slug: "rh-strategique-data-rh",
+    title: "RH stratégique et data RH",
+    short:
+      "Faire de la fonction RH un partenaire stratégique, piloté par la donnée.",
+    color: "#1076DA",
+    lead: "La fonction RH, partenaire stratégique piloté par la donnée",
+    heroImage: "/images/pages/header-pedagogie.jpg",
+    introImage: "/images/services/diagnostic-data-analyse.jpg",
+    paragraphs: [
+      "La fonction RH se réinvente : de la gestion administrative au pilotage stratégique du capital humain, appuyé par la donnée.",
+      "Cette thématique aide les DRH et leurs équipes à aligner la stratégie RH sur les enjeux de l'organisation et à décider à partir d'indicateurs fiables.",
+    ],
+    needs: [
+      "Stratégie RH alignée sur la stratégie d'entreprise",
+      "Data RH : indicateurs, tableaux de bord et pilotage",
+      "Gestion des talents et développement des compétences",
+      "Marque employeur et expérience collaborateur",
+    ],
+  },
+  {
+    slug: "gestion-projet-suivi-evaluation",
+    title: "Gestion de projet et suivi-évaluation",
+    short:
+      "Planifier, piloter et évaluer l'impact de vos projets avec des méthodes éprouvées.",
+    color: "#FCD430",
+    lead: "Piloter et mesurer l'impact de vos projets",
+    heroImage: "/images/pages/header-kickoff.jpg",
+    introImage: "/images/services/pilotage-projet.jpg",
+    paragraphs: [
+      "Un projet réussi se planifie, se pilote et s'évalue. Cette thématique transmet les méthodes éprouvées de gestion de projet et de suivi-évaluation.",
+      "Vous apprenez à structurer un projet, à en piloter l'exécution et à mesurer ses résultats et son impact réel.",
+    ],
+    needs: [
+      "Cadrage et planification de projet",
+      "Pilotage, budget et gestion des risques projet",
+      "Suivi-évaluation : indicateurs, cadre logique, théorie du changement",
+      "Évaluation d'impact et reporting aux bailleurs",
+    ],
+  },
+  {
+    slug: "rse-developpement-durable",
+    title: "RSE et développement durable",
+    short:
+      "Intégrer la responsabilité sociétale et le développement durable au cœur de la stratégie.",
+    color: "#FFBC7D",
+    lead: "Ancrer la responsabilité au cœur de la stratégie",
+    heroImage: "/images/pages/header-innovation.jpg",
+    introImage: "/images/services/transition-societale-environnementale.jpg",
+    paragraphs: [
+      "La RSE n'est plus une option : elle est un levier de performance, d'attractivité et de résilience. Cette thématique aide à intégrer le développement durable dans la stratégie et les opérations.",
+      "De la raison d'être aux engagements concrets, vous construisez une démarche RSE crédible et créatrice de valeur.",
+    ],
+    needs: [
+      "Fondamentaux de la RSE et cadres de référence (ODD, ISO 26000)",
+      "Stratégie RSE et raison d'être de l'entreprise",
+      "Transition environnementale et sociétale",
+      "Reporting extra-financier et dialogue avec les parties prenantes",
+    ],
+  },
+  {
+    slug: "agriculture-agribusiness",
+    title: "Agriculture et agribusiness",
+    short:
+      "Développer des filières agricoles rentables et durables, du champ à la valorisation.",
+    color: "#097D7A",
+    lead: "Des filières agricoles rentables et durables",
+    heroImage: "/images/pages/header-strategie.jpg",
+    introImage: "/images/services/valeurs-raison-etre-de-entreprise.jpg",
+    paragraphs: [
+      "L'agriculture et l'agribusiness sont des moteurs de développement pour l'Afrique. Cette thématique outille les acteurs pour bâtir des filières rentables, du champ à la valorisation.",
+      "Techniques de production durables, structuration de filières et accès aux marchés : vous repartez avec une vision opérationnelle de l'agribusiness.",
+    ],
+    needs: [
+      "Techniques de production durables (cultures sous serre, micro-irrigation)",
+      "Structuration et financement de filières agricoles",
+      "Agribusiness : transformation, valorisation et accès aux marchés",
+      "Agriculture, climat et sécurité alimentaire",
+    ],
+  },
+];
+
+export const thematics: Thematic[] = thematicSpecs.map((t) => ({
+  title: t.title,
+  short: t.short,
+  color: t.color,
+  href: `/${t.slug}`,
+}));
+
+const thematicPages: PageData[] = thematicSpecs.map((t) => ({
+  slug: t.slug,
+  type: "content",
+  title: `${t.title} | SY&CO`,
+  h1: t.title,
+  category: "Nos expertises",
+  description: t.short,
+  heroImage: t.heroImage,
+  introHeading: t.lead,
+  introImage: t.introImage,
+  needsEyebrow: "Au programme",
+  needsTitle: "Ce que couvre cette thématique",
+  needs: t.needs,
+  datasheet: t.datasheet ?? "",
+  paragraphs: t.paragraphs,
+}));
+
+export const pages: PageData[] = [...basePages, ...thematicPages];
+
 export const pageBySlug = (slug: string) => pages.find((p) => p.slug === slug);
 
 /** Ordered sequences for previous/next in-page navigation. */
@@ -387,6 +575,7 @@ export const expertiseNavOrder = [
   "formation-sur-mesure",
   "nos-offres",
   "calendrier-2027",
+  ...thematicSpecs.map((t) => t.slug),
 ];
 
 export const caseNavOrder: string[] = [];
