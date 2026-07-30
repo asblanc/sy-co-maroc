@@ -7,7 +7,6 @@ import { usePathname } from "next/navigation";
 import { ChevronDown, Menu, Phone, X } from "lucide-react";
 import { AnimatePresence, motion } from "framer-motion";
 import { TopBar } from "./TopBar";
-import { Button } from "@/components/ui/Button";
 import { megaMenu, navLinks, contactInfo } from "@/lib/data";
 import { cn } from "@/lib/utils";
 
@@ -65,7 +64,7 @@ export function Header() {
                   isExpertiseActive ? "text-teal" : "text-ink group-hover:text-teal"
                 )}
               >
-                Nos programmes
+                Nos expertises
                 <ChevronDown className="h-4 w-4 transition-transform duration-300 group-hover:rotate-180" />
               </button>
               {/* Mega menu */}
@@ -120,10 +119,6 @@ export function Header() {
                 </Link>
               );
             })}
-
-            <Button href="/contact" variant="pink" size="sm" className="ml-2">
-              Contact
-            </Button>
           </nav>
 
           {/* Mobile toggle */}
@@ -176,7 +171,7 @@ export function Header() {
                   className="flex items-center justify-between py-3 font-heading text-lg font-bold text-ink"
                   onClick={() => setExpertisesOpen((v) => !v)}
                 >
-                  Nos programmes
+                  Nos expertises
                   <ChevronDown
                     className={cn(
                       "h-5 w-5 transition-transform",
@@ -231,15 +226,6 @@ export function Header() {
                 >
                   <Phone className="h-5 w-5" /> {contactInfo.phone}
                 </a>
-
-                <Button
-                  href="/contact"
-                  variant="pink"
-                  className="mt-3"
-                  onClick={() => setMobileOpen(false)}
-                >
-                  Contact
-                </Button>
               </nav>
             </motion.div>
           </>

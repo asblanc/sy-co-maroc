@@ -65,11 +65,15 @@ Lucide React · Supabase (formulaire de devis) · ESLint (flat config). Déploie
   (placeholders). Le composant `Clients` affiche un vrai logo si `logo` est renseigné
   (déposer les fichiers dans `public/images/clients/`). N'afficher que de **vrais** clients.
 - **Réalisations** (`realizations`) : formats d'événements illustratifs, **sans nom de client réel**.
-- **Menu / rubriques** : méga-menu « Nos programmes » = **Form’Action / Meet & Share /
-  Formation sur mesure** ; navLinks « Nos offres », « Calendrier 2027 », « L'agence »,
-  « Le Blog ». Pages piliers : `/form-action`, `/meet-and-share`, `/formation-sur-mesure`,
-  plus `/nos-offres`, `/calendrier-2027`. La page `/nos-cas-clients` = « Ils nous font
-  confiance » (intro + études de cas conservées + mur clients).
+- **Menu / rubriques** : méga-menu « Nos expertises » = **Form’Action / Meet & Share /
+  Formation sur mesure** ; navLinks « Qui sommes-nous », « Calendrier 2027 », « Contacts »,
+  « Le Blog » (pas de bouton Contact séparé, pas de numéro dans la barre). Pages piliers :
+  `/form-action`, `/meet-and-share`, `/formation-sur-mesure`. Les pages `/nos-offres` et
+  `/nos-cas-clients` (« Ils nous font confiance » : galerie + mur clients) ne sont plus dans
+  la barre mais restent accessibles (footer + bouton « Voir toutes les photos » de l'accueil).
+- **Images `public/images/evenements/`** : à n'utiliser QUE dans la galerie
+  (`lib/gallery.ts` / `components/sections/Gallery.tsx`). Interdit en bulles, fonds de
+  page (heroImage) ou illustration d'article/section — voir décision client.
 - **Contenu 100% original** : ne pas recopier de textes/tournures de coefficience3.
 
 ## 6. Base de données (Supabase)

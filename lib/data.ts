@@ -38,10 +38,9 @@ export const megaMenu: NavColumn[] = [
 ];
 
 export const navLinks: NavChild[] = [
-  { label: "Nos offres", href: "/nos-offres" },
+  { label: "Qui sommes-nous", href: "/qui-sommes-nous" },
   { label: "Calendrier 2027", href: "/calendrier-2027" },
-  { label: "L’agence", href: "/qui-sommes-nous" },
-  { label: "Références", href: "/nos-cas-clients" },
+  { label: "Contacts", href: "/contact" },
   { label: "Le Blog", href: "/nos-articles" },
 ];
 
@@ -182,37 +181,37 @@ export const realizations: Realization[] = [
     tag: "Form’Action",
     title: "Finance publique, verte & durable",
     location: "Casablanca",
-    image: "/images/evenements/gestion-projet-2024/gestion-projet-2024-02.jpg",
+    image: "/images/services/ev-convention.jpg",
   },
   {
     tag: "Form’Action",
     title: "Leadership & transformation digitale",
     location: "Marrakech",
-    image: "/images/evenements/leadership-feminin-2025/leadership-feminin-2025-07.jpg",
+    image: "/images/services/ev-seminaire.jpg",
   },
   {
     tag: "Meet & Share",
     title: "TOP MANAGER — Stratégie & Innovation",
     location: "Casablanca",
-    image: "/images/evenements/agriculture-meknes/agriculture-meknes-02.jpg",
+    image: "/images/services/ev-incentive.jpg",
   },
   {
     tag: "Meet & Share",
     title: "SHE TALK — Forum des Femmes Leaders",
     location: "Dakar",
-    image: "/images/evenements/leadership-feminin-2025/leadership-feminin-2025-05.jpg",
+    image: "/images/services/ev-teambuilding.jpg",
   },
   {
     tag: "Form’Action",
     title: "Gouvernance, audit & conformité",
     location: "Abidjan",
-    image: "/images/evenements/leadership-feminin-2025/leadership-feminin-2025-03.jpg",
+    image: "/images/cases/conseil.jpg",
   },
   {
     tag: "Sur mesure",
     title: "Formation intra-entreprise personnalisée",
     location: "Tanger",
-    image: "/images/evenements/agriculture-meknes/agriculture-meknes-08.jpg",
+    image: "/images/services/ev-formation.jpg",
   },
 ];
 
