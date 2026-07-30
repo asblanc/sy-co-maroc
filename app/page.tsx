@@ -2,7 +2,7 @@ import { Header } from "@/components/layout/Header";
 import { Footer } from "@/components/layout/Footer";
 import { Hero } from "@/components/sections/Hero";
 import { Expertises } from "@/components/sections/Expertises";
-import { Beliefs } from "@/components/sections/Beliefs";
+import { TailoredSeminars } from "@/components/sections/TailoredSeminars";
 import { Accompany } from "@/components/sections/Accompany";
 import { Team } from "@/components/sections/Team";
 import { SeminarPhases } from "@/components/sections/SeminarPhases";
@@ -19,7 +19,7 @@ export default function Home() {
       <main id="main-content">
         <Hero />
         <Expertises />
-        <Beliefs />
+        <TailoredSeminars />
         <Accompany />
         <Team />
         <SeminarPhases />

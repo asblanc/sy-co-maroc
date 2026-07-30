@@ -48,18 +48,17 @@ export function SeminarPhases() {
   return (
     <section id="methode" className="bg-peach/20 py-20 lg:py-28">
       <div className="container-narrow">
-        <Reveal className="mx-auto mb-14 max-w-3xl text-center">
-          <h2 className="font-display text-3xl uppercase leading-tight text-teal sm:text-4xl lg:text-5xl">
-            Les{" "}
-            <span className="bg-gradient-to-r from-pink via-orange to-teal bg-clip-text text-transparent">
-              4 phases
-            </span>{" "}
-            d&rsquo;un séminaire SY&amp;CO
-          </h2>
-          <p className="mt-4 text-base leading-relaxed text-ink/70">
-            De l&rsquo;écoute du besoin jusqu&rsquo;à l&rsquo;ancrage des acquis,
-            une démarche rigoureuse en quatre temps.
-          </p>
+        <Reveal className="mx-auto mb-14 max-w-3xl">
+          <div className="rounded-3xl bg-teal px-6 py-10 text-center text-white shadow-lg sm:px-10">
+            <h2 className="font-display text-2xl uppercase leading-tight sm:text-4xl lg:text-[2.75rem]">
+              Les <span className="text-orange">4 phases</span> d&rsquo;un
+              séminaire SY&amp;CO
+            </h2>
+            <p className="mx-auto mt-4 max-w-2xl text-base leading-relaxed text-white/85">
+              De l&rsquo;écoute du besoin jusqu&rsquo;à l&rsquo;ancrage des
+              acquis, une démarche rigoureuse en quatre temps.
+            </p>
+          </div>
         </Reveal>
 
         <div className="grid gap-6 md:grid-cols-2">

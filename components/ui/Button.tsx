@@ -10,6 +10,8 @@ const buttonVariants = cva(
         primary:
           "bg-teal text-white hover:bg-pink hover:-translate-y-0.5 shadow-sm hover:shadow-md",
         pink: "bg-pink text-white hover:bg-teal hover:-translate-y-0.5 shadow-sm hover:shadow-md",
+        orange:
+          "bg-orange text-white hover:bg-teal hover:-translate-y-0.5 shadow-sm hover:shadow-md",
         outline:
           "border-2 border-teal text-teal hover:bg-teal hover:text-white",
         white:
