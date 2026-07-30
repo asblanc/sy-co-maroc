@@ -44,7 +44,7 @@ export function Header() {
           scrolled ? "shadow-md" : "shadow-sm"
         )}
       >
-        <div className="container-narrow flex h-20 items-center justify-between gap-6">
+        <div className="flex h-20 w-full items-center justify-between gap-6 px-4 sm:px-6 lg:px-8">
           <Link href="/" className="shrink-0" aria-label="SY&CO accueil">
             <Image
               src="/images/logo2.png"
@@ -61,7 +61,7 @@ export function Header() {
             <div className="group relative">
               <button
                 className={cn(
-                  "flex items-center gap-1 rounded-full px-3 py-2 font-heading text-[15px] font-bold transition-colors",
+                  "flex items-center gap-1 whitespace-nowrap rounded-full px-3 py-2 font-heading text-[15px] font-bold transition-colors",
                   isExpertiseActive ? "text-teal" : "text-ink group-hover:text-teal"
                 )}
               >
@@ -110,7 +110,7 @@ export function Header() {
                   key={link.label}
                   href={link.href}
                   className={cn(
-                    "relative rounded-full px-3 py-2 font-heading text-[15px] font-bold transition-colors after:absolute after:bottom-1 after:left-3 after:h-0.5 after:rounded-full after:bg-orange after:transition-all after:duration-300 hover:text-teal",
+                    "relative whitespace-nowrap rounded-full px-3 py-2 font-heading text-[15px] font-bold transition-colors after:absolute after:bottom-1 after:left-3 after:h-0.5 after:rounded-full after:bg-orange after:transition-all after:duration-300 hover:text-teal",
                     active
                       ? "text-teal after:w-[calc(100%-1.5rem)]"
                       : "text-ink after:w-0 hover:after:w-[calc(100%-1.5rem)]"
@@ -121,15 +121,7 @@ export function Header() {
               );
             })}
 
-            <a
-              href={`tel:${contactInfo.phone.replace(/[^+\d]/g, "")}`}
-              className="ml-2 flex items-center gap-2 rounded-full border border-teal/20 px-3 py-2 text-sm font-semibold text-teal transition-colors hover:bg-teal/5"
-            >
-              <Phone className="h-4 w-4" />
-              <span className="hidden xl:inline">{contactInfo.phone}</span>
-            </a>
-
-            <Button href="/contact" variant="pink" size="sm" className="ml-1">
+            <Button href="/contact" variant="pink" size="sm" className="ml-2">
               Contact
             </Button>
           </nav>
