@@ -42,8 +42,8 @@ Lucide React · Supabase (formulaire de devis) · ESLint (flat config). Déploie
 
 ## 4. Architecture du contenu (où éditer quoi)
 
-- `lib/data.ts` — nav, méga-menu, expertises (home), méthode ÉCLAT (`methodSteps`),
-  études de cas, stats, partenaires, réalisations, coordonnées, liens footer/légaux.
+- `lib/data.ts` — nav, méga-menu, expertises (home), stats, partenaires (secteurs),
+  coordonnées, liens footer/légaux.
 - `lib/pages.ts` — **toutes les pages dynamiques** (`/[slug]`) : expertises, études de cas,
   agence, blog, contact, légales, événementiel. Un objet `PageData` par page.
 - `lib/articles.ts` — articles de blog (contenu complet + auteurs).
@@ -54,9 +54,13 @@ Lucide React · Supabase (formulaire de devis) · ESLint (flat config). Déploie
 
 ## 5. Décisions structurantes (à respecter)
 
-- **Méthode maison = ÉCLAT** (Écoute · Conception · Lancement · Animation · Traces),
-  affichée sur la home (section `Method`). Ne PAS réintroduire « IDDEA » (méthode
-  déposée de la référence). Voir aussi les **3 axes du leadership SY&CO** (page L'agence).
+- **Les 4 phases d'un séminaire SY&CO** (Diagnostic & cadrage · Conception · Animation ·
+  Capitalisation), section `SeminarPhases` sur la home. (L'ancienne méthode « ÉCLAT » a été
+  retirée à la demande du client.) Ne PAS réintroduire les intitulés de la référence
+  (« IDDEA », Immersion / Co-design / Bilan & préconisations). Voir aussi les **3 axes du
+  leadership SY&CO** (page L'agence).
+- **CTA de bas de page = « Parlons de votre projet »** (composant `ContactCTA`, dernière
+  section de l'accueil). Ne PAS copier la baseline café/thé de la référence.
 - **Directrice Générale : Mme Sylviane KOFFI AMA** (mot de la Directrice sur `qui-sommes-nous`).
   Ne PAS réutiliser l'ancien nom « Adjahi Sylviane » ni le titre « PDG » (placeholders).
 - **Équipe** : noms fictifs + **avatars à initiales générés** (pas de vraies photos de

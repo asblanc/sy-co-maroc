@@ -32,7 +32,7 @@ export function ContactCTA() {
       <div className="container-narrow text-center">
         <Reveal>
           <h2 className="mb-5 text-3xl font-bold text-teal sm:text-4xl">
-            Envie de transformer vos équipes&nbsp;?
+            Parlons de votre projet
           </h2>
           <p className="mx-auto mb-14 max-w-xl text-base text-ink/80">
             Formation résidentielle, rencontre entre pairs ou programme sur

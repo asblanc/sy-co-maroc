@@ -75,51 +75,6 @@ export const expertises: Expertise[] = [
   },
 ];
 
-export type Step = {
-  letter: string;
-  title: string;
-  description: string;
-  color: string;
-};
-
-export const methodSteps: Step[] = [
-  {
-    letter: "É",
-    title: "Écoute",
-    description:
-      "Immersion dans vos enjeux, votre culture et vos objectifs : audit, entretiens et cadrage précis du besoin.",
-    color: "#097D7A",
-  },
-  {
-    letter: "C",
-    title: "Conception",
-    description:
-      "Co-création d'une expérience sur-mesure : contenu, format, fil narratif et scénographie.",
-    color: "#ED0F7D",
-  },
-  {
-    letter: "L",
-    title: "Lancement",
-    description:
-      "Production et orchestration : logistique, coordination et préparation des intervenants, jusqu'au moindre détail.",
-    color: "#1076DA",
-  },
-  {
-    letter: "A",
-    title: "Animation",
-    description:
-      "Le jour J : facilitation, énergie et interactivité pour une expérience réellement mémorable.",
-    color: "#FD8B15",
-  },
-  {
-    letter: "T",
-    title: "Traces",
-    description:
-      "Mesure de l'impact, bilan et actions concrètes pour prolonger les effets dans la durée.",
-    color: "#FCD430",
-  },
-];
-
 export type Stat = {
   value: number;
   suffix?: string;
