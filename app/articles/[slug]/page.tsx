@@ -6,6 +6,7 @@ import { ArrowLeft, ArrowRight, Clock, User } from "lucide-react";
 
 import { Header } from "@/components/layout/Header";
 import { Footer } from "@/components/layout/Footer";
+import { ContactCTA } from "@/components/sections/ContactCTA";
 import { ShareButtons } from "@/components/ui/ShareButtons";
 import { Reveal } from "@/components/ui/Reveal";
 import { articles, articleBySlug, type Article } from "@/lib/articles";
@@ -241,6 +242,7 @@ export default async function ArticlePage({
       </section>
       </main>
 
+      <ContactCTA />
       <Footer />
     </>
   );

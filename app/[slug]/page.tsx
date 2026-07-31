@@ -80,6 +80,7 @@ export default async function DynamicPage({
       />
       <main id="main-content">{renderBody(page)}</main>
       <PageNav prev={prev} next={next} />
+      {page.type !== "contact" && <ContactCTA />}
       <Footer />
     </>
   );
@@ -102,19 +103,6 @@ function renderBody(page: PageData) {
     default:
       return <ContentBody page={page} />;
   }
-}
-
-function ContactCta() {
-  return (
-    <div className="mt-12 flex flex-wrap items-center gap-4 rounded-3xl bg-peach/25 p-8">
-      <p className="flex-1 font-heading text-lg font-bold text-teal">
-        Un projet en tête pour vos équipes&nbsp;?
-      </p>
-      <Button href="/contact" variant="pink" size="lg">
-        Contactez-nous
-      </Button>
-    </div>
-  );
 }
 
 /** Bloc « Fiche technique » — pages thématiques. href vide = fiche à venir. */
@@ -226,10 +214,6 @@ function IntroBlock({ page }: { page: PageData }) {
 
 function ContentBody({ page }: { page: PageData }) {
   const hasIntro = Boolean(page.introHeading && page.introImage);
-  const hasRichBody = Boolean(
-    (page.services && page.services.length) ||
-      (page.highlights && page.highlights.length)
-  );
 
   return (
     <>
@@ -267,18 +251,6 @@ function ContentBody({ page }: { page: PageData }) {
         <ReservationCTA />
       )}
       {page.datasheet !== undefined && <DatasheetBlock href={page.datasheet} />}
-
-      {hasRichBody ? (
-        <>
-          <ContactCTA />
-        </>
-      ) : (
-        <section className="bg-white pb-16 lg:pb-24">
-          <div className="container-narrow max-w-4xl">
-            <ContactCta />
-          </div>
-        </section>
-      )}
     </>
   );
 }
