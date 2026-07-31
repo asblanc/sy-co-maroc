@@ -12,10 +12,10 @@ export function Expertises() {
     <section id="expertises" className="bg-white py-20 lg:py-28">
       <div className="container-narrow">
         <Reveal className="mx-auto mb-14 max-w-2xl text-center">
-          <h2 className="font-display text-4xl leading-tight text-teal sm:text-5xl lg:text-6xl">
-            Construisons
-            <br />
-            <span className="bg-gradient-to-r from-orange via-pink to-teal bg-clip-text text-transparent">
+          <h2 className="font-display text-4xl font-bold uppercase leading-[1.02] sm:text-5xl lg:text-6xl">
+            <span className="bg-gradient-to-r from-pink via-orange to-teal bg-clip-text text-transparent">
+              Construisons
+              <br />
               votre réussite
             </span>
           </h2>
