@@ -15,7 +15,9 @@ export function Expertises() {
           <h2 className="font-display text-4xl leading-tight text-teal sm:text-5xl lg:text-6xl">
             Construisons
             <br />
-            <span className="text-orange">votre réussite</span>
+            <span className="bg-gradient-to-r from-orange via-pink to-teal bg-clip-text text-transparent">
+              votre réussite
+            </span>
           </h2>
           <p className="mt-6 font-heading text-lg font-bold text-ink/70">
             Nos trois piliers : Form’Action · Meet &amp; Share · Event.
