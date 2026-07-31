@@ -21,16 +21,16 @@ export function Hero() {
         <div className="text-center text-white lg:text-left">
           <TextReveal
             as="h1"
-            text={"Vous guider\nvers la réussite."}
+            text={"Un séminaire.\nUn déclic.\nUne équipe transformée."}
             delay={0.15}
             stagger={0.08}
-            className="text-4xl font-bold uppercase leading-[1.08] sm:text-5xl lg:text-6xl"
+            className="text-3xl font-bold uppercase leading-[1.08] sm:text-4xl lg:text-5xl"
           />
 
           <TextReveal
             as="p"
             text={
-              "Le cabinet de formation et de conseil qui transforme vos cadres et dirigeants en leaders de demain — Form’Action · Meet & Share · Event."
+              "Développer les compétences pour bâtir des équipes plus fortes."
             }
             delay={0.6}
             stagger={0.03}
@@ -57,7 +57,7 @@ export function Hero() {
           initial={{ opacity: 0, scale: 0.94 }}
           animate={{ opacity: 1, scale: 1 }}
           transition={{ duration: 0.8, delay: 0.4 }}
-          className="relative mx-auto w-full sm:w-[86%] sm:max-w-[440px]"
+          className="relative mx-auto w-full sm:w-[86%] sm:max-w-[440px] lg:max-w-[560px]"
         >
           {/* decorative shapes — sit clearly outside the photo */}
           <motion.span
@@ -79,10 +79,10 @@ export function Hero() {
           <div className="relative z-10 aspect-[4/5] w-full overflow-hidden rounded-[1.75rem] shadow-2xl sm:rounded-[2.25rem]">
             <Image
               src="/images/hero-team1.jpeg"
-              alt="Cadres et dirigeants accompagnés par SY&CO"
+              alt="Équipe en formation avec SY&CO"
               fill
               priority
-              sizes="(max-width: 1024px) 90vw, 440px"
+              sizes="(max-width: 1024px) 90vw, 560px"
               className="object-cover object-center"
             />
           </div>
