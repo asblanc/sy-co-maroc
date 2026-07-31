@@ -14,10 +14,12 @@ export function Thematics() {
       <div className="container-narrow">
         <Reveal className="mb-14 text-center">
           <p className="font-heading text-sm font-bold uppercase tracking-widest text-orange">
-            Nos programmes
+            Nos séminaires
           </p>
-          <h2 className="mt-1 text-3xl font-bold text-teal sm:text-4xl">
-            Des parcours qui transforment
+          <h2 className="mt-2 font-display text-4xl font-bold uppercase leading-[1.02] sm:text-5xl lg:text-6xl">
+            <span className="bg-gradient-to-r from-pink via-orange to-teal bg-clip-text text-transparent">
+              Des parcours qui transforment
+            </span>
           </h2>
           <p className="mx-auto mt-4 max-w-2xl text-base text-ink/70">
             Nos formations Form&rsquo;Action, organisées par thématique
