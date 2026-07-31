@@ -46,29 +46,30 @@ const phases: Phase[] = [
 /** « Les 4 phases d'un séminaire SY&CO » — 4 boîtes numérotées (2 colonnes). */
 export function SeminarPhases() {
   return (
-    <section id="methode">
-      {/* Bande teal pleine largeur (comme la section « Une équipe… ») */}
-      <div className="bg-teal py-16 text-white lg:py-20">
-        <Reveal className="container-narrow text-center">
-          <h2 className="font-display text-2xl uppercase leading-tight sm:text-4xl lg:text-[2.75rem]">
-            Les <span className="text-orange">4 phases</span> d&rsquo;un séminaire
-            SY&amp;CO
-          </h2>
-          <p className="mx-auto mt-4 max-w-2xl text-base leading-relaxed text-white/85">
-            De l&rsquo;écoute du besoin jusqu&rsquo;à l&rsquo;ancrage des acquis,
-            une démarche rigoureuse en quatre temps.
-          </p>
+    <section id="methode" className="bg-white py-16 lg:py-24">
+      <div className="container-narrow">
+        {/* Bande teal contenue (marges autour = du blanc pour la distinguer
+            de la bande pleine largeur de la section « Une équipe… ») */}
+        <Reveal>
+          <div className="rounded-[2rem] bg-teal px-6 py-12 text-center text-white shadow-xl sm:px-10 lg:py-16">
+            <h2 className="font-display text-2xl uppercase leading-tight sm:text-4xl lg:text-[2.75rem]">
+              Les <span className="text-orange">4 phases</span> d&rsquo;un
+              séminaire SY&amp;CO
+            </h2>
+            <p className="mx-auto mt-4 max-w-2xl text-base leading-relaxed text-white/85">
+              De l&rsquo;écoute du besoin jusqu&rsquo;à l&rsquo;ancrage des
+              acquis, une démarche rigoureuse en quatre temps.
+            </p>
+          </div>
         </Reveal>
-      </div>
 
-      {/* Les 4 boîtes */}
-      <div className="bg-peach/20 py-16 lg:py-24">
-        <div className="container-narrow grid gap-6 md:grid-cols-2">
+        {/* Les 4 boîtes */}
+        <div className="mt-12 grid gap-6 md:grid-cols-2">
           {phases.map((p, i) => (
             <Reveal
               key={p.n}
               delay={(i % 2) * 0.1}
-              className="flex overflow-hidden rounded-3xl bg-white shadow-sm transition-all duration-300 hover:-translate-y-1.5 hover:shadow-xl"
+              className="flex overflow-hidden rounded-3xl border border-black/5 bg-white shadow-sm transition-all duration-300 hover:-translate-y-1.5 hover:shadow-xl"
             >
               <div
                 className="flex w-20 shrink-0 items-center justify-center rounded-r-[2rem] sm:w-24"
