@@ -43,28 +43,31 @@ const phases: Phase[] = [
   },
 ];
 
-/** « Les 4 phases d'un séminaire SY&CO » — 4 boîtes numérotées (2 colonnes). */
+/** « Les 4 phases d'un séminaire SY&CO » — bande teal pleine largeur + 4 boîtes. */
 export function SeminarPhases() {
   return (
-    <section id="methode" className="bg-white py-16 lg:py-24">
-      <div className="container-narrow">
-        {/* Bande teal contenue (marges autour = du blanc pour la distinguer
-            de la bande pleine largeur de la section « Une équipe… ») */}
-        <Reveal>
-          <div className="rounded-[2rem] bg-teal px-6 py-12 text-center text-white shadow-xl sm:px-10 lg:py-16">
-            <h2 className="font-display text-2xl uppercase leading-tight sm:text-4xl lg:text-[2.75rem]">
-              Les <span className="text-orange">4 phases</span> d&rsquo;un
-              séminaire SY&amp;CO
-            </h2>
-            <p className="mx-auto mt-4 max-w-2xl text-base leading-relaxed text-white/85">
-              De l&rsquo;écoute du besoin jusqu&rsquo;à l&rsquo;ancrage des
-              acquis, une démarche rigoureuse en quatre temps.
-            </p>
-          </div>
+    <section id="methode">
+      {/* Bande teal pleine largeur (sans coins arrondis), gros titre en dégradé */}
+      <div className="bg-teal py-14 text-white lg:py-20">
+        <Reveal className="container-narrow">
+          <h2 className="font-display font-bold uppercase leading-[0.95]">
+            <span className="block bg-gradient-to-r from-pink via-orange to-yellow bg-clip-text text-5xl text-transparent sm:text-6xl lg:text-7xl">
+              Les 4 phases
+            </span>
+            <span className="mt-2 block text-2xl sm:text-3xl lg:text-4xl">
+              d&rsquo;un séminaire SY&amp;CO
+            </span>
+          </h2>
+          <p className="mt-5 max-w-2xl text-base leading-relaxed text-white/85 lg:text-lg">
+            De l&rsquo;écoute du besoin jusqu&rsquo;à l&rsquo;ancrage des acquis,
+            une démarche rigoureuse en quatre temps.
+          </p>
         </Reveal>
+      </div>
 
-        {/* Les 4 boîtes */}
-        <div className="mt-12 grid gap-6 md:grid-cols-2">
+      {/* Les 4 boîtes */}
+      <div className="bg-peach/20 py-16 lg:py-24">
+        <div className="container-narrow grid gap-6 md:grid-cols-2">
           {phases.map((p, i) => (
             <Reveal
               key={p.n}

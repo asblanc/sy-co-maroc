@@ -21,8 +21,8 @@ export default function Home() {
         <Expertises />
         <TailoredSeminars />
         <Accompany />
-        <Team />
         <SeminarPhases />
+        <Team />
         <Thematics />
         <Gallery tinted limit={9} />
         <Clients />
