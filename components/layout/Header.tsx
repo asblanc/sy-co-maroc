@@ -44,16 +44,25 @@ export function Header() {
         )}
       >
         <div className="flex h-20 w-full items-center justify-between gap-6 px-4 sm:px-6 lg:px-8">
-          <Link href="/" className="shrink-0" aria-label="SY&CO accueil">
-            <Image
-              src="/images/logo2.png"
-              alt="SY&CO"
-              width={190}
-              height={64}
-              priority
-              className="h-12 w-auto"
-            />
-          </Link>
+          <div className="flex items-center gap-4 sm:gap-6">
+            <Link href="/" className="shrink-0" aria-label="SY&CO accueil">
+              <Image
+                src="/images/logo2.png"
+                alt="SY&CO"
+                width={190}
+                height={64}
+                priority
+                className="h-12 w-auto"
+              />
+            </Link>
+            <a
+              href={`tel:${contactInfo.phone.replace(/[^+\d]/g, "")}`}
+              className="hidden items-center gap-2 rounded-full border border-teal/15 bg-teal/5 px-3.5 py-1.5 text-xs font-semibold text-teal transition-colors hover:bg-teal hover:text-white xl:flex"
+            >
+              <Phone className="h-3.5 w-3.5" strokeWidth={2.2} />
+              <span>{contactInfo.phone}</span>
+            </a>
+          </div>
 
           {/* Desktop nav */}
           <nav className="hidden items-center gap-1 lg:flex">
