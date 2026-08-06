@@ -109,9 +109,9 @@ export type Partner = { name: string; logo?: string };
  * déposer les fichiers dans /public/images/clients/ et renseigner `logo`.
  */
 export const partners: Partner[] = [
-  { name: "Partenaire SY&CO", logo: "/images/clients/partner-1.jpg" },
-  { name: "Partenaire SY&CO", logo: "/images/clients/partner-2.jpg" },
-  { name: "Partenaire SY&CO", logo: "/images/clients/partner-3.jpg" },
+  { name: "Partenaire SY&CO", logo: "/images/clients/logo_part1.jpeg" },
+  { name: "Partenaire SY&CO", logo: "/images/clients/logo_part2.jpeg" },
+  { name: "Partenaire SY&CO", logo: "/images/clients/logo_part3.jpeg" },
 ];
 
 export const contactInfo = {

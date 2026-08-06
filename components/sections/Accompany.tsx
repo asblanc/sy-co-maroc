@@ -20,7 +20,7 @@ export function Accompany() {
           <span className="absolute -left-5 bottom-6 -z-10 h-28 w-28 rounded-3xl bg-orange/60" />
           <div className="blob-a overflow-hidden shadow-xl">
             <Image
-              src="/images/demain1.jpg"
+              src="/images/img_accompagn.jpeg"
               alt="Participants d'un programme de formation SY&CO"
               width={620}
               height={520}
