@@ -109,18 +109,9 @@ export type Partner = { name: string; logo?: string };
  * déposer les fichiers dans /public/images/clients/ et renseigner `logo`.
  */
 export const partners: Partner[] = [
-  { name: "Finance publique" },
-  { name: "Banque & Assurance" },
-  { name: "Administration publique" },
-  { name: "Énergie & Mines" },
-  { name: "Agro-industrie" },
-  { name: "Télécoms & Digital" },
-  { name: "Santé" },
-  { name: "Éducation & Formation" },
-  { name: "Collectivités territoriales" },
-  { name: "Grande distribution" },
-  { name: "Industrie & BTP" },
-  { name: "Organisations internationales" },
+  { name: "Partenaire SY&CO", logo: "/images/clients/partner-1.jpg" },
+  { name: "Partenaire SY&CO", logo: "/images/clients/partner-2.jpg" },
+  { name: "Partenaire SY&CO", logo: "/images/clients/partner-3.jpg" },
 ];
 
 export const contactInfo = {

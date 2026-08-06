@@ -13,7 +13,7 @@ export function TailoredSeminars() {
           <span className="absolute -bottom-6 right-2 -z-10 h-24 w-24 rounded-full bg-teal/10" />
           <div className="blob-b relative mx-auto aspect-[4/5] w-full max-w-[440px] overflow-hidden shadow-xl">
             <Image
-              src="/images/illustration-home.jpg"
+              src="/images/img_seminaire.jpeg"
               alt="Séminaire personnalisé conçu par SY&CO"
               fill
               sizes="(max-width: 1024px) 90vw, 440px"

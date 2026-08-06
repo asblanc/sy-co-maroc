@@ -7,7 +7,7 @@ import { Reveal } from "@/components/ui/Reveal";
  * in /public/images/clients/, otherwise a clean branded wordmark tile.
  */
 export function Clients() {
-  const loop = [...partners, ...partners];
+  const loop = [...partners, ...partners, ...partners, ...partners];
 
   return (
     <section className="bg-white py-16 lg:py-20">
@@ -24,16 +24,16 @@ export function Clients() {
         <div className="flex w-max animate-marquee items-center gap-6">
           {loop.map((partner, i) => (
             <div
-              key={`${partner.name}-${i}`}
-              className="flex h-20 w-40 shrink-0 items-center justify-center rounded-2xl border border-teal/10 bg-white px-6 shadow-sm"
+              key={`${partner.logo}-${i}`}
+              className="flex h-24 w-44 shrink-0 items-center justify-center rounded-2xl border border-teal/10 bg-white p-3 shadow-sm transition-all duration-300 hover:border-orange/30 hover:shadow-md"
             >
               {partner.logo ? (
                 <Image
                   src={partner.logo}
                   alt={partner.name}
-                  width={140}
-                  height={64}
-                  className="max-h-12 w-auto object-contain grayscale transition-all duration-300 hover:grayscale-0"
+                  width={160}
+                  height={80}
+                  className="max-h-20 w-auto object-contain transition-all duration-300 hover:scale-105"
                 />
               ) : (
                 <span className="text-center font-heading text-base font-bold leading-tight tracking-tight text-teal/80">
