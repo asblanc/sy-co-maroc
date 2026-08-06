@@ -21,7 +21,7 @@ function StatItem({
         <span ref={ref}>{current.toLocaleString("fr-FR")}</span>
         {suffix}
       </p>
-      <p className="mx-auto mt-3 max-w-[16rem] text-sm leading-relaxed text-white/85">
+      <p className="mx-auto mt-3 max-w-[22rem] text-sm leading-relaxed text-white/85">
         {label}
       </p>
     </div>

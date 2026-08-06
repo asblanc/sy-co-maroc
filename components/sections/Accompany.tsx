@@ -8,7 +8,7 @@ const agilePoints = [
   "un impact mesuré : chaque participant repart avec un plan d'action concret,",
   "des formations résidentielles immersives (Form’Action),",
   "des rencontres entre pairs pour échanger sans filtre (Meet & Share),",
-  "un ancrage panafricain : Maroc, Sénégal, Côte d'Ivoire.",
+  "un ancrage panafricain et international : Maroc, Sénégal, Côte d'Ivoire, Île Maurice, Turquie, Dubaï.",
 ];
 
 /** "Vous accompagner vers demain" — image + agility checklist. */

@@ -96,7 +96,7 @@ export const stats: Stat[] = [
   {
     value: 6,
     suffix: "",
-    label: "pays de déploiement : Maroc, Sénégal, Côte d'Ivoire, et au-delà",
+    label: "pays de déploiement : Maroc, Sénégal, Côte d’Ivoire, Île Maurice, Turquie, Dubaï",
   },
 ];
 
@@ -128,7 +128,7 @@ export const contactInfo = {
   email: "seminairesyco@gmail.com",
   address: "Boulevard d'Anfa, Twin Center",
   city: "20100 Casablanca, Maroc",
-  reach: "Maroc · Sénégal · Côte d'Ivoire",
+  reach: "Maroc · Sénégal · Côte d'Ivoire · Île Maurice · Turquie · Dubaï",
 };
 
 export const footerExpertises: NavChild[] = [

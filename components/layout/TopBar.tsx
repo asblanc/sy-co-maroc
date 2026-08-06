@@ -5,7 +5,7 @@ import { contactInfo } from "@/lib/data";
 export function TopBar() {
   return (
     <div className="hidden bg-teal text-white lg:block">
-      <div className="container-narrow flex h-10 items-center justify-end gap-8 text-sm">
+      <div className="container-narrow flex h-10 items-center justify-start gap-8 text-sm">
         <a
           href={`tel:${contactInfo.phone.replace(/[^+\d]/g, "")}`}
           className="flex items-center gap-2 transition-colors hover:text-orange"

@@ -30,11 +30,10 @@ export function Gallery({
             En images
           </p>
           <h2 className="mt-1 text-3xl font-bold text-teal sm:text-4xl">
-            Nos formations en action
+            RETOUR EN IMAGES SUR NOS SÉMINAIRES
           </h2>
-          <p className="mx-auto mt-4 max-w-2xl text-base text-ink/70">
-            Retour sur nos programmes Form&rsquo;Action et nos rencontres Meet
-            &amp; Share — au Maroc, au Sénégal, en Côte d&rsquo;Ivoire et au-delà.
+          <p className="mx-auto mt-4 max-w-2xl font-heading text-base font-bold uppercase tracking-wide text-ink/80">
+            ILS NOUS FONT CONFIANCE
           </p>
         </Reveal>
 

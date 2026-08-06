@@ -18,7 +18,7 @@ export function WhatsAppButton() {
       target="_blank"
       rel="noopener noreferrer"
       aria-label="Discuter avec SY&CO sur WhatsApp"
-      className="group fixed bottom-5 right-5 z-40 flex items-center gap-3 rounded-full bg-[#25D366] p-4 text-white shadow-lg shadow-black/20 transition-all duration-300 hover:scale-105 hover:shadow-xl focus-visible:outline-none focus-visible:ring-4 focus-visible:ring-[#25D366]/40 sm:bottom-6 sm:right-6"
+      className="group fixed bottom-5 left-5 z-40 flex items-center gap-3 rounded-full bg-[#25D366] p-4 text-white shadow-lg shadow-black/20 transition-all duration-300 hover:scale-105 hover:shadow-xl focus-visible:outline-none focus-visible:ring-4 focus-visible:ring-[#25D366]/40 sm:bottom-6 sm:left-6"
     >
       {/* halo pulsé (désactivé si l'utilisateur réduit les animations) */}
       <span
